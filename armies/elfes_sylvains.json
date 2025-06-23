@@ -1,20 +1,25 @@
 {
-  "armyName": "Arabie",
+  "armyName": "Elfes Sylvains",
   "units": [
-    {
-      "name": "Lanciers",
-      "type": "Infanterie",
-      "cost": 45
-    },
     {
       "name": "Archers",
       "type": "Infanterie",
       "cost": 55
     },
     {
-      "name": "Gardes",
+      "name": "Hommes d’Armes",
       "type": "Infanterie",
-      "cost": 70
+      "cost": 45
+    },
+    {
+      "name": "Paysans",
+      "type": "Infanterie",
+      "cost": 30
+    },
+    {
+      "name": "Ecuyers",
+      "type": "Cavalerie",
+      "cost": 90
     },
     {
       "name": "Chevaliers",
@@ -22,48 +27,47 @@
       "cost": 110
     },
     {
-      "name": "Cavaliers du désert",
+      "name": "Chevaliers du Graal",
       "type": "Cavalerie",
-      "cost": 80
+      "cost": 120
     },
     {
-      "name": "Méharistes",
-      "type": "Cavalerie",
-      "cost": 100
-    },
-    {
-      "name": "Tapis Volants",
-      "type": "Cavalerie",
-      "cost": 85
-    },{
-      "name": "Éléphants",
+      "name": "Chevaliers Pégase",
       "type": "Monstre",
-      "cost": 200
+      "cost": 90
     },
     {
+      "name": "Trébuchet",
+      "type": "Artillerie",
+      "cost": 100
+    },{
       "name": "Général",
       "type": "Général",
-      "cost": 75
+      "cost": 125
     },{
       "name": "Héros",
       "type": "Héros",
       "cost": 80
     },{
-      "name": "Sorcier",
+      "name": "Enchanteresse",
       "type": "Sorcier",
       "cost": 45
     },{
-      "name": "Tapis Volant",
+      "name": "Pégase",
       "type": "Monture",
-      "cost": 10
+      "cost": 15
     },{
-      "name": "Éléphant",
+      "name": "Licorne",
+      "type": "Monture",
+      "cost": 15
+    },{
+      "name": "Hippogryphe",
       "type": "Monture Monstrueuse",
-      "cost": 50
+      "cost": 60
     },{
-      "name": "Djinn",
-      "type": "Monture",
-      "cost": 80
+      "name": "Reliquaire du Graal",
+      "type": "Spécial",
+      "cost": 40
     },
     {
       "name": "Terradons",

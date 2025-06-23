@@ -1,69 +1,69 @@
 {
-  "armyName": "Arabie",
+  "armyName": "Elfes Noirs",
   "units": [
     {
       "name": "Lanciers",
       "type": "Infanterie",
-      "cost": 45
+      "cost": 60
     },
     {
-      "name": "Archers",
+      "name": "Arbalétriers",
       "type": "Infanterie",
-      "cost": 55
+      "cost": 75
     },
     {
-      "name": "Gardes",
+      "name": "Furies",
       "type": "Infanterie",
       "cost": 70
     },
     {
-      "name": "Chevaliers",
+      "name": "Cavaliers Noirs",
       "type": "Cavalerie",
-      "cost": 110
+      "cost": 95
     },
     {
-      "name": "Cavaliers du désert",
+      "name": "Chevaliers sur Sang-Froid",
       "type": "Cavalerie",
-      "cost": 80
+      "cost": 130
     },
     {
-      "name": "Méharistes",
-      "type": "Cavalerie",
+      "name": "Harpies",
+      "type": "Monstre",
+      "cost": 65
+    },
+    {
+      "name": "Hydre de Guerre",
+      "type": "Monstre",
       "cost": 100
     },
     {
-      "name": "Tapis Volants",
-      "type": "Cavalerie",
-      "cost": 85
+      "name": "Baliste à Répétition",
+      "type": "Artillerie",
+      "cost": 55
     },{
-      "name": "Éléphants",
-      "type": "Monstre",
-      "cost": 200
-    },
-    {
       "name": "Général",
       "type": "Général",
-      "cost": 75
+      "cost": 155
     },{
       "name": "Héros",
       "type": "Héros",
       "cost": 80
     },{
-      "name": "Sorcier",
+      "name": "Sorcière",
       "type": "Sorcier",
-      "cost": 45
+      "cost": 80
     },{
-      "name": "Tapis Volant",
-      "type": "Monture",
+      "name": "Manticore",
+      "type": "Monture Monstrueuse",
+      "cost": 60
+    },{
+      "name": "Char",
+      "type": "Monture Char",
       "cost": 10
     },{
-      "name": "Éléphant",
-      "type": "Monture Monstrueuse",
-      "cost": 50
-    },{
-      "name": "Djinn",
-      "type": "Monture",
-      "cost": 80
+      "name": "Chaudron de Sang",
+      "type": "Monture Char",
+      "cost": 15
     },
     {
       "name": "Terradons",
