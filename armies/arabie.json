@@ -1,0 +1,79 @@
+{
+  "armyName": "Arabie",
+  "units": [
+    {
+      "name": "Lanciers",
+      "type": "Infanterie",
+      "cost": 45
+    },
+    {
+      "name": "Archers",
+      "type": "Infanterie",
+      "cost": 55
+    },
+    {
+      "name": "Gardes",
+      "type": "Infanterie",
+      "cost": 70
+    },
+    {
+      "name": "Chevaliers",
+      "type": "Cavalerie",
+      "cost": 110
+    },
+    {
+      "name": "Cavaliers du désert",
+      "type": "Cavalerie",
+      "cost": 80
+    },
+    {
+      "name": "Méharistes",
+      "type": "Cavalerie",
+      "cost": 100
+    },
+    {
+      "name": "Tapis Volants",
+      "type": "Cavalerie",
+      "cost": 85
+    },{
+      "name": "Éléphants",
+      "type": "Monstre",
+      "cost": 200
+    },
+    {
+      "name": "Général",
+      "type": "Général",
+      "cost": 75
+    },{
+      "name": "Héros",
+      "type": "Héros",
+      "cost": 80
+    },{
+      "name": "Sorcier",
+      "type": "Sorcier",
+      "cost": 45
+    },{
+      "name": "Tapis Volant",
+      "type": "Monture",
+      "cost": 10
+    },{
+      "name": "Éléphant",
+      "type": "Monture Monstrueuse",
+      "cost": 50
+    },{
+      "name": "Djinn",
+      "type": "Monture",
+      "cost": 60
+    },
+    {
+      "name": "Terradons",
+      "type": "Volant",
+      "cost": 95
+    },
+    {
+      "name": "Temple Guard",
+      "type": "Élite",
+      "cost": 130
+    }
+  ]
+}

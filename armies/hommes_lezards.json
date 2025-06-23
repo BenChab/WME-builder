@@ -2,44 +2,72 @@
   "armyName": "Hommes-Lézards",
   "units": [
     {
-      "name": "Général Slann",
-      "type": "Personnage",
-      "cost": 125
+      "name": "Skinks",
+      "type": "Infanterie",
+      "cost": 35
     },
     {
-      "name": "Héros Skink",
-      "type": "Personnage",
-      "cost": 80
+      "name": "Saurus",
+      "type": "Infanterie",
+      "cost": 70
     },
     {
-      "name": "Prêtre Mage Slann",
-      "type": "Personnage",
-      "cost": 90
-    },
-    {
-      "name": "Saurus Warriors",
+      "name": "Gardes des Temples",
       "type": "Infanterie",
       "cost": 110
     },
     {
-      "name": "Skinks",
-      "type": "Infanterie légère",
-      "cost": 60
+      "name": "Salamandres",
+      "type": "Infanterie",
+      "cost": 25
     },
     {
       "name": "Kroxigors",
-      "type": "Monstrueuse",
+      "type": "Infanterie",
+      "cost": 135
+    },
+    {
+      "name": "Cavaliers sur Sang-Froid",
+      "type": "Cavalerie",
       "cost": 140
     },
     {
+      "name": "Téradons",
+      "type": "Monstre",
+      "cost": 85
+    },{
       "name": "Stégadon",
       "type": "Monstre",
-      "cost": 130
+      "cost": 250
     },
     {
-      "name": "Salamandres",
-      "type": "Tirailleur",
+      "name": "Slann",
+      "type": "Général",
+      "cost": 75
+    },{
+      "name": "Héros Saurus",
+      "type": "Héros",
+      "cost": 45
+    },{
+      "name": "Héros Skink",
+      "type": "Héros",
+      "cost": 70
+    },{
+      "name": "Chaman Skink",
+      "type": "Sorcier",
+      "cost": 30
+    },{
+      "name": "Palanquin",
+      "type": "Monture",
+      "cost": 20
+    },{
+      "name": "Stégadon",
+      "type": "Monture Monstrueuse",
       "cost": 90
+    },{
+      "name": "Carnosaure",
+      "type": "Monture Monstrueuse",
+      "cost": 60
     },
     {
       "name": "Terradons",
