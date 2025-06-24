@@ -9,7 +9,7 @@ const totalPointsEl = document.getElementById('totalPoints');
 const unitSelectorContainer = document.getElementById('unitSelectorContainer');
 
 function updateTotal() {
-  const total = army.reduce((sum, u) => sum + u.cost, 0);
+  const total = army.reduce((sum, u) => sum + (u.cost * u.count), 0);
   totalPointsEl.textContent = total;
 }
 
