@@ -1,0 +1,69 @@
+{
+  "armyName": "Elfes Noirs",
+  "units": [
+    {
+      "name": "Lanciers",
+      "type": "Infanterie",
+      "cost": 60
+    },
+    {
+      "name": "Arbalétriers",
+      "type": "Infanterie",
+      "cost": 75
+    },
+    {
+      "name": "Furies",
+      "type": "Infanterie",
+      "cost": 70
+    },
+    {
+      "name": "Cavaliers Noirs",
+      "type": "Cavalerie",
+      "cost": 95
+    },
+    {
+      "name": "Chevaliers sur Sang-Froid",
+      "type": "Cavalerie",
+      "cost": 130
+    },
+    {
+      "name": "Harpies",
+      "type": "Monstre",
+      "cost": 65
+    },
+    {
+      "name": "Hydre de Guerre",
+      "type": "Monstre",
+      "cost": 100
+    },
+    {
+      "name": "Baliste à Répétition",
+      "type": "Artillerie",
+      "cost": 55
+    },{
+      "name": "Général",
+      "type": "Général",
+      "cost": 155
+    },{
+      "name": "Héros",
+      "type": "Héros",
+      "cost": 80
+    },{
+      "name": "Sorcière",
+      "type": "Sorcier",
+      "cost": 80
+    },{
+      "name": "Manticore",
+      "type": "Monture Monstrueuse",
+      "cost": 60
+    },{
+      "name": "Char",
+      "type": "Monture Char",
+      "cost": 10
+    },{
+      "name": "Chaudron de Sang",
+      "type": "Monture Char",
+      "cost": 15
+    },
+  ]
+}

@@ -1,8 +1,8 @@
 {
-  "armyName": "Arabie",
+  "armyName": "Kislev",
   "units": [
     {
-      "name": "Lanciers",
+      "name": "Guerriers",
       "type": "Infanterie",
       "cost": 45
     },
@@ -12,58 +12,49 @@
       "cost": 55
     },
     {
-      "name": "Gardes",
+      "name": "Ours",
       "type": "Infanterie",
-      "cost": 70
+      "cost": 85
     },
     {
       "name": "Chevaliers",
       "type": "Cavalerie",
       "cost": 110
     },
-    {
-      "name": "Cavaliers du désert",
+      {
+      "name": "Archers à Cheval",
       "type": "Cavalerie",
       "cost": 80
     },
     {
-      "name": "Méharistes",
-      "type": "Cavalerie",
-      "cost": 100
-    },
-    {
-      "name": "Tapis Volants",
-      "type": "Cavalerie",
-      "cost": 85
-    },{
-      "name": "Éléphants",
+      "name": "Chariot de Guerre",
       "type": "Monstre",
-      "cost": 200
+      "cost": 50
     },
     {
       "name": "Général",
       "type": "Général",
-      "cost": 75
-    },{
+      "cost": 125
+    },
+    {
       "name": "Héros",
       "type": "Héros",
       "cost": 80
-    },{
+    },
+    {
       "name": "Sorcier",
       "type": "Sorcier",
       "cost": 45
-    },{
-      "name": "Tapis Volant",
+    },
+    {
+      "name": "Ours",
       "type": "Monture",
       "cost": 10
-    },{
-      "name": "Éléphant",
-      "type": "Monture Monstrueuse",
-      "cost": 50
-    },{
-      "name": "Djinn",
-      "type": "Monture",
-      "cost": 80
+    },
+    {
+      "name": "Tzarine",
+      "type": "Spécial",
+      "cost": 25
     },
   ]
 }

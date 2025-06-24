@@ -1,0 +1,73 @@
+{
+  "armyName": "Empire",
+  "units": [
+    {
+      "name": "Hallebardiers",
+      "type": "Infanterie",
+      "cost": 55
+    },
+    {
+      "name": "Arquebusiers",
+      "type": "Infanterie",
+      "cost": 45
+    },
+    {
+      "name": "Arbalétriers",
+      "type": "Infanterie",
+      "cost": 30
+    },
+    {
+      "name": "Flagellants",
+      "type": "Cavalerie",
+      "cost": 90
+    },
+    {
+      "name": "Tirailleurs",
+      "type": "Cavalerie",
+      "cost": 110
+    },
+    {
+      "name": "Chevaliers",
+      "type": "Cavalerie",
+      "cost": 120
+    },
+    {
+      "name": "Pistoliers",
+      "type": "Monstre",
+      "cost": 90
+    },
+    {
+      "name": "Canon Feu d’Enfer",
+      "type": "Artillerie",
+      "cost": 100
+    },{
+      "name": "Canon",
+      "type": "Artillerie",
+      "cost": 100
+    },{
+      "name": "Tank à Vapeur",
+      "type": "Artillerie",
+      "cost": 100
+    },{
+      "name": "Général",
+      "type": "Général",
+      "cost": 125
+    },{
+      "name": "Héros",
+      "type": "Héros",
+      "cost": 80
+    },{
+      "name": "Sorcier",
+      "type": "Sorcier",
+      "cost": 45
+    },{
+      "name": "Autel de Guerre",
+      "type": "Monture",
+      "cost": 15
+    },{
+      "name": "Griffon",
+      "type": "Monture Monstrueuse",
+      "cost": 60
+    },
+  ]
+}

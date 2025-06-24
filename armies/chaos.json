@@ -1,0 +1,74 @@
+{
+    "armyName": "Chaos",
+    "units": [
+        {
+            "name": "Guerriers du Chaos",
+            "type": "Infanterie",
+            "cost": 150
+        },
+        {
+            "name": "Maraudeurs du Chaos",
+            "type": "Infanterie",
+            "cost": 60
+        },
+        {
+            "name": "Ogres",
+            "type": "Infanterie",
+            "cost": 105
+        },
+        {
+            "name": "Trolls",
+            "type": "Infanterie",
+            "cost": 90
+        },
+        {
+            "name": "Cavaliers Maraudeurs",
+            "type": "Cavalerie",
+            "cost": 90
+        },
+        {
+            "name": "Chevaliers du Chaos",
+            "type": "Cavalerie",
+            "cost": 200
+        },
+        {
+            "name": "Chiens du Chaos",
+            "type": "Cavalerie",
+            "cost": 30
+        },
+        {
+            "name": "Chars du Chaos",
+            "type": "Char",
+            "cost": 95
+        },
+        {
+            "name": "Harpies",
+            "type": "Monstre",
+            "cost": 65
+        },{
+            "name": "Dragons-Ogres",
+            "type": "Monstre",
+            "cost": 200
+        },{
+            "name": "Enfant du Chaos",
+            "type": "Monstre",
+            "cost": 80
+        },{
+            "name": "Général",
+            "type": "Général",
+            "cost": 125
+        },{
+            "name": "Héros",
+            "type": "Héros",
+            "cost": 80
+        },{
+            "name": "Sorcier",
+            "type": "Sorcier",
+            "cost": 90
+        },{
+            "name": "Dragon du Chaos",
+            "type": "Monture Monstrueuse",
+            "cost": 100
+        },
+    ]
+}

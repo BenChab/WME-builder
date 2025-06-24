@@ -1,0 +1,65 @@
+{
+  "armyName": "Comtes Vampires",
+  "units": [
+    {
+      "name": "Squelettes",
+      "type": "Infanterie",
+      "cost": 30
+    },
+    {
+      "name": "Zombies",
+      "type": "Infanterie",
+      "cost": 35
+    },
+    {
+      "name": "Goules",
+      "type": "Infanterie",
+      "cost": 55
+    },
+    {
+      "name": "Gardes des Cryptes",
+      "type": "Infanterie",
+      "cost": 60
+    },
+    {
+      "name": "Nuées Éthérées",
+      "type": "Infanterie",
+      "cost": 90
+    },
+    {
+      "name": "Chevaliers Noirs",
+      "type": "Cavalerie",
+      "cost": 110
+    },
+    {
+      "name": "Loups Funestes",
+      "type": "Cavalerie",
+      "cost": 40
+    },
+    {
+      "name": "Chauve-Souris Vampires",
+      "type": "Monstre",
+      "cost": 65
+    },{
+      "name": "Seigneur Vampire",
+      "type": "Général",
+      "cost": 150
+    },{
+      "name": "Vampire",
+      "type": "Héros",
+      "cost": 80
+    },{
+      "name": "Nécromancien",
+      "type": "Sorcier",
+      "cost": 45
+    },{
+      "name": "Cauchemar Ailé",
+      "type": "Monture Monstrueuse",
+      "cost": 60
+    },{
+      "name": "Carrosse Noir",
+      "type": "Monture Char",
+      "cost": 15
+    },
+  ]
+}

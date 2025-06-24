@@ -1,0 +1,85 @@
+{
+  "armyName": "Nains",
+  "units": [
+    {
+      "name": "Guerriers",
+      "type": "Infanterie",
+      "cost": 110
+    },
+    {
+      "name": "Arquebusiers",
+      "type": "Infanterie",
+      "cost": 90
+    },
+    {
+      "name": "Rangers",
+      "type": "Infanterie",
+      "cost": 110
+    },
+    {
+      "name": "Marteliers",
+      "type": "Infanterie",
+      "cost": 125
+    },
+      {
+      "name": "Mineurs",
+      "type": "Infanterie",
+      "cost": 90
+    },
+    {
+      "name": "Tueurs de Trolls",
+      "type": "Infanterie",
+      "cost": 80
+    },
+       {
+      "name": "Canons",
+      "type": "Artillerie",
+      "cost": 90
+    },
+       {
+      "name": "Canon à Flammes",
+      "type": "Artillerie",
+      "cost": 50
+    },
+       {
+      "name": "Gyrocoptère",
+      "type": "Machine",
+      "cost": 75
+    },
+      {
+      "name": "Zeppelin",
+      "type": "Machine",
+      "cost": 100
+    },
+      {
+      "name": "Barge",
+      "type": "Amélioration",
+      "cost": 20
+    },
+    {
+      "name": "Général",
+      "type": "Général",
+      "cost": 155
+    },
+    {
+      "name": "Héros",
+      "type": "Héros",
+      "cost": 80
+    },
+      {
+      "name": "Maître des Runes",
+      "type": "Héros",
+      "cost": 90
+    },
+    {
+      "name": "Enclume du Destin",
+      "type": "Monture",
+      "cost": 50
+    },
+   {
+      "name": "Trône du Pouvoir",
+      "type": "Monture",
+      "cost": 15
+    },
+  ]
+}

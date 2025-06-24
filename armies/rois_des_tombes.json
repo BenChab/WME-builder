@@ -1,0 +1,69 @@
+{
+  "armyName": "Rois des Tombes",
+  "units": [
+    {
+      "name": "Squelettes",
+      "type": "Infanterie",
+      "cost": 30
+    },
+    {
+      "name": "Archers Squelettes",
+      "type": "Infanterie",
+      "cost": 40
+    },
+       {
+      "name": "Cavaliers Squelettes",
+      "type": "Cavalerie",
+      "cost": 60
+    },
+       {
+      "name": "Chars Squelettes",
+      "type": "Char",
+      "cost": 110
+    },
+       {
+      "name": "Charognards",
+      "type": "Monstre",
+      "cost": 65
+    },
+       {
+      "name": "Géant Squelette",
+      "type": "Monstre",
+      "cost": 95
+    },
+      {
+      "name": "Sphinx",
+      "type": "Monstre",
+      "cost": 100
+    },
+      {
+      "name": "Catapulte à Crânes",
+      "type": "Artillerie",
+      "cost": 85
+    },
+       {
+      "name": "Balistes à Ossements",
+      "type": "Artillerie",
+      "cost": 65
+    },
+    {
+      "name": "Roi des Tombes",
+      "type": "Général",
+      "cost": 130
+    },
+    {
+      "name": "Prêtre-Liche",
+      "type": "Sorcier",
+      "cost": 90
+    },
+   {
+      "name": "Dragon Zombie",
+      "type": "Monture Monstrueuse",
+      "cost": 100
+    },{
+      "name": "Char Liche",
+      "type": "Monture Char",
+      "cost": 10
+    },
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "armyName": "Gobelins",
+  "units": [
+    {
+      "name": "Gobelins",
+      "type": "Infanterie",
+      "cost": 30
+    },
+    {
+      "name": "Fanatiques Gobelins",
+      "type": "Infanterie",
+      "cost": 15
+    },
+    {
+      "name": "Squigs",
+      "type": "Infanterie",
+      "cost": 70
+    },
+    {
+      "name": "Trolls",
+      "type": "Infanterie",
+      "cost": 110
+    },
+    {
+      "name": "Gobelins sur Loup",
+      "type": "Cavalerie",
+      "cost": 60
+    },
+    {
+      "name": "Gobelins sur Araignée",
+      "type": "Cavalerie",
+      "cost": 60
+    },
+    {
+      "name": "Chars à Loups",
+      "type": "Char",
+      "cost": 80
+    },
+    {
+      "name": "Chariot à Pompe",
+      "type": "Char",
+      "cost": 50
+    },{
+      "name": "Géant",
+      "type": "Monstre",
+      "cost": 150
+    },{
+      "name": "Arachnarok",
+      "type": "Monstre",
+      "cost": 120
+    },{
+      "name": "Catapulte à Plongeurs de la Mort",
+      "type": "Artillerie",
+      "cost": 100
+    },{
+      "name": "Balistes",
+      "type": "Artillerie",
+      "cost": 65
+    },{
+      "name": "Chef de Guerre",
+      "type": "Général",
+      "cost": 80
+    },{
+      "name": "Grand Chef",
+      "type": "Héros",
+      "cost": 45
+    },{
+      "name": "Chaman",
+      "type": "Sorcier",
+      "cost": 30
+    },
+    {
+      "name": "Wyvern",
+      "type": "Monture Monstrueuse",
+      "cost": 60
+    },
+    {
+      "name": "Char",
+      "type": "Monture",
+      "cost": 10
+    }
+  ]
+}

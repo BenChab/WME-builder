@@ -1,0 +1,86 @@
+{
+  "armyName": "Mercenaires",
+  "units": [
+    {
+      "name": "Piquiers",
+      "type": "Infanterie",
+      "cost": 60
+    },
+    {
+      "name": "Guerriers Nains",
+      "type": "Infanterie",
+      "cost": 110
+    },
+    {
+      "name": "Ogres",
+      "type": "Infanterie",
+      "cost": 105
+    },
+    {
+      "name": "Arbalétriers avec Pavois",
+      "type": "Infanterie",
+      "cost": 70
+    },
+      {
+      "name": "Éclaireurs Halflings",
+      "type": "Infanterie",
+      "cost": 45
+    },
+    {
+      "name": "Franche Compagnie",
+      "type": "Infanterie",
+      "cost": 45
+    },
+     {
+      "name": "Hommes Oiseaux",
+      "type": "Infanterie",
+      "cost": 50
+    },
+       {
+      "name": "Cavalerie Lourde",
+      "type": "Cavalerie",
+      "cost": 110
+    },
+       {
+      "name": "Cavalerie Légère",
+      "type": "Cavalerie",
+      "cost": 80
+    },
+       {
+      "name": "Canons Tractés",
+      "type": "Artillerie",
+      "cost": 85
+    },
+       {
+      "name": "Marmite Halfling",
+      "type": "Artillerie",
+      "cost": 60
+    },
+       {
+      "name": "Mammouth de Guerre",
+      "type": "Monstre",
+      "cost": 100
+    },
+    {
+      "name": "Général",
+      "type": "Général",
+      "cost": 125
+    },
+    {
+      "name": "Héros",
+      "type": "Héros",
+      "cost": 80
+    },
+      {
+      "name": "Trésorier Payeur",
+      "type": "Héros",
+      "cost": 90
+    },
+    {
+      "name": "Sorcier",
+      "type": "Sorcier",
+      "cost": 45
+    },
+   
+  ]
+}

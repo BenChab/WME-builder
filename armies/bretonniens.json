@@ -1,0 +1,73 @@
+{
+  "armyName": "Bretonnie",
+  "units": [
+    {
+      "name": "Archers",
+      "type": "Infanterie",
+      "cost": 55
+    },
+    {
+      "name": "Hommes d’Armes",
+      "type": "Infanterie",
+      "cost": 45
+    },
+    {
+      "name": "Paysans",
+      "type": "Infanterie",
+      "cost": 30
+    },
+    {
+      "name": "Ecuyers",
+      "type": "Cavalerie",
+      "cost": 90
+    },
+    {
+      "name": "Chevaliers",
+      "type": "Cavalerie",
+      "cost": 110
+    },
+    {
+      "name": "Chevaliers du Graal",
+      "type": "Cavalerie",
+      "cost": 120
+    },
+    {
+      "name": "Chevaliers Pégase",
+      "type": "Monstre",
+      "cost": 90
+    },
+    {
+      "name": "Trébuchet",
+      "type": "Artillerie",
+      "cost": 100
+    },{
+      "name": "Général",
+      "type": "Général",
+      "cost": 125
+    },{
+      "name": "Héros",
+      "type": "Héros",
+      "cost": 80
+    },{
+      "name": "Enchanteresse",
+      "type": "Sorcier",
+      "cost": 45
+    },{
+      "name": "Pégase",
+      "type": "Monture",
+      "cost": 15
+    },{
+      "name": "Licorne",
+      "type": "Monture",
+      "cost": 15
+    },{
+      "name": "Hippogryphe",
+      "type": "Monture Monstrueuse",
+      "cost": 60
+    },{
+      "name": "Reliquaire du Graal",
+      "type": "Spécial",
+      "cost": 40
+    },
+  ]
+}

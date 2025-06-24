@@ -1,0 +1,74 @@
+{
+  "armyName": "Elfes Sylvains",
+  "units": [
+    {
+      "name": "Forestiers",
+      "type": "Infanterie",
+      "cost": 75
+    },
+    {
+      "name": "Gardes Éternels",
+      "type": "Infanterie",
+      "cost": 45
+    },
+    {
+      "name": "Gardes Sylvains",
+      "type": "Infanterie",
+      "cost": 60
+    },
+    {
+      "name": "Dryades",
+      "type": "Infanterie",
+      "cost": 60
+    },
+    {
+      "name": "Lémures",
+      "type": "Infanterie",
+      "cost": 100
+    },
+    {
+      "name": "Danseurs de Guerre",
+      "type": "Infanterie",
+      "cost": 90
+    },
+    {
+      "name": "Chevaliers Sylvains",
+      "type": "Cavalerie",
+      "cost": 90
+    },
+    {
+      "name": "Cavaliers Sauvages",
+      "type": "Cavalerie",
+      "cost": 100
+    },{
+      "name": "Guerriers Faucon",
+      "type": "Monstre",
+      "cost": 70
+    },{
+      "name": "Homme Arbre",
+      "type": "Monstre",
+      "cost": 130
+    },{
+      "name": "Seigneur Sylvain",
+      "type": "Général",
+      "cost": 120
+    },{
+      "name": "Noble Sylvain",
+      "type": "Héros",
+      "cost": 80
+    },{
+      "name": "Tisseur de Sorts",
+      "type": "Sorcier",
+      "cost": 90
+    },{
+      "name": "Vénérable Homme Arbre",
+      "type": "Amélioration",
+      "cost": 60
+    },{
+      "name": "Dragon Sylvain",
+      "type": "Monture Monstrueuse",
+      "cost": 100
+    },
+  
+  ]
+}

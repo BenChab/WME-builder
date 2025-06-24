@@ -1,0 +1,69 @@
+{
+  "armyName": "Démons",
+  "units": [
+    {
+      "name": "Hordes Démoniaques",
+      "type": "Infanterie",
+      "cost": 75
+    },
+    {
+      "name": "Nuées Démoniaques",
+      "type": "Infanterie",
+      "cost": 40
+    },
+    {
+      "name": "Cavalerie Démoniaques",
+      "type": "Cavalerie",
+      "cost": 110
+    },
+    {
+      "name": "Chiens Démoniaques",
+      "type": "Cavalerie",
+      "cost": 90
+    },
+    {
+      "name": "Chars Démoniaques",
+      "type": "Char",
+      "cost": 95
+    },
+    {
+      "name": "Bêtes Démoniaques",
+      "type": "Monstre",
+      "cost": 200
+    },
+    {
+      "name": "Démons Volants",
+      "type": "Monstre",
+      "cost": 80
+    },
+    {
+      "name": "Démon Majeur",
+      "type": "Monstre",
+      "cost": 150
+    },{
+      "name": "Archi Démon",
+      "type": "Général",
+      "cost": 125
+    },{
+      "name": "Seigneur Démon",
+      "type": "Héros",
+      "cost": 90
+    },{
+      "name": "Seigneur Démon",
+      "type": "Sorcier",
+      "cost": 90
+    },{
+      "name": "Faveur des Dieux",
+      "type": "Spécial",
+      "cost": 50
+    },{
+      "name": "Ailes Ténébreuses",
+      "type": "Spécial",
+      "cost": 10
+    },{
+      "name": "Amélioration Sorcier pour général",
+      "type": "Spécial",
+      "cost": 25
+    },
+  ]
+}

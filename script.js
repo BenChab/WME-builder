@@ -17,15 +17,21 @@ function renderArmy() {
   armyList.innerHTML = '';
   army.forEach((unit, index) => {
     const li = document.createElement('li');
-    li.textContent = `${unit.name} - ${unit.cost} pts`;
+    li.textContent = `${unit.name} x${unit.count} - ${unit.cost * unit.count} pts`;
+
     const removeBtn = document.createElement('button');
     removeBtn.textContent = '🗑️';
     removeBtn.className = 'ml-2 text-red-500 hover:text-red-700';
     removeBtn.onclick = () => {
-      army.splice(index, 1);
+      if (unit.count > 1) {
+        unit.count--;
+      } else {
+        army.splice(index, 1);
+      }
       renderArmy();
       updateTotal();
     };
+
     li.appendChild(removeBtn);
     armyList.appendChild(li);
   });
@@ -71,7 +77,12 @@ addUnitBtn.addEventListener('click', () => {
   const selectedName = unitSelect.value;
   const unit = units.find(u => u.name === selectedName);
   if (unit) {
-    army.push({ ...unit });
+    const existing = army.find(u => u.name === unit.name);
+    if (existing) {
+      existing.count++;
+    } else {
+      army.push({ ...unit, count: 1 });
+    }
     renderArmy();
     updateTotal();
   }
