@@ -1,0 +1,80 @@
+{
+  "armyName": "Royaumes Ogres",
+  "units": [
+    {
+      "name": "Buffles Ogres",
+      "type": "Infanterie",
+      "cost": 105
+    },
+    {
+      "name": "Crache-Plomb",
+      "type": "Infanterie",
+      "cost": 110
+    },
+    {
+      "name": "Ventres-Durs",
+      "type": "Infanterie",
+      "cost": 150
+    },
+    {
+      "name": "Yétis",
+      "type": "Infanterie",
+      "cost": 100
+    },
+      {
+      "name": "Gnoblars",
+      "type": "Infanterie",
+      "cost": 30
+    },
+    {
+      "name": "Mangeurs d’Hommes",
+      "type": "Infanterie",
+      "cost": 120
+    },
+       {
+      "name": "Chevaucheurs de Rhinox",
+      "type": "Cavalerie",
+      "cost": 220
+    },
+       {
+      "name": "Crocs de Sabre",
+      "type": "Cavalerie",
+      "cost": 50
+    },
+       {
+      "name": "Géant",
+      "type": "Monstre",
+      "cost": 150
+    },
+       {
+      "name": "Lance-Ferraille Gnoblar",
+      "type": "Artillerie",
+      "cost": 100
+    },
+    {
+      "name": "Tyran",
+      "type": "Général",
+      "cost": 125
+    },
+    {
+      "name": "Cogneur",
+      "type": "Héros",
+      "cost": 80
+    },
+    {
+      "name": "Boucher",
+      "type": "Sorcier",
+      "cost": 80
+    },
+   {
+      "name": "Rhinox",
+      "type": "Monture",
+      "cost": 10
+    },
+      {
+      "name": "Mastauroc",
+      "type": "Monture Monstrueuse",
+      "cost": 60
+    },
+  ]
+}

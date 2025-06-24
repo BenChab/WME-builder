@@ -1,0 +1,68 @@
+{
+  "armyName": "Hauts Elfes",
+  "units": [
+    {
+      "name": "Lanciers",
+      "type": "Infanterie",
+      "cost": 60
+    },
+    {
+      "name": "Archers",
+      "type": "Infanterie",
+      "cost": 75
+    },
+    {
+      "name": "Heaumes d’Argent",
+      "type": "Cavalerie",
+      "cost": 110
+    },
+    {
+      "name": "Patrouilleurs Ellyriens",
+      "type": "Cavalerie",
+      "cost": 90
+    },
+    {
+      "name": "Chars",
+      "type": "Char",
+      "cost": 95
+    },
+    {
+      "name": "Aigles Géants",
+      "type": "Monstre",
+      "cost": 70
+    },
+    {
+      "name": "Baliste à Répétition",
+      "type": "Artillerie",
+      "cost": 55
+    },{
+      "name": "Général",
+      "type": "Général",
+      "cost": 125
+    },{
+      "name": "Seigneur Haut Elfe",
+      "type": "Amélioration",
+      "cost": 30
+    },{
+      "name": "Héros",
+      "type": "Héros",
+      "cost": 80
+    },{
+      "name": "Sorcier",
+      "type": "Sorcier",
+      "cost": 90
+    },{
+      "name": "Aigle Géant",
+      "type": "Monture",
+      "cost": 15
+    },{
+      "name": "Dragon",
+      "type": "Monture Monstrueuse",
+      "cost": 100
+    },{
+      "name": "Char",
+      "type": "Monture Char",
+      "cost": 10
+    },
+  ]
+}

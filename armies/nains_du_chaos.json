@@ -1,0 +1,90 @@
+{
+  "armyName": "Nains du Chaos",
+  "units": [
+    {
+      "name": "Nains du Chaos",
+      "type": "Infanterie",
+      "cost": 110
+    },
+    {
+      "name": "Tromblons",
+      "type": "Infanterie",
+      "cost": 95
+    },
+    {
+      "name": "Hobgoblins",
+      "type": "Infanterie",
+      "cost": 50
+    },
+    {
+      "name": "Orques Noirs",
+      "type": "Infanterie",
+      "cost": 110
+    },
+      {
+      "name": "Esclaves",
+      "type": "Infanterie",
+      "cost": 25
+    },
+       {
+      "name": "Hobgoblins sur Loup",
+      "type": "Cavalerie",
+      "cost": 80
+    },
+       {
+      "name": "Centaures Taureaux",
+      "type": "Cavalerie",
+      "cost": 145
+    },
+       {
+      "name": "Canon Trembleterre",
+      "type": "Artillerie",
+      "cost": 100
+    },
+       {
+      "name": "Lance-Roquettes",
+      "type": "Artillerie",
+      "cost": 60
+    },
+       {
+      "name": "Balistes",
+      "type": "Artillerie",
+      "cost": 65
+    },
+    {
+      "name": "Général",
+      "type": "Général",
+      "cost": 125
+    },
+      {
+      "name": "Option Sorcier",
+      "type": "Spécial",
+      "cost": 25
+    },
+    {
+      "name": "Héros",
+      "type": "Héros",
+      "cost": 80
+    },
+      {
+      "name": "Khan Hobgoblin",
+      "type": "Héros",
+      "cost": 45
+    },
+    {
+      "name": "Sorcier",
+      "type": "Sorcier",
+      "cost": 90
+    },
+   {
+      "name": "Grand Taurus",
+      "type": "Monture Monstrueuse",
+      "cost": 70
+    },
+      {
+      "name": "Lammasu",
+      "type": "Monture",
+      "cost": 20
+    },
+  ]
+}

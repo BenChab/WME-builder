@@ -1,43 +1,51 @@
 {
-  "armyName": "Bretonnie",
+  "armyName": "Empire",
   "units": [
     {
-      "name": "Archers",
+      "name": "Hallebardiers",
       "type": "Infanterie",
       "cost": 55
     },
     {
-      "name": "Hommes d’Armes",
+      "name": "Arquebusiers",
       "type": "Infanterie",
       "cost": 45
     },
     {
-      "name": "Paysans",
+      "name": "Arbalétriers",
       "type": "Infanterie",
       "cost": 30
     },
     {
-      "name": "Ecuyers",
+      "name": "Flagellants",
       "type": "Cavalerie",
       "cost": 90
     },
     {
-      "name": "Chevaliers",
+      "name": "Tirailleurs",
       "type": "Cavalerie",
       "cost": 110
     },
     {
-      "name": "Chevaliers du Graal",
+      "name": "Chevaliers",
       "type": "Cavalerie",
       "cost": 120
     },
     {
-      "name": "Chevaliers Pégase",
+      "name": "Pistoliers",
       "type": "Monstre",
       "cost": 90
     },
     {
-      "name": "Trébuchet",
+      "name": "Canon Feu d’Enfer",
+      "type": "Artillerie",
+      "cost": 100
+    },{
+      "name": "Canon",
+      "type": "Artillerie",
+      "cost": 100
+    },{
+      "name": "Tank à Vapeur",
       "type": "Artillerie",
       "cost": 100
     },{
@@ -49,35 +57,17 @@
       "type": "Héros",
       "cost": 80
     },{
-      "name": "Enchanteresse",
+      "name": "Sorcier",
       "type": "Sorcier",
       "cost": 45
     },{
-      "name": "Pégase",
+      "name": "Autel de Guerre",
       "type": "Monture",
       "cost": 15
     },{
-      "name": "Licorne",
-      "type": "Monture",
-      "cost": 15
-    },{
-      "name": "Hippogryphe",
+      "name": "Griffon",
       "type": "Monture Monstrueuse",
       "cost": 60
-    },{
-      "name": "Reliquaire du Graal",
-      "type": "Spécial",
-      "cost": 40
     },
-    {
-      "name": "Terradons",
-      "type": "Volant",
-      "cost": 95
-    },
-    {
-      "name": "Temple Guard",
-      "type": "Élite",
-      "cost": 130
-    }
   ]
 }

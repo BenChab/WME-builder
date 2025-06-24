@@ -1,0 +1,73 @@
+{
+  "armyName": "Hommes-bêtes",
+  "units": [
+    {
+      "name": "Ungors",
+      "type": "Infanterie",
+      "cost": 45
+    },
+    {
+      "name": "Gors",
+      "type": "Infanterie",
+      "cost": 45
+    },
+    {
+      "name": "Bestigors",
+      "type": "Infanterie",
+      "cost": 75
+    },
+    {
+      "name": "Minotaures",
+      "type": "Infanterie",
+      "cost": 135
+    },
+    {
+      "name": "Centigors",
+      "type": "Cavalerie",
+      "cost": 95
+    },
+    {
+      "name": "Chars",
+      "type": "Char",
+      "cost": 200
+    },
+    {
+      "name": "Dragons Ogres",
+      "type": "Monstre",
+      "cost": 200
+    },{
+      "name": "Jabberslythe",
+      "type": "Monstre",
+      "cost": 175
+    },{
+      "name": "Shaggoth",
+      "type": "Monstre",
+      "cost": 175
+    },{
+      "name": "Ghorgon",
+      "type": "Monstre",
+      "cost": 175
+    },{
+      "name": "Seigneur",
+      "type": "Général",
+      "cost": 95
+    },{
+      "name": "Héros",
+      "type": "Héros",
+      "cost": 80
+    },{
+      "name": "Doombull",
+      "type": "Héros",
+      "cost": 55
+    },{
+      "name": "Chaman",
+      "type": "Sorcier",
+      "cost": 45
+    },
+      {
+      "name": "Char",
+      "type": "Monture Char",
+      "cost": 10
+    },
+  ]
+}

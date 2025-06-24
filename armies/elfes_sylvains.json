@@ -2,82 +2,73 @@
   "armyName": "Elfes Sylvains",
   "units": [
     {
-      "name": "Archers",
+      "name": "Forestiers",
       "type": "Infanterie",
-      "cost": 55
+      "cost": 75
     },
     {
-      "name": "Hommes d’Armes",
+      "name": "Gardes Éternels",
       "type": "Infanterie",
       "cost": 45
     },
     {
-      "name": "Paysans",
+      "name": "Gardes Sylvains",
       "type": "Infanterie",
-      "cost": 30
+      "cost": 60
     },
     {
-      "name": "Ecuyers",
+      "name": "Dryades",
+      "type": "Infanterie",
+      "cost": 60
+    },
+    {
+      "name": "Lémures",
+      "type": "Infanterie",
+      "cost": 100
+    },
+    {
+      "name": "Danseurs de Guerre",
+      "type": "Infanterie",
+      "cost": 90
+    },
+    {
+      "name": "Chevaliers Sylvains",
       "type": "Cavalerie",
       "cost": 90
     },
     {
-      "name": "Chevaliers",
+      "name": "Cavaliers Sauvages",
       "type": "Cavalerie",
-      "cost": 110
-    },
-    {
-      "name": "Chevaliers du Graal",
-      "type": "Cavalerie",
-      "cost": 120
-    },
-    {
-      "name": "Chevaliers Pégase",
-      "type": "Monstre",
-      "cost": 90
-    },
-    {
-      "name": "Trébuchet",
-      "type": "Artillerie",
       "cost": 100
     },{
-      "name": "Général",
-      "type": "Général",
-      "cost": 125
+      "name": "Guerriers Faucon",
+      "type": "Monstre",
+      "cost": 70
     },{
-      "name": "Héros",
+      "name": "Homme Arbre",
+      "type": "Monstre",
+      "cost": 130
+    },{
+      "name": "Seigneur Sylvain",
+      "type": "Général",
+      "cost": 120
+    },{
+      "name": "Noble Sylvain",
       "type": "Héros",
       "cost": 80
     },{
-      "name": "Enchanteresse",
+      "name": "Tisseur de Sorts",
       "type": "Sorcier",
-      "cost": 45
+      "cost": 90
     },{
-      "name": "Pégase",
-      "type": "Monture",
-      "cost": 15
-    },{
-      "name": "Licorne",
-      "type": "Monture",
-      "cost": 15
-    },{
-      "name": "Hippogryphe",
-      "type": "Monture Monstrueuse",
+      "name": "Vénérable Homme Arbre",
+      "type": "Amélioration",
       "cost": 60
     },{
-      "name": "Reliquaire du Graal",
-      "type": "Spécial",
-      "cost": 40
+      "name": "Dragon Sylvain",
+      "type": "Monture Monstrueuse",
+      "cost": 100
     },
-    {
-      "name": "Terradons",
-      "type": "Volant",
-      "cost": 95
-    },
-    {
-      "name": "Temple Guard",
-      "type": "Élite",
-      "cost": 130
-    }
+  
   ]
 }

@@ -1,0 +1,75 @@
+{
+  "armyName": "Répurgateurs",
+  "units": [
+    {
+      "name": "Dévots",
+      "type": "Infanterie",
+      "cost": 40
+    },
+    {
+      "name": "Flagellants",
+      "type": "Infanterie",
+      "cost": 70
+    },
+    {
+      "name": "Exorcistes",
+      "type": "Infanterie",
+      "cost": 80
+    },
+    {
+      "name": "Miliciens",
+      "type": "Infanterie",
+      "cost": 45
+    },
+      {
+      "name": "Chasseurs",
+      "type": "Infanterie",
+      "cost": 55
+    },
+    {
+      "name": "Chiens de Guerre",
+      "type": "Infanterie",
+      "cost": 20
+    },
+       {
+      "name": "Chevaliers",
+      "type": "Cavalerie",
+      "cost": 110
+    },
+       {
+      "name": "Pistoliers",
+      "type": "Cavalerie",
+      "cost": 95
+    },
+       {
+      "name": "Chariot Purificateur",
+      "type": "Char",
+      "cost": 100
+    },
+    {
+      "name": "Inquisiteur",
+      "type": "Général",
+      "cost": 125
+    },
+    {
+      "name": "Répurgateur",
+      "type": "Héros",
+      "cost": 95
+    },
+    {
+      "name": "Prêtre Guerrier",
+      "type": "Sorcier",
+      "cost": 55
+    },
+    {
+      "name": "Prison Tractée",
+      "type": "Monture Char",
+      "cost": 80
+    },
+      {
+      "name": "Autel de Sigmar",
+      "type": "Spécial",
+      "cost": 45
+    },
+  ]
+}

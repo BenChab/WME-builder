@@ -1,0 +1,60 @@
+{
+  "armyName": "Kislev",
+  "units": [
+    {
+      "name": "Guerriers",
+      "type": "Infanterie",
+      "cost": 45
+    },
+    {
+      "name": "Archers",
+      "type": "Infanterie",
+      "cost": 55
+    },
+    {
+      "name": "Ours",
+      "type": "Infanterie",
+      "cost": 85
+    },
+    {
+      "name": "Chevaliers",
+      "type": "Cavalerie",
+      "cost": 110
+    },
+      {
+      "name": "Archers à Cheval",
+      "type": "Cavalerie",
+      "cost": 80
+    },
+    {
+      "name": "Chariot de Guerre",
+      "type": "Monstre",
+      "cost": 50
+    },
+    {
+      "name": "Général",
+      "type": "Général",
+      "cost": 125
+    },
+    {
+      "name": "Héros",
+      "type": "Héros",
+      "cost": 80
+    },
+    {
+      "name": "Sorcier",
+      "type": "Sorcier",
+      "cost": 45
+    },
+    {
+      "name": "Ours",
+      "type": "Monture",
+      "cost": 10
+    },
+    {
+      "name": "Tzarine",
+      "type": "Spécial",
+      "cost": 25
+    },
+  ]
+}

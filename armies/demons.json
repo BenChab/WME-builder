@@ -65,15 +65,5 @@
       "type": "Spécial",
       "cost": 25
     },
-    {
-      "name": "Terradons",
-      "type": "Volant",
-      "cost": 95
-    },
-    {
-      "name": "Temple Guard",
-      "type": "Élite",
-      "cost": 130
-    }
   ]
 }

@@ -1,0 +1,70 @@
+{
+  "armyName": "Skavens",
+  "units": [
+    {
+      "name": "Guerriers des Clans",
+      "type": "Infanterie",
+      "cost": 40
+    },
+    {
+      "name": "Vermines de Choc",
+      "type": "Infanterie",
+      "cost": 55
+    },
+    {
+      "name": "Jezzails",
+      "type": "Infanterie",
+      "cost": 70
+    },
+    {
+      "name": "Moines de la Peste",
+      "type": "Infanterie",
+      "cost": 70
+    },
+      {
+      "name": "Nuées de Rats",
+      "type": "Infanterie",
+      "cost": 25
+    },
+    {
+      "name": "Coureurs d'Égouts",
+      "type": "Infanterie",
+      "cost": 70
+    },
+     {
+      "name": "Rats-Ogres",
+      "type": "Infanterie",
+      "cost": 110
+    },
+       {
+      "name": "Canon à Malefoudre",
+      "type": "Artillerie",
+      "cost": 50
+    },
+       {
+      "name": "Roue Infernale",
+      "type": "Machine",
+      "cost": 125
+    },
+    {
+      "name": "Prophète Gris",
+      "type": "Général",
+      "cost": 130
+    },
+    {
+      "name": "Héros",
+      "type": "Héros",
+      "cost": 70
+    },
+    {
+      "name": "Technomage",
+      "type": "Sorcier",
+      "cost": 30
+    },
+   {
+      "name": "Cloche Hurlante",
+      "type": "Monture Char",
+      "cost": 120
+    },
+  ]
+}

@@ -1,83 +1,83 @@
 {
-  "armyName": "Bretonnie",
+  "armyName": "Gobelins",
   "units": [
     {
-      "name": "Archers",
-      "type": "Infanterie",
-      "cost": 55
-    },
-    {
-      "name": "Hommes d’Armes",
-      "type": "Infanterie",
-      "cost": 45
-    },
-    {
-      "name": "Paysans",
+      "name": "Gobelins",
       "type": "Infanterie",
       "cost": 30
     },
     {
-      "name": "Ecuyers",
-      "type": "Cavalerie",
-      "cost": 90
+      "name": "Fanatiques Gobelins",
+      "type": "Infanterie",
+      "cost": 15
     },
     {
-      "name": "Chevaliers",
-      "type": "Cavalerie",
+      "name": "Squigs",
+      "type": "Infanterie",
+      "cost": 70
+    },
+    {
+      "name": "Trolls",
+      "type": "Infanterie",
       "cost": 110
     },
     {
-      "name": "Chevaliers du Graal",
+      "name": "Gobelins sur Loup",
       "type": "Cavalerie",
-      "cost": 120
+      "cost": 60
     },
     {
-      "name": "Chevaliers Pégase",
+      "name": "Gobelins sur Araignée",
+      "type": "Cavalerie",
+      "cost": 60
+    },
+    {
+      "name": "Chars à Loups",
+      "type": "Char",
+      "cost": 80
+    },
+    {
+      "name": "Chariot à Pompe",
+      "type": "Char",
+      "cost": 50
+    },{
+      "name": "Géant",
       "type": "Monstre",
-      "cost": 90
-    },
-    {
-      "name": "Trébuchet",
+      "cost": 150
+    },{
+      "name": "Arachnarok",
+      "type": "Monstre",
+      "cost": 120
+    },{
+      "name": "Catapulte à Plongeurs de la Mort",
       "type": "Artillerie",
       "cost": 100
     },{
-      "name": "Général",
-      "type": "Général",
-      "cost": 125
+      "name": "Balistes",
+      "type": "Artillerie",
+      "cost": 65
     },{
-      "name": "Héros",
-      "type": "Héros",
+      "name": "Chef de Guerre",
+      "type": "Général",
       "cost": 80
     },{
-      "name": "Enchanteresse",
-      "type": "Sorcier",
+      "name": "Grand Chef",
+      "type": "Héros",
       "cost": 45
     },{
-      "name": "Pégase",
-      "type": "Monture",
-      "cost": 15
-    },{
-      "name": "Licorne",
-      "type": "Monture",
-      "cost": 15
-    },{
-      "name": "Hippogryphe",
+      "name": "Chaman",
+      "type": "Sorcier",
+      "cost": 30
+    },
+    {
+      "name": "Wyvern",
       "type": "Monture Monstrueuse",
       "cost": 60
-    },{
-      "name": "Reliquaire du Graal",
-      "type": "Spécial",
-      "cost": 40
     },
     {
-      "name": "Terradons",
-      "type": "Volant",
-      "cost": 95
-    },
-    {
-      "name": "Temple Guard",
-      "type": "Élite",
-      "cost": 130
+      "name": "Char",
+      "type": "Monture",
+      "cost": 10
     }
   ]
 }

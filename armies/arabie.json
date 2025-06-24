@@ -65,15 +65,5 @@
       "type": "Monture",
       "cost": 80
     },
-    {
-      "name": "Terradons",
-      "type": "Volant",
-      "cost": 95
-    },
-    {
-      "name": "Temple Guard",
-      "type": "Élite",
-      "cost": 130
-    }
   ]
 }
