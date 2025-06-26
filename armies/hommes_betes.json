@@ -4,70 +4,117 @@
     {
       "name": "Ungors",
       "type": "Infanterie",
-      "cost": 45
+      "cost": 45,
+      "restrictions": {
+        "minPer1000": 2
+      }
     },
     {
       "name": "Gors",
       "type": "Infanterie",
-      "cost": 45
+      "cost": 45,
+      "restrictions": {
+        "minPer1000": 2
+      }
     },
     {
       "name": "Bestigors",
       "type": "Infanterie",
-      "cost": 75
+      "cost": 75,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
     {
       "name": "Minotaures",
       "type": "Infanterie",
-      "cost": 135
+      "cost": 135,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Centigors",
       "type": "Cavalerie",
-      "cost": 95
+      "cost": 95,
+      "restrictions": {
+        "maxPer1000": 4
+      }
     },
     {
       "name": "Chars",
       "type": "Char",
-      "cost": 200
+      "cost": 200,
+      "restrictions": {
+        "maxPer1000": 3
+      }
     },
     {
       "name": "Dragons Ogres",
       "type": "Monstre",
-      "cost": 200
-    },{
+      "cost": 200,
+      "restrictions": {
+        "maxPer1000": 1
+      }
+    },
+    {
       "name": "Jabberslythe",
       "type": "Monstre",
       "cost": 175
-    },{
+    },
+    {
       "name": "Shaggoth",
       "type": "Monstre",
       "cost": 175
-    },{
+    },
+    {
       "name": "Ghorgon",
       "type": "Monstre",
       "cost": 175
-    },{
+    },
+    {
       "name": "Seigneur",
       "type": "Général",
-      "cost": 95
-    },{
+      "cost": 95,
+      "restrictions": {
+        "min": 1,
+        "max": 1,
+        "perArmy": true
+      }
+    },
+    {
       "name": "Héros",
       "type": "Héros",
-      "cost": 80
-    },{
+      "cost": 80,
+      "restrictions": {
+        "maxPer1000": 2
+      }
+    },
+    {
       "name": "Doombull",
       "type": "Héros",
-      "cost": 55
-    },{
+      "cost": 55,
+      "restrictions": {
+        "min": 0,
+        "max": 1,
+        "perArmy": true
+      }
+    },
+    {
       "name": "Chaman",
       "type": "Sorcier",
-      "cost": 45
+      "cost": 45,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
-      {
+    {
       "name": "Char",
       "type": "Monture Char",
-      "cost": 10
+      "cost": 10,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     }
   ]
 }

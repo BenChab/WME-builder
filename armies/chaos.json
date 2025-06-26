@@ -4,71 +4,125 @@
         {
             "name": "Guerriers du Chaos",
             "type": "Infanterie",
-            "cost": 150
+            "cost": 150,
+            "restrictions": {
+                "minPer1000": 1
+            }
         },
         {
             "name": "Maraudeurs du Chaos",
             "type": "Infanterie",
-            "cost": 60
+            "cost": 60,
+            "restrictions": {
+                "minPer1000": 1
+            }
         },
         {
             "name": "Ogres",
             "type": "Infanterie",
-            "cost": 105
+            "cost": 105,
+            "restrictions": {
+                "maxPer1000": 1
+            }
         },
         {
             "name": "Trolls",
             "type": "Infanterie",
-            "cost": 90
+            "cost": 90,
+            "restrictions": {
+                "maxPer1000": 1
+            }
         },
         {
             "name": "Cavaliers Maraudeurs",
             "type": "Cavalerie",
-            "cost": 90
+            "cost": 90,
+            "restrictions": {
+                "maxPer1000": 4
+            }
         },
         {
             "name": "Chevaliers du Chaos",
             "type": "Cavalerie",
-            "cost": 200
+            "cost": 200,
+            "restrictions": {
+                "maxPer1000": 2
+            }
         },
         {
             "name": "Chiens du Chaos",
             "type": "Cavalerie",
-            "cost": 30
+            "cost": 30,
+            "restrictions": {
+                "maxPer1000": 2
+            }
         },
         {
             "name": "Chars du Chaos",
             "type": "Char",
-            "cost": 95
+            "cost": 95,
+            "restrictions": {
+                "maxPer1000": 3
+            }
         },
         {
             "name": "Harpies",
             "type": "Monstre",
-            "cost": 65
-        },{
+            "cost": 65,
+            "restrictions": {
+                "maxPer1000": 1
+            }
+        },
+        {
             "name": "Dragons-Ogres",
             "type": "Monstre",
-            "cost": 200
-        },{
+            "cost": 200,
+            "restrictions": {
+                "maxPer1000": 1
+            }
+        },
+        {
             "name": "Enfant du Chaos",
             "type": "Monstre",
-            "cost": 80
-        },{
+            "cost": 80,
+            "restrictions": {
+                "maxPer1000": 1
+            }
+        },
+        {
             "name": "Général",
             "type": "Général",
-            "cost": 125
-        },{
+            "cost": 125,
+            "restrictions": {
+                "min": 1,
+                "max": 1,
+                "perArmy": true
+            }
+        },
+        {
             "name": "Héros",
             "type": "Héros",
-            "cost": 80
-        },{
+            "cost": 80,
+            "restrictions": {
+                "maxPer1000": 1
+            }
+        },
+        {
             "name": "Sorcier",
             "type": "Sorcier",
-            "cost": 90
-        },{
+            "cost": 90,
+            "restrictions": {
+                "maxPer1000": 1
+            }
+        },
+        {
             "name": "Dragon du Chaos",
             "type": "Monture Monstrueuse",
-            "cost": 100
+            "cost": 100,
+            "restrictions": {
+                "maxPer1000": 1
+            }
+
         }
     ]
 }

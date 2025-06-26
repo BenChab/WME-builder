@@ -4,77 +4,125 @@
     {
       "name": "Buffles Ogres",
       "type": "Infanterie",
-      "cost": 105
+      "cost": 105,
+      "restrictions": {
+        "minPer1000": 2
+      }
     },
     {
       "name": "Crache-Plomb",
       "type": "Infanterie",
-      "cost": 110
+      "cost": 110,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
     {
       "name": "Ventres-Durs",
       "type": "Infanterie",
-      "cost": 150
+      "cost": 150,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
     {
       "name": "Yétis",
       "type": "Infanterie",
-      "cost": 100
+      "cost": 100,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
-      {
+    {
       "name": "Gnoblars",
       "type": "Infanterie",
-      "cost": 30
+      "cost": 30,
+      "restrictions": {
+        "minPer1000": 2,
+        "maxPer1000": 4
+      }
     },
     {
       "name": "Mangeurs d’Hommes",
       "type": "Infanterie",
-      "cost": 120
+      "cost": 120,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
-       {
+    {
       "name": "Chevaucheurs de Rhinox",
       "type": "Cavalerie",
-      "cost": 220
+      "cost": 220,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
-       {
+    {
       "name": "Crocs de Sabre",
       "type": "Cavalerie",
-      "cost": 50
+      "cost": 50,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
-       {
+    {
       "name": "Géant",
       "type": "Monstre",
-      "cost": 150
+      "cost": 150,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
-       {
+    {
       "name": "Lance-Ferraille Gnoblar",
       "type": "Artillerie",
-      "cost": 100
+      "cost": 100,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Tyran",
       "type": "Général",
-      "cost": 125
+      "cost": 125,
+      "restrictions": {
+        "min": 1,
+        "max": 1,
+        "perArmy": true
+      }
     },
     {
       "name": "Cogneur",
       "type": "Héros",
-      "cost": 80
+      "cost": 80,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Boucher",
       "type": "Sorcier",
-      "cost": 80
+      "cost": 80,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
-   {
+    {
       "name": "Rhinox",
       "type": "Monture",
-      "cost": 10
+      "cost": 10,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
-      {
+    {
       "name": "Mastauroc",
       "type": "Monture Monstrueuse",
-      "cost": 60
+      "cost": 60,
+      "restrictions": {
+        "maxPer1000": 1
+      }v
     }
   ]
 }

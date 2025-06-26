@@ -4,80 +4,124 @@
     {
       "name": "Skinks",
       "type": "Infanterie",
-      "cost": 35
+      "cost": 35,
+      "restrictions": {
+        "minPer1000": 2
+      }
     },
     {
       "name": "Saurus",
       "type": "Infanterie",
-      "cost": 75
+      "cost": 75,
+      "restrictions": {
+        "minPer1000": 2
+      }
     },
     {
       "name": "Gardes des Temples",
       "type": "Infanterie",
-      "cost": 110
+      "cost": 110,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Salamandres",
       "type": "Infanterie",
-      "cost": 25
+      "cost": 25,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
     {
       "name": "Kroxigors",
       "type": "Infanterie",
-      "cost": 135
+      "cost": 135,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Cavaliers sur Sang-Froid",
       "type": "Cavalerie",
-      "cost": 140
+      "cost": 140,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
     {
       "name": "Téradons",
       "type": "Monstre",
-      "cost": 85
-    },{
+      "cost": 85,
+      "restrictions": {
+        "maxPer1000": 1
+      }
+    },
+    {
       "name": "Stégadon",
       "type": "Monstre",
-      "cost": 250
+      "cost": 250,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Slann",
       "type": "Général",
-      "cost": 75
-    },{
+      "cost": 75,
+      "restrictions": {
+        "min": 1,
+        "max": 1,
+        "perArmy": true
+      }
+    },
+    {
       "name": "Héros Saurus",
       "type": "Héros",
-      "cost": 45
-    },{
+      "cost": 45,
+      "restrictions": {
+        "maxPer1000": 1
+      }
+    },
+    {
       "name": "Héros Skink",
       "type": "Héros",
-      "cost": 70
-    },{
+      "cost": 70,
+      "restrictions": {
+        "maxPer1000": 3
+      }
+    },
+    {
       "name": "Chaman Skink",
       "type": "Sorcier",
-      "cost": 30
-    },{
+      "cost": 30,
+      "restrictions": {
+        "maxPer1000": 1
+      }
+    },
+    {
       "name": "Palanquin",
       "type": "Monture",
-      "cost": 20
-    },{
+      "cost": 20,
+      "restrictions": {
+        "maxPer1000": 1
+      }
+    },
+    {
       "name": "Stégadon",
       "type": "Monture Monstrueuse",
-      "cost": 90
-    },{
+      "cost": 90,
+      "restrictions": {
+        "maxPer1000": 1
+      }
+    },
+    {
       "name": "Carnosaure",
       "type": "Monture Monstrueuse",
-      "cost": 60
-    },
-    {
-      "name": "Terradons",
-      "type": "Volant",
-      "cost": 95
-    },
-    {
-      "name": "Temple Guard",
-      "type": "Élite",
-      "cost": 130
+      "cost": 60,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     }
   ]
 }

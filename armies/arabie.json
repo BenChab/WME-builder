@@ -4,17 +4,26 @@
     {
       "name": "Lanciers",
       "type": "Infanterie",
-      "cost": 45
+      "cost": 45,
+      "restrictions": {
+        "minPer1000": 2
+      }
     },
     {
       "name": "Archers",
       "type": "Infanterie",
-      "cost": 55
+      "cost": 55,
+      "restrictions": {
+        "minPer1000": 2
+      }
     },
     {
       "name": "Gardes",
       "type": "Infanterie",
-      "cost": 70
+      "cost": 70,
+      "restrictions": {
+        "maxPer1000": 4
+      }
     },
     {
       "name": "Chevaliers",
@@ -24,46 +33,78 @@
     {
       "name": "Cavaliers du désert",
       "type": "Cavalerie",
-      "cost": 80
+      "cost": 80,
+      "restrictions": {
+        "minPer1000": 1
+      }
     },
     {
       "name": "Méharistes",
       "type": "Cavalerie",
-      "cost": 100
+      "cost": 100,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
     {
       "name": "Tapis Volants",
       "type": "Cavalerie",
-      "cost": 85
+      "cost": 85,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },{
       "name": "Éléphants",
       "type": "Monstre",
-      "cost": 200
+      "cost": 200,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Général",
       "type": "Général",
-      "cost": 75
+      "cost": 75,
+      "restrictions": {
+        "min": 1,
+        "max": 1,
+        "perArmy": true
+      }
     },{
       "name": "Héros",
       "type": "Héros",
-      "cost": 80
+      "cost": 80,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },{
       "name": "Sorcier",
       "type": "Sorcier",
-      "cost": 45
+      "cost": 45,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },{
       "name": "Tapis Volant",
       "type": "Monture",
-      "cost": 10
+      "cost": 10,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },{
       "name": "Éléphant",
       "type": "Monture Monstrueuse",
-      "cost": 50
+      "cost": 50,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },{
       "name": "Djinn",
       "type": "Monture",
-      "cost": 80
+      "cost": 80,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     }
   ]
 }

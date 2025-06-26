@@ -9,65 +9,121 @@
     {
       "name": "Hommes d’Armes",
       "type": "Infanterie",
-      "cost": 45
+      "cost": 45,
+      "restrictions": {
+        "minPer1000": 1
+      }
     },
     {
       "name": "Paysans",
       "type": "Infanterie",
-      "cost": 30
+      "cost": 30,
+      "restrictions": {
+        "maxPer1000": 4
+      }
     },
     {
       "name": "Ecuyers",
       "type": "Cavalerie",
-      "cost": 90
+      "cost": 90,
+      "restrictions": {
+        "minPer1000": 1,
+        "maxPer1000": 4
+      }
     },
     {
       "name": "Chevaliers",
       "type": "Cavalerie",
-      "cost": 110
+      "cost": 110,
+      "restrictions": {
+        "minPer1000": 1
+      }
     },
     {
       "name": "Chevaliers du Graal",
       "type": "Cavalerie",
-      "cost": 120
+      "cost": 120,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Chevaliers Pégase",
       "type": "Monstre",
-      "cost": 90
+      "cost": 90,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Trébuchet",
       "type": "Artillerie",
-      "cost": 100
-    },{
+      "cost": 100,
+      "restrictions": {
+        "min": 0,
+        "max": 1,
+        "perArmy": true
+      }
+    },
+    {
       "name": "Général",
       "type": "Général",
-      "cost": 125
-    },{
+      "cost": 125,
+      "restrictions": {
+        "min": 1,
+        "max": 1,
+        "perArmy": true
+      }
+    },
+    {
       "name": "Héros",
       "type": "Héros",
-      "cost": 80
-    },{
+      "cost": 80,
+      "restrictions": {
+        "maxPer1000": 2
+      }
+    },
+    {
       "name": "Enchanteresse",
       "type": "Sorcier",
-      "cost": 45
-    },{
+      "cost": 45,
+      "restrictions": {
+        "maxPer1000": 1
+      }
+    },
+    {
       "name": "Pégase",
       "type": "Monture",
-      "cost": 15
-    },{
+      "cost": 15,
+      "restrictions": {
+        "maxPer1000": 1
+      }
+    },
+    {
       "name": "Licorne",
       "type": "Monture",
-      "cost": 15
-    },{
+      "cost": 15,
+      "restrictions": {
+        "maxPer1000": 1
+      }
+    },
+    {
       "name": "Hippogryphe",
       "type": "Monture Monstrueuse",
-      "cost": 60
-    },{
+      "cost": 60,
+      "restrictions": {
+        "maxPer1000": 1
+      }
+    },
+    {
       "name": "Reliquaire du Graal",
       "type": "Spécial",
-      "cost": 40
+      "cost": 40,
+      "restrictions": {
+        "min": 0,
+        "max": 1,
+        "perArmy": true
+      }
     }
   ]
 }

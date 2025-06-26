@@ -4,66 +4,105 @@
     {
       "name": "Squelettes",
       "type": "Infanterie",
-      "cost": 30
+      "cost": 30,
+      "restrictions": {
+        "minPer1000": 2
+      }
     },
     {
       "name": "Archers Squelettes",
       "type": "Infanterie",
-      "cost": 40
+      "cost": 40,
+      "restrictions": {
+        "minPer1000": 2
+      }
     },
-       {
+    {
       "name": "Cavaliers Squelettes",
       "type": "Cavalerie",
       "cost": 60
     },
-       {
+    {
       "name": "Chars Squelettes",
       "type": "Char",
-      "cost": 110
+      "cost": 110,
+      "restrictions": {
+        "maxPer1000": 3
+      }
     },
-       {
+    {
       "name": "Charognards",
       "type": "Monstre",
-      "cost": 65
+      "cost": 65,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
-       {
+    {
       "name": "Géant Squelette",
       "type": "Monstre",
-      "cost": 95
+      "cost": 95,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
-      {
+    {
       "name": "Sphinx",
       "type": "Monstre",
-      "cost": 100
+      "cost": 100,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
-      {
+    {
       "name": "Catapulte à Crânes",
       "type": "Artillerie",
-      "cost": 85
+      "cost": 85,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
-       {
+    {
       "name": "Balistes à Ossements",
       "type": "Artillerie",
-      "cost": 65
+      "cost": 65,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Roi des Tombes",
       "type": "Général",
-      "cost": 130
+      "cost": 130,
+      "restrictions": {
+        "min": 1,
+        "max": 1,
+        "perArmy": true
+      }
     },
     {
       "name": "Prêtre-Liche",
       "type": "Sorcier",
-      "cost": 90
+      "cost": 90,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
-   {
+    {
       "name": "Dragon Zombie",
       "type": "Monture Monstrueuse",
-      "cost": 100
-    },{
+      "cost": 100,
+      "restrictions": {
+        "maxPer1000": 1
+      }
+    },
+    {
       "name": "Char Liche",
       "type": "Monture Char",
-      "cost": 10
+      "cost": 10,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     }
   ]
 }

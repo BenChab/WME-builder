@@ -4,62 +4,97 @@
     {
       "name": "Hordes Démoniaques",
       "type": "Infanterie",
-      "cost": 75
+      "cost": 75,
+      "restrictions": {
+        "minPer1000": 2
+      }
     },
     {
       "name": "Nuées Démoniaques",
       "type": "Infanterie",
-      "cost": 40
+      "cost": 40,
+      "restrictions": {
+        "minPer1000": 1,
+        "maxPer1000": 4
+      }
     },
     {
       "name": "Cavalerie Démoniaques",
       "type": "Cavalerie",
-      "cost": 110
+      "cost": 110,
+      "restrictions": {
+        "maxPer1000": 3
+      }
     },
     {
       "name": "Chiens Démoniaques",
       "type": "Cavalerie",
-      "cost": 90
+      "cost": 90,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
     {
       "name": "Chars Démoniaques",
       "type": "Char",
-      "cost": 95
+      "cost": 95,
+      "restrictions": {
+        "maxPer1000": 3
+      }
     },
     {
       "name": "Bêtes Démoniaques",
       "type": "Monstre",
-      "cost": 200
+      "cost": 200,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Démons Volants",
       "type": "Monstre",
-      "cost": 80
+      "cost": 80,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Démon Majeur",
       "type": "Monstre",
-      "cost": 150
+      "cost": 150,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },{
       "name": "Archi Démon",
       "type": "Général",
-      "cost": 125
+      "cost": 125,
+      "restrictions": {
+        "min": 1,
+        "max": 1,
+        "perArmy": true
+      }
     },{
-      "name": "Seigneur Démon",
+      "name": "Seigneur Démon (héros ou sorcier)",
       "type": "Héros",
-      "cost": 90
-    },{
-      "name": "Seigneur Démon",
-      "type": "Sorcier",
-      "cost": 90
+      "cost": 90,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },{
       "name": "Faveur des Dieux",
       "type": "Spécial",
-      "cost": 50
+      "cost": 50,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },{
       "name": "Ailes Ténébreuses",
       "type": "Spécial",
-      "cost": 10
+      "cost": 10,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },{
       "name": "Amélioration Sorcier pour général",
       "type": "Spécial",

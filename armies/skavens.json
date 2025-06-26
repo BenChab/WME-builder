@@ -4,67 +4,108 @@
     {
       "name": "Guerriers des Clans",
       "type": "Infanterie",
-      "cost": 40
+      "cost": 40,
+      "restrictions": {
+        "minPer1000": 2
+      }
     },
     {
       "name": "Vermines de Choc",
       "type": "Infanterie",
-      "cost": 55
+      "cost": 55,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
     {
       "name": "Jezzails",
       "type": "Infanterie",
-      "cost": 70
+      "cost": 70,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
     {
       "name": "Moines de la Peste",
       "type": "Infanterie",
-      "cost": 70
+      "cost": 70,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
       {
       "name": "Nuées de Rats",
       "type": "Infanterie",
-      "cost": 25
+      "cost": 25,
+      "restrictions": {
+        "minPer1000": 2
+      }
     },
     {
       "name": "Coureurs d'Égouts",
       "type": "Infanterie",
-      "cost": 70
+      "cost": 70,
+      "restrictions": {
+        "maxPer1000": 4
+      }
     },
      {
       "name": "Rats-Ogres",
       "type": "Infanterie",
-      "cost": 110
+      "cost": 110,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
        {
       "name": "Canon à Malefoudre",
       "type": "Artillerie",
-      "cost": 50
+      "cost": 50,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
        {
       "name": "Roue Infernale",
       "type": "Machine",
-      "cost": 125
+      "cost": 125,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Prophète Gris",
       "type": "Général",
-      "cost": 130
+      "cost": 130,
+      "restrictions": {
+        "min": 1,
+        "max": 1,
+        "perArmy": true
+      }
     },
     {
       "name": "Héros",
       "type": "Héros",
-      "cost": 70
+      "cost": 70,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
     {
       "name": "Technomage",
       "type": "Sorcier",
-      "cost": 30
+      "cost": 30,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
    {
       "name": "Cloche Hurlante",
       "type": "Monture Char",
-      "cost": 120
+      "cost": 120,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     }
   ]
 }

@@ -4,27 +4,42 @@
     {
       "name": "Guerriers Orques",
       "type": "Infanterie",
-      "cost": 60
+      "cost": 60,
+      "restrictions": {
+        "minPer1000": 2
+      }
     },
     {
       "name": "Orques Noirs",
       "type": "Infanterie",
-      "cost": 110
+      "cost": 110,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Gobelins",
       "type": "Infanterie",
-      "cost": 30
+      "cost": 30,
+      "restrictions": {
+        "minPer1000": 2
+      }
     },
     {
       "name": "Trolls",
       "type": "Infanterie",
-      "cost": 110
+      "cost": 110,
+      "restrictions": {
+        "maxPer1000": 3
+      }
     },
       {
       "name": "Ogres",
       "type": "Infanterie",
-      "cost": 105
+      "cost": 105,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
        {
       "name": "Orques sur Sanglier",
@@ -39,50 +54,82 @@
        {
       "name": "Chars à Loups",
       "type": "Char",
-      "cost":8085
+      "cost": 80,
+      "restrictions": {
+        "maxPer1000": 3
+      }
     },
        {
       "name": "Géant",
       "type": "Monstre",
-      "cost": 150
+      "cost": 150,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
        {
       "name": "Lance Rocs",
       "type": "Artillerie",
-      "cost": 75
+      "cost": 75,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Général Orque",
       "type": "Général",
-      "cost": 95
+      "cost": 95,
+      "restrictions": {
+        "min": 1,
+        "max": 1,
+        "perArmy": true
+      }
     },
     {
       "name": "Héros Orque",
       "type": "Héros",
-      "cost": 80
+      "cost": 80,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
       {
       "name": "Chaman Orque",
       "type": "Sorcier",
-      "cost": 45
+      "cost": 45,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Héros Gobelin",
       "type": "Héros",
-      "cost": 45
+      "cost": 45,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
    {
       "name": "Chaman Gobelin",
       "type": "Sorcier",
-      "cost": 30
+      "cost": 30,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },{
       "name": "Vouivre",
       "type": "Monture Monstrueuse",
-      "cost": 60
+      "cost": 60,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },{
       "name": "Char",
       "type": "Monture Char",
-      "cost": 10
+      "cost": 10,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     }
   ]
 }

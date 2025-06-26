@@ -4,71 +4,120 @@
     {
       "name": "Forestiers",
       "type": "Infanterie",
-      "cost": 75
+      "cost": 75,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
     {
       "name": "Gardes Éternels",
       "type": "Infanterie",
-      "cost": 45
+      "cost": 45,
+      "restrictions": {
+        "minPer1000": 1
+      }
     },
     {
       "name": "Gardes Sylvains",
       "type": "Infanterie",
-      "cost": 60
+      "cost": 60,
+      "restrictions": {
+        "minPer1000": 1
+      }
     },
     {
       "name": "Dryades",
       "type": "Infanterie",
-      "cost": 60
+      "cost": 60,
+      "restrictions": {
+        "minPer1000": 1
+      }
     },
     {
       "name": "Lémures",
       "type": "Infanterie",
-      "cost": 100
+      "cost": 100,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Danseurs de Guerre",
       "type": "Infanterie",
-      "cost": 90
+      "cost": 90,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Chevaliers Sylvains",
       "type": "Cavalerie",
-      "cost": 90
+      "cost": 90,
+      "restrictions": {
+        "maxPer1000": 3
+      }
     },
     {
       "name": "Cavaliers Sauvages",
       "type": "Cavalerie",
-      "cost": 100
+      "cost": 100,
+      "restrictions": {
+        "maxPer1000": 3
+      }
     },{
       "name": "Guerriers Faucon",
       "type": "Monstre",
-      "cost": 70
+      "cost": 70,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },{
       "name": "Homme Arbre",
       "type": "Monstre",
-      "cost": 130
+      "cost": 130,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },{
       "name": "Seigneur Sylvain",
       "type": "Général",
-      "cost": 120
+      "cost": 120,
+      "restrictions": {
+        "min": 1,
+        "max": 1,
+        "perArmy": true
+      }
     },{
       "name": "Noble Sylvain",
       "type": "Héros",
-      "cost": 80
+      "cost": 80,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },{
       "name": "Tisseur de Sorts",
       "type": "Sorcier",
-      "cost": 90
+      "cost": 90,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },{
       "name": "Vénérable Homme Arbre",
       "type": "Amélioration",
-      "cost": 60
+      "cost": 60,
+      "restrictions": {
+        "min": 0,
+        "max": 1,
+        "perArmy": true
+      }
     },{
       "name": "Dragon Sylvain",
       "type": "Monture Monstrueuse",
-      "cost": 100
-    }
+      "cost": 100,
+      "restrictions": {
+        "maxPer1000": 1
+      }
+    },
   
   ]
 }
