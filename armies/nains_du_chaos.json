@@ -4,87 +4,140 @@
     {
       "name": "Nains du Chaos",
       "type": "Infanterie",
-      "cost": 110
+      "cost": 110,
+      "restrictions": {
+        "minPer1000": 2,
+        "maxPer1000": 4
+      }
     },
     {
       "name": "Tromblons",
       "type": "Infanterie",
-      "cost": 95
+      "cost": 95,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
     {
       "name": "Hobgoblins",
       "type": "Infanterie",
-      "cost": 50
+      "cost": 50,
+      "restrictions": {
+        "minPer1000": 2
+      }
     },
     {
       "name": "Orques Noirs",
       "type": "Infanterie",
-      "cost": 110
+      "cost": 110,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
-      {
+    {
       "name": "Esclaves",
       "type": "Infanterie",
-      "cost": 25
+      "cost": 25,
+      "restrictions": {
+        "maxPer1000": 4
+      }
     },
-       {
+    {
       "name": "Hobgoblins sur Loup",
       "type": "Cavalerie",
       "cost": 80
     },
-       {
+    {
       "name": "Centaures Taureaux",
       "type": "Cavalerie",
-      "cost": 145
+      "cost": 145,
+      "restrictions": {
+        "maxPer1000": 2
+      }
     },
-       {
+    {
       "name": "Canon Trembleterre",
       "type": "Artillerie",
-      "cost": 100
+      "cost": 100,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
-       {
+    {
       "name": "Lance-Roquettes",
       "type": "Artillerie",
-      "cost": 60
+      "cost": 60,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
-       {
+    {
       "name": "Balistes",
       "type": "Artillerie",
-      "cost": 65
+      "cost": 65,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Général",
       "type": "Général",
-      "cost": 125
+      "cost": 125,
+      "restrictions": {
+        "min": 1,
+        "max": 1,
+        "perArmy": true
+      }
     },
-      {
+    {
       "name": "Option Sorcier",
       "type": "Spécial",
-      "cost": 25
+      "cost": 25,
+      "restrictions": {
+        "min": 0,
+        "max": 1,
+        "perArmy": true
+      }
     },
     {
       "name": "Héros",
       "type": "Héros",
-      "cost": 80
+      "cost": 80,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
-      {
+    {
       "name": "Khan Hobgoblin",
       "type": "Héros",
-      "cost": 45
+      "cost": 45,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
     {
       "name": "Sorcier",
       "type": "Sorcier",
-      "cost": 90
+      "cost": 90,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
-   {
+    {
       "name": "Grand Taurus",
       "type": "Monture Monstrueuse",
-      "cost": 70
+      "cost": 70,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     },
-      {
+    {
       "name": "Lammasu",
       "type": "Monture",
-      "cost": 20
+      "cost": 20,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     }
   ]
 }
