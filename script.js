@@ -24,6 +24,7 @@ function renderArmy() {
   armyList.innerHTML = '';
   army.forEach((unit, index) => {
     const li = document.createElement('li');
+    li.className = 'flex justify-between items-center p-2 bg-white rounded shadow-sm text-sm';
     li.textContent = `${unit.name} x${unit.count} - ${unit.cost * unit.count} pts`;
     const removeBtn = document.createElement('button');
     removeBtn.textContent = '🗑️';

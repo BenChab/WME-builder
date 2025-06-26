@@ -1,13 +1,16 @@
 <!doctype html>
 <html lang="fr">
     <head>
-        <meta charset="UTF-8" />
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>Liste d’armée Warmaster</title>
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="p-6 bg-gray-100 text-gray-900">
+    <body class="p-4 bg-gray-100 text-gray-900">
         <div class="max-w-4xl mx-auto">
-            <h1 class="text-3xl font-bold mb-4">Créateur de liste d’armée - Warmaster Evolution</h1>
+            <h1 class="text-2xl md:text-3xl font-bold mb-4 text-center">Créateur de liste d’armée - Warmaster Evolution</h1>
 
             <!-- Champ pour définir la taille cible de l'armée -->
 
@@ -21,7 +24,7 @@
 
             <div class="mb-4">
                 <label for="armySelect" class="block font-medium mb-2">Choisir une armée :</label>
-                <select id="armySelect" class="border rounded px-2 py-1">
+                <select id="armySelect" class="border w-full rounded px-2 py-2 text-sm">
                     <option value="">-- Sélectionner --</option>
                     <option value="arabie">Arabie</option>
                     <option value="bretonniens">Bretonniens</option>
@@ -48,7 +51,9 @@
             </div>
 
             <div id="unitSelectorContainer" class="hidden">
+
                 <div id="unitButtonsContainer" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 my-4"></div>
+
             </div>
 
             <div class="mt-6">
