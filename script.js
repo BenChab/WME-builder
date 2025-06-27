@@ -11,7 +11,7 @@ const validationMessages = document.getElementById('validationMessages');
 
 function getPointBlocks() {
   const targetPoints = parseInt(targetPointsInput.value, 10);
-  return Math.ceil(targetPoints / 1000);
+  return Math.floor(targetPoints / 1000); // Tranches complètes uniquement
 }
 
 function updateTotal() {
@@ -24,7 +24,6 @@ function renderArmy() {
   armyList.innerHTML = '';
   army.forEach((unit, index) => {
     const li = document.createElement('li');
-    li.className = 'flex justify-between items-center p-2 bg-white rounded shadow-sm text-sm';
     li.textContent = `${unit.name} x${unit.count} - ${unit.cost * unit.count} pts`;
     const removeBtn = document.createElement('button');
     removeBtn.textContent = '🗑️';
@@ -67,6 +66,29 @@ function validateArmy() {
       messages.push(`${unit.name} : maximum ${r.maxPer1000} par 1000 pts dépassé (actuellement ${count})`);
     }
   });
+
+  // Compte des unités par groupe de restriction
+  const groupCounts = {};
+  const groupLimits = {};
+
+  army.forEach(unit => {
+    const r = unit.restrictions;
+    if (r && r.groupId) {
+      if (!groupCounts[r.groupId]) {
+        groupCounts[r.groupId] = 0;
+        groupLimits[r.groupId] = r.maxPer1000;
+      }
+      groupCounts[r.groupId] += unit.count;
+    }
+  });
+
+  // Validation par groupe
+  for (const [groupId, count] of Object.entries(groupCounts)) {
+    const limit = groupLimits[groupId] * pointBlocks;
+    if (count > limit) {
+      messages.push(`Groupe ${groupId} : maximum ${limit} unités autorisées (actuellement ${count})`);
+    }
+  }
 
   validationMessages.innerHTML = '';
   if (messages.length > 0) {
