@@ -232,4 +232,37 @@ function addMagicItem(name) {
   if (existing) {
     existing.count++;
   } else {
-    selectedMagicItems.push({ ...item, count: 1
+    selectedMagicItems.push({ ...item, count: 1 });
+  }
+
+  renderArmy(); // met à jour aussi les objets
+  updateTotal();
+}
+
+async function loadArmy() {
+  const selected = armySelect.value;
+  if (!selected) return;
+
+  try {
+    const [armyRes, magicRes] = await Promise.all([
+      fetch(`armies/${selected}.json`),
+      fetch("armies/magic_items.json")
+    ]);
+
+    const armyData = await armyRes.json();
+    magicItems = await magicRes.json();
+
+    createMagicItemButtons();
+    selectedMagicItems = [];
+
+    units = armyData.units;
+    unitSelectorContainer.classList.remove('hidden');
+    createUnitButtons();
+    army = [];
+    renderArmy();
+    updateTotal();
+  } catch (error) {
+    alert("Erreur de chargement des données.");
+    console.error("Erreur de chargement :", error);
+  }
+}
