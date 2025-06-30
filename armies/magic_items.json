@@ -1,1 +1,39 @@
+[
+  {
+    "name": "Bannière de Vaillance",
+    "type": "banner",
+    "cost": 25,
+    "restrictions": ["unit"]
+  },
+  {
+    "name": "Bannière de Protection",
+    "type": "banner",
+    "cost": 30,
+    "restrictions": ["unit"]
+  },
+  {
+    "name": "Épée Enflammée",
+    "type": "weapon",
+    "cost": 25,
+    "restrictions": ["unit", "character"]
+  },
+  {
+    "name": "Bâton du Savoir",
+    "type": "weapon",
+    "cost": 40,
+    "restrictions": ["character"]
+  },
+  {
+    "name": "Talisman d’Endurance",
+    "type": "item",
+    "cost": 20,
+    "restrictions": ["character"]
+  },
+  {
+    "name": "Amulette de Résistance",
+    "type": "item",
+    "cost": 30,
+    "restrictions": ["character"]
+  }
+]
 
