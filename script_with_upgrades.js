@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateTotal();
   
   const toggleMagicItemsBtn = document.getElementById('toggleMagicItemsBtn');
+  const magicItemsContainer = document.getElementById('magicItemsContainer');
 
 toggleMagicItemsBtn.addEventListener('click', () => {
   if (magicItemsContainer.style.display === 'none' || magicItemsContainer.classList.contains('hidden')) {
