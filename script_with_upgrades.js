@@ -18,21 +18,21 @@ document.addEventListener("DOMContentLoaded", () => {
   armySelect.addEventListener("change", loadArmy);
   targetPointsInput.addEventListener("input", updateTargetPoints);
   updateTotal();
-  
-  const toggleMagicItemsBtn = document.getElementById('toggleMagicItemsBtn');
-  const magicItemsContainer = document.getElementById('magicItemsContainer');
 
-toggleMagicItemsBtn.addEventListener('click', () => {
-  if (magicItemsContainer.style.display === 'none' || magicItemsContainer.classList.contains('hidden')) {
-    magicItemsContainer.style.display = 'block';
-    magicItemsContainer.classList.remove('hidden');
-    toggleMagicItemsBtn.textContent = 'Masquer les objets magiques';
-  } else {
-    magicItemsContainer.style.display = 'none';
-    magicItemsContainer.classList.add('hidden');
-    toggleMagicItemsBtn.textContent = 'Afficher les objets magiques';
-  }
-});
+  // Masquer initialement le conteneur objets magiques
+  magicItemsContainer.style.display = 'none';
+
+  const toggleMagicItemsBtn = document.getElementById('toggleMagicItemsBtn');
+
+  toggleMagicItemsBtn.addEventListener('click', () => {
+    if (magicItemsContainer.style.display === 'none') {
+      magicItemsContainer.style.display = 'block';
+      toggleMagicItemsBtn.textContent = 'Masquer les objets magiques';
+    } else {
+      magicItemsContainer.style.display = 'none';
+      toggleMagicItemsBtn.textContent = 'Afficher les objets magiques';
+    }
+  });
 });
 
 function updateTargetPoints() {
@@ -55,7 +55,7 @@ function updateTotal() {
 function renderArmy() {
   armyList.innerHTML = '';
 
-  // Unités
+  // Affiche unités
   army.forEach((unit, index) => {
     const li = document.createElement('li');
     li.textContent = `${unit.name} x${unit.count} - ${unit.cost * unit.count} pts`;
@@ -75,7 +75,7 @@ function renderArmy() {
     armyList.appendChild(li);
   });
 
-  // Objets magiques
+  // Affiche objets magiques
   selectedMagicItems.forEach((item, index) => {
     const li = document.createElement('li');
     li.textContent = `${item.name} x${item.count} - ${item.cost * item.count} pts`;
@@ -199,34 +199,7 @@ function addUnitByName(name) {
   updateTotal();
 }
 
-async function loadArmy() {
-  const selected = armySelect.value;
-  if (!selected) return;
-
-  try {
-    const [armyRes, magicRes] = await Promise.all([
-      fetch(`armies/${selected}.json`),
-      fetch("armies/magic_items.json")
-    ]);
-
-    const armyData = await armyRes.json();
-    magicItems = await magicRes.json();
-
-    createMagicItemButtons();
-selectedMagicItems = [];
-
-    units = armyData.units;
-    unitSelectorContainer.classList.remove('hidden');
-    createUnitButtons();
-    army = [];
-    renderArmy();
-    updateTotal();
-  } catch (error) {
-    alert("Erreur de chargement des données.");
-    console.error("Erreur de chargement :", error);
-  }
-
-  function createMagicItemButtons() {
+function createMagicItemButtons() {
   magicItemsButtonsContainer.innerHTML = '';
   magicItems.forEach(item => {
     const btn = document.createElement('button');
@@ -235,9 +208,10 @@ selectedMagicItems = [];
     btn.onclick = () => addMagicItem(item.name);
     magicItemsButtonsContainer.appendChild(btn);
   });
-  magicItemsContainer.classList.remove('hidden');
+  // On ne force plus d'affichage ici, c'est géré par le bouton toggle
 }
-  function addMagicItem(name) {
+
+function addMagicItem(name) {
   const item = magicItems.find(i => i.name === name);
   if (!item) return;
 
@@ -258,10 +232,4 @@ selectedMagicItems = [];
   if (existing) {
     existing.count++;
   } else {
-    selectedMagicItems.push({ ...item, count: 1 });
-  }
-
-  renderArmy(); // met à jour aussi les objets
-  updateTotal();
-}
-}
+    selectedMagicItems.push({ ...item, count: 1
