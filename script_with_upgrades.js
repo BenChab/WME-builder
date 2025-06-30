@@ -18,6 +18,20 @@ document.addEventListener("DOMContentLoaded", () => {
   armySelect.addEventListener("change", loadArmy);
   targetPointsInput.addEventListener("input", updateTargetPoints);
   updateTotal();
+  
+  const toggleMagicItemsBtn = document.getElementById('toggleMagicItemsBtn');
+
+toggleMagicItemsBtn.addEventListener('click', () => {
+  if (magicItemsContainer.style.display === 'none' || magicItemsContainer.classList.contains('hidden')) {
+    magicItemsContainer.style.display = 'block';
+    magicItemsContainer.classList.remove('hidden');
+    toggleMagicItemsBtn.textContent = 'Masquer les objets magiques';
+  } else {
+    magicItemsContainer.style.display = 'none';
+    magicItemsContainer.classList.add('hidden');
+    toggleMagicItemsBtn.textContent = 'Afficher les objets magiques';
+  }
+});
 });
 
 function updateTargetPoints() {
