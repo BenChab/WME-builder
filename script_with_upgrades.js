@@ -37,6 +37,6 @@ console.log("Chargement de :", "armies/magic_items.json"),
         document.getElementById("unitButtonsContainer").innerHTML = "";
         displayUnits();
     } catch (error) {
-        console.error("Erreur de chargement :", error);
+        console.error("Erreur de chargement :", error),
     }
 }
