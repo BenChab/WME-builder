@@ -24,8 +24,8 @@ async function loadArmy() {
 
     try {
         const [armyRes, magicRes] = await Promise.all([
-            fetch(`data/${selected}.json`),
-            fetch("data/magic_items.json")
+            fetch(`armies/${selected}.json`),
+            fetch("armies/magic_items.json")
         ]);
 
         armyData = await armyRes.json();
