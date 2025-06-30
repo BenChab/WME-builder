@@ -1,6 +1,7 @@
 let units = [];
 let army = [];
 let magicItems = [];
+let selectedMagicItems = [];
 let targetPoints = 2000;
 
 const armySelect = document.getElementById('armySelect');
@@ -10,6 +11,8 @@ const unitSelectorContainer = document.getElementById('unitSelectorContainer');
 const unitButtonsContainer = document.getElementById('unitButtonsContainer');
 const targetPointsInput = document.getElementById('targetPoints');
 const validationMessages = document.getElementById('validationMessages');
+const magicItemsContainer = document.getElementById('magicItemsContainer');
+const magicItemsButtonsContainer = document.getElementById('magicItemsButtonsContainer');
 
 document.addEventListener("DOMContentLoaded", () => {
   armySelect.addEventListener("change", loadArmy);
@@ -27,13 +30,17 @@ function getPointBlocks() {
 }
 
 function updateTotal() {
-  const total = army.reduce((sum, u) => sum + (u.cost * u.count), 0);
+  const armyTotal = army.reduce((sum, u) => sum + (u.cost * u.count), 0);
+  const magicTotal = selectedMagicItems.reduce((sum, i) => sum + (i.cost * i.count), 0);
+  const total = armyTotal + magicTotal;
   totalPointsEl.textContent = total;
   validateArmy();
 }
 
 function renderArmy() {
   armyList.innerHTML = '';
+
+  // Unités
   army.forEach((unit, index) => {
     const li = document.createElement('li');
     li.textContent = `${unit.name} x${unit.count} - ${unit.cost * unit.count} pts`;
@@ -45,6 +52,26 @@ function renderArmy() {
         unit.count--;
       } else {
         army.splice(index, 1);
+      }
+      renderArmy();
+      updateTotal();
+    };
+    li.appendChild(removeBtn);
+    armyList.appendChild(li);
+  });
+
+  // Objets magiques
+  selectedMagicItems.forEach((item, index) => {
+    const li = document.createElement('li');
+    li.textContent = `${item.name} x${item.count} - ${item.cost * item.count} pts`;
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = '🗑️';
+    removeBtn.className = 'ml-2 text-red-500 hover:text-red-700';
+    removeBtn.onclick = () => {
+      if (item.count > 1) {
+        item.count--;
+      } else {
+        selectedMagicItems.splice(index, 1);
       }
       renderArmy();
       updateTotal();
@@ -170,6 +197,9 @@ async function loadArmy() {
     const armyData = await armyRes.json();
     magicItems = await magicRes.json();
 
+    createMagicItemButtons();
+selectedMagicItems = [];
+
     units = armyData.units;
     unitSelectorContainer.classList.remove('hidden');
     createUnitButtons();
@@ -180,4 +210,43 @@ async function loadArmy() {
     alert("Erreur de chargement des données.");
     console.error("Erreur de chargement :", error);
   }
+
+  function createMagicItemButtons() {
+  magicItemsButtonsContainer.innerHTML = '';
+  magicItems.forEach(item => {
+    const btn = document.createElement('button');
+    btn.className = 'bg-yellow-100 hover:bg-yellow-200 border rounded p-2 shadow';
+    btn.innerHTML = `<strong>${item.name}</strong><br><span class="text-sm">${item.cost} pts</span>`;
+    btn.onclick = () => addMagicItem(item.name);
+    magicItemsButtonsContainer.appendChild(btn);
+  });
+  magicItemsContainer.classList.remove('hidden');
+}
+  function addMagicItem(name) {
+  const item = magicItems.find(i => i.name === name);
+  if (!item) return;
+
+  const pointBlocks = getPointBlocks();
+  const existing = selectedMagicItems.find(i => i.name === name);
+  const currentCount = existing ? existing.count : 0;
+
+  const restriction = item.restrictions || {};
+  if (restriction.perArmy && existing) {
+    alert(`${item.name} ne peut être sélectionné qu'une seule fois.`);
+    return;
+  }
+  if (restriction.maxPer1000 && currentCount >= restriction.maxPer1000 * pointBlocks) {
+    alert(`${item.name} est limité à ${restriction.maxPer1000} par 1000 pts.`);
+    return;
+  }
+
+  if (existing) {
+    existing.count++;
+  } else {
+    selectedMagicItems.push({ ...item, count: 1 });
+  }
+
+  renderArmy(); // met à jour aussi les objets
+  updateTotal();
+}
 }
