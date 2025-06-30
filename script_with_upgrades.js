@@ -29,7 +29,7 @@ async function loadArmy() {
         selectedArmy = selected;
         currentArmy = [];
         document.getElementById("unitButtonsContainer").innerHTML = "";
-        displayUnits();
+        createUnitButtons();
     } catch (error) {
         console.error("Erreur de chargement :", error);
     }
