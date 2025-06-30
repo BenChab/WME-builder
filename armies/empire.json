@@ -4,7 +4,7 @@
     {
       "name": "Hallebardiers",
       "type": "Infanterie",
-      "cost": 55,
+      "cost": 45,
       "restrictions": {
         "minPer1000": 2
       }
@@ -12,7 +12,7 @@
     {
       "name": "Arquebusiers",
       "type": "Infanterie",
-      "cost": 45,
+      "cost": 65,
       "restrictions": {
         "maxPer1000": 3
       }
@@ -20,7 +20,7 @@
     {
       "name": "Arbalétriers",
       "type": "Infanterie",
-      "cost": 30,
+      "cost": 55,
       "restrictions": {
         "minPer1000": 2
       }
@@ -28,22 +28,22 @@
     {
       "name": "Flagellants",
       "type": "Infanterie",
-      "cost": 90
+      "cost": 70
     },
     {
       "name": "Tirailleurs",
       "type": "Infanterie",
-      "cost": 110
+      "cost": 25
     },
     {
       "name": "Chevaliers",
       "type": "Cavalerie",
-      "cost": 120
+      "cost": 110
     },
     {
       "name": "Pistoliers",
       "type": "Cavalerie",
-      "cost": 90,
+      "cost": 95,
       "restrictions": {
         "maxPer1000": 4
       }
@@ -51,7 +51,7 @@
     {
       "name": "Canon Feu d’Enfer",
       "type": "Artillerie",
-      "cost": 100,
+      "cost": 50,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -59,7 +59,7 @@
     {
       "name": "Canon",
       "type": "Artillerie",
-      "cost": 100,
+      "cost": 85,
       "restrictions": {
         "maxPer1000": 1
       }
