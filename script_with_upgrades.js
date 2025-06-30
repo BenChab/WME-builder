@@ -1,4 +1,3 @@
-
 // == Warmaster Army Builder with Upgrades and Restrictions ==
 
 let armyData = null;
@@ -23,12 +22,7 @@ async function loadArmy() {
     if (!selected) return;
 
     try {
-        const [armyRes, magicRes] = await Promise.all([
-            console.log("Chargement de :", `armies/${selected}.json`),
-console.log("Chargement de :", "armies/magic_items.json"),
-            fetch(`armies/${selected}.json`),
-            fetch("armies/magic_items.json")
-        ]);
+        const [armyRes, magicRes] = await Promise.all([fetch(`armies/${selected}.json`), fetch("armies/magic_items.json")]);
 
         armyData = await armyRes.json();
         magicItems = await magicRes.json();
@@ -37,6 +31,6 @@ console.log("Chargement de :", "armies/magic_items.json"),
         document.getElementById("unitButtonsContainer").innerHTML = "";
         displayUnits();
     } catch (error) {
-        console.error("Erreur de chargement :", error),
+        console.error("Erreur de chargement :", error);
     }
 }
