@@ -1,38 +1,110 @@
 [
   {
-    "name": "Bannière de Vaillance",
+    "name": "Bannière de Bataille",
     "type": "banner",
-    "cost": 25,
+    "cost": 50,
     "restrictions": ["unit"]
   },
   {
     "name": "Bannière de Protection",
     "type": "banner",
-    "cost": 30,
+    "cost": 50,
     "restrictions": ["unit"]
   },
   {
-    "name": "Épée Enflammée",
+    "name": "Bannière de Robustesse",
+    "type": "banner",
+    "cost": 50,
+    "restrictions": ["unit"]
+  },
+  {
+    "name": "Bannière de Ténacité",
+    "type": "banner",
+    "cost": 50,
+    "restrictions": ["unit"]
+  },
+  {
+    "name": "Bannière de Chance",
+    "type": "banner",
+    "cost": 50,
+    "restrictions": ["unit"]
+  },
+  {
+    "name": "Épée de Destruction",
     "type": "weapon",
-    "cost": 25,
+    "cost": 10,
     "restrictions": ["unit", "character"]
   },
   {
-    "name": "Bâton du Savoir",
+    "name": "Épée du Destin",
     "type": "weapon",
-    "cost": 40,
+    "cost": 5,
+    "restrictions": ["unit", "character"]
+  },
+  {
+    "name": "Épée de Mutilation",
+    "type": "weapon",
+    "cost": 10,
+    "restrictions": ["unit", "character"]
+  },
+  {
+    "name": "Épée de Puissance",
+    "type": "weapon",
+    "cost": 10,
+    "restrictions": ["unit", "character"]
+  },
+  {
+    "name": "Couronne de Commandement",
+    "type": "enchanted item",
+    "cost": 100,
     "restrictions": ["character"]
   },
   {
-    "name": "Talisman d’Endurance",
-    "type": "item",
+    "name": "Heaume de Domination",
+    "type": "enchanted item",
+    "cost": 50,
+    "restrictions": ["character"]
+  },
+  {
+    "name": "Anneau de Sorcellerie",
+    "type": "enchanted item",
+    "cost": 30,
+    "restrictions": ["character"]
+  },
+  {
+    "name": "Orbe de Majesté",
+    "type": "enchanted item",
+    "cost": 30,
+    "restrictions": ["character"]
+  },
+  {
+    "name": "Bâton d'Envoûtement",
+    "type": "enchanted item",
+    "cost": 30,
+    "restrictions": ["character"]
+  },
+  {
+    "name": "Sceptre de Souveraineté",
+    "type": "enchanted item",
+    "cost": 30,
+    "restrictions": ["character"]
+  },
+  {
+    "name": "Parchemin d’Anti-Magie",
+    "type": "enchanted item",
     "cost": 20,
     "restrictions": ["character"]
   },
   {
-    "name": "Amulette de Résistance",
-    "type": "item",
-    "cost": 30,
+    "name": "Baguette de Pouvoir",
+    "type": "enchanted item",
+    "cost": 10,
+    "restrictions": ["character"]
+  },
+  {
+    "name": "Bâton de Répétition",
+    "type": "enchanted item",
+    "cost": 10,
     "restrictions": ["character"]
   }
 ]
