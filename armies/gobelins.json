@@ -74,7 +74,13 @@
     },{
       "name": "Arachnarok",
       "type": "Monstre",
-      "cost": 120,
+      "cost": 100,
+      "restrictions": {
+        "maxPer1000": 1
+      },{
+      "name": "Arachnarok Géante",
+      "type": "Monstre",
+      "cost": 200,
       "restrictions": {
         "maxPer1000": 1
       }
