@@ -114,6 +114,14 @@
       "restrictions": {
         "maxPer1000": 1
       }
+    },
+    {
+      "name": "Pégase Noir",
+      "type": "Monture ",
+      "cost": 15,
+      "restrictions": {
+        "maxPer1000": 1
+      }
     }
   ]
 }
