@@ -75,44 +75,74 @@ function calculateBreakPoint() {
 function renderArmy() {
   armyList.innerHTML = '';
 
-  // Affiche unités
-  army.forEach((unit, index) => {
+  function createRow(name, count, cost, removeCallback) {
     const li = document.createElement('li');
-    li.textContent = `${unit.name} x${unit.count} - ${unit.cost * unit.count} pts`;
+    li.className = "flex justify-between items-center text-sm bg-white rounded px-2 py-1 shadow";
+
+    const left = document.createElement('div');
+    left.className = "flex gap-3 items-center";
+
+    const nameEl = document.createElement('span');
+    nameEl.className = "font-medium w-40 truncate";
+    nameEl.textContent = name;
+
+    const countEl = document.createElement('span');
+    countEl.className = "w-8 text-center";
+    countEl.textContent = `x${count}`;
+
+    const costEl = document.createElement('span');
+    costEl.className = "w-20 text-right";
+    costEl.textContent = `${cost} pts`;
+
     const removeBtn = document.createElement('button');
     removeBtn.textContent = '🗑️';
-    removeBtn.className = 'ml-2 text-red-500 hover:text-red-700';
-    removeBtn.onclick = () => {
-      if (unit.count > 1) {
-        unit.count--;
-      } else {
-        army.splice(index, 1);
-      }
-      renderArmy();
-      updateTotal();
-    };
+    removeBtn.className = "text-red-500 hover:text-red-700";
+    removeBtn.onclick = removeCallback;
+
+    left.appendChild(nameEl);
+    left.appendChild(countEl);
+    left.appendChild(costEl);
+
+    li.appendChild(left);
     li.appendChild(removeBtn);
+
     armyList.appendChild(li);
+  }
+
+  // 🔹 Unités
+  army.forEach((unit, index) => {
+    createRow(
+      unit.name,
+      unit.count,
+      unit.cost * unit.count,
+      () => {
+        if (unit.count > 1) {
+          unit.count--;
+        } else {
+          army.splice(index, 1);
+        }
+        renderArmy();
+        updateTotal();
+      }
+    );
   });
 
-  // Affiche objets magiques
+  // 🔸 Objets magiques
   selectedMagicItems.forEach((item, index) => {
-    const li = document.createElement('li');
-    li.textContent = `${item.name} x${item.count} - ${item.cost * item.count} pts`;
-    const removeBtn = document.createElement('button');
-    removeBtn.textContent = '🗑️';
-    removeBtn.className = 'ml-2 text-red-500 hover:text-red-700';
-    removeBtn.onclick = () => {
-      if (item.count > 1) {
-        item.count--;
-      } else {
-        selectedMagicItems.splice(index, 1);
+    createRow(
+      item.name,
+      item.count,
+      item.cost * item.count,
+      () => {
+        if (item.count > 1) {
+          item.count--;
+        } else {
+          selectedMagicItems.splice(index, 1);
+        }
+        renderArmy();
+        updateTotal();
       }
-      renderArmy();
-      updateTotal();
-    };
-    li.appendChild(removeBtn);
-    armyList.appendChild(li);
+    );
   });
 }
 
