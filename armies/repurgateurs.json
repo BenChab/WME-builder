@@ -74,6 +74,7 @@
       "name": "Inquisiteur",
       "type": "Général",
       "cost": 125,
+      "countsForBP": false,
       "restrictions": {
         "min": 1,
         "max": 1,
@@ -84,6 +85,7 @@
       "name": "Répurgateur",
       "type": "Héros",
       "cost": 95,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -92,6 +94,7 @@
       "name": "Prêtre Guerrier",
       "type": "Sorcier",
       "cost": 55,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
       }
@@ -100,6 +103,7 @@
       "name": "Prison Tractée",
       "type": "Monture Char",
       "cost": 80,
+      "countsForBP": false,
       "restrictions": {
         "min": 0,
         "max": 1,
@@ -110,6 +114,7 @@
       "name": "Autel de Sigmar",
       "type": "Spécial",
       "cost": 45,
+        "countsForBP": false,
       "restrictions": {
         "min": 0,
         "max": 1,
