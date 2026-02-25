@@ -13,9 +13,6 @@
       "name": "Arquebusiers",
       "type": "Infanterie",
       "cost": 90,
-      "restrictions": {
-        "maxPer1000": 2
-      }
     },
     {
       "name": "Rangers",
@@ -72,21 +69,6 @@
       "restrictions": {
         "maxPer1000": 1
       }
-    },
-    {
-      "name": "Zeppelin",
-      "type": "Machine",
-      "cost": 100,
-      "restrictions": {
-        "min": 0,
-        "max": 1,
-        "perArmy": true
-      }
-    },
-    {
-      "name": "Barge",
-      "type": "Amélioration",
-      "cost": 20
     },
     {
       "name": "Général",
