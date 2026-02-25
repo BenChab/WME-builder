@@ -28,7 +28,7 @@
         {
             "name": "Trolls",
             "type": "Infanterie",
-            "cost": 90,
+            "cost": 110,
             "restrictions": {
                 "maxPer1000": 1
             }
