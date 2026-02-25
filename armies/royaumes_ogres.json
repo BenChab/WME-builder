@@ -38,7 +38,7 @@
       "type": "Infanterie",
       "cost": 30,
       "restrictions": {
-        "minPer1000": 2,
+        "minPer1000": 1,
         "maxPer1000": 4
       }
     },
