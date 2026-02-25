@@ -66,6 +66,7 @@
       "name": "Général",
       "type": "Général",
       "cost": 125,
+      "countsForBP": false,
       "restrictions": {
         "min": 1,
         "max": 1,
@@ -88,6 +89,7 @@
       "name": "Héros",
       "type": "Héros",
       "cost": 80,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
       },
@@ -108,6 +110,7 @@
       "name": "Sorcier",
       "type": "Sorcier",
       "cost": 45,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       },
