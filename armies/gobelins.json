@@ -13,6 +13,7 @@
       "name": "Fanatiques Gobelins",
       "type": "Infanterie",
       "cost": 15,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 4
       }
@@ -61,6 +62,7 @@
       "name": "Chariot à Pompe",
       "type": "Char",
       "cost": 50,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
       }
@@ -102,6 +104,7 @@
       "name": "Chef de Guerre",
       "type": "Général",
       "cost": 80,
+      "countsForBP": false,
       "restrictions": {
         "min": 1,
         "max": 1,
@@ -111,6 +114,7 @@
       "name": "Grand Chef",
       "type": "Héros",
       "cost": 45,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 4
       }
@@ -118,6 +122,7 @@
       "name": "Chaman",
       "type": "Sorcier",
       "cost": 30,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
       }
@@ -126,6 +131,7 @@
       "name": "Wyvern",
       "type": "Monture Monstrueuse",
       "cost": 60,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -133,6 +139,7 @@
     {
       "name": "Char",
       "type": "Monture",
+      "countsForBP": false,
       "cost": 10
     }
   ]
