@@ -29,6 +29,7 @@
       "name": "Salamandres",
       "type": "Infanterie",
       "cost": 25,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
       }
@@ -69,6 +70,7 @@
       "name": "Slann",
       "type": "Général",
       "cost": 75,
+      "countsForBP": false,
       "restrictions": {
         "min": 1,
         "max": 1,
@@ -79,6 +81,7 @@
       "name": "Héros Saurus",
       "type": "Héros",
       "cost": 45,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -87,6 +90,7 @@
       "name": "Héros Skink",
       "type": "Héros",
       "cost": 70,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 3
       }
@@ -95,6 +99,7 @@
       "name": "Chaman Skink",
       "type": "Sorcier",
       "cost": 30,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -103,6 +108,7 @@
       "name": "Palanquin",
       "type": "Monture",
       "cost": 20,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -111,6 +117,7 @@
       "name": "Stégadon",
       "type": "Monture Monstrueuse",
       "cost": 90,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -119,6 +126,7 @@
       "name": "Carnosaure",
       "type": "Monture Monstrueuse",
       "cost": 60,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
