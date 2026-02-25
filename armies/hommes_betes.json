@@ -44,7 +44,7 @@
     {
       "name": "Chars",
       "type": "Char",
-      "cost": 200,
+      "cost": 120,
       "restrictions": {
         "maxPer1000": 3
       }
@@ -60,17 +60,17 @@
     {
       "name": "Jabberslythe",
       "type": "Monstre",
-      "cost": 175
+      "cost": 100
     },
     {
       "name": "Shaggoth",
       "type": "Monstre",
-      "cost": 175
+      "cost": 100
     },
     {
       "name": "Ghorgon",
       "type": "Monstre",
-      "cost": 175
+      "cost": 100
     },
     {
       "name": "Seigneur",
