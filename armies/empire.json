@@ -34,7 +34,7 @@
       "name": "Tirailleurs",
       "type": "Infanterie",
       "cost": 25,
-      "countsForBP": false,
+      "countsForBP": false
     },
     {
       "name": "Chevaliers",
