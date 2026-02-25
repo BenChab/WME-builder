@@ -79,6 +79,7 @@
       "name": "Général Orque",
       "type": "Général",
       "cost": 95,
+      "countsForBP": false,
       "restrictions": {
         "min": 1,
         "max": 1,
@@ -89,6 +90,7 @@
       "name": "Héros Orque",
       "type": "Héros",
       "cost": 80,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
       }
@@ -97,6 +99,7 @@
       "name": "Chaman Orque",
       "type": "Sorcier",
       "cost": 45,
+        "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -105,6 +108,7 @@
       "name": "Héros Gobelin",
       "type": "Héros",
       "cost": 45,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
       }
@@ -113,6 +117,7 @@
       "name": "Chaman Gobelin",
       "type": "Sorcier",
       "cost": 30,
+     "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -120,6 +125,7 @@
       "name": "Vouivre",
       "type": "Monture Monstrueuse",
       "cost": 60,
+     "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -127,6 +133,7 @@
       "name": "Char",
       "type": "Monture Char",
       "cost": 10,
+     "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
