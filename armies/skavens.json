@@ -77,6 +77,7 @@
       "name": "Prophète Gris",
       "type": "Général",
       "cost": 130,
+      "countsForBP": false,
       "restrictions": {
         "min": 1,
         "max": 1,
@@ -87,6 +88,7 @@
       "name": "Héros",
       "type": "Héros",
       "cost": 70,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
       }
@@ -95,6 +97,7 @@
       "name": "Technomage",
       "type": "Sorcier",
       "cost": 30,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -103,6 +106,7 @@
       "name": "Cloche Hurlante",
       "type": "Monture Char",
       "cost": 120,
+     "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
