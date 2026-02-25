@@ -13,6 +13,7 @@ const targetPointsInput = document.getElementById('targetPoints');
 const validationMessages = document.getElementById('validationMessages');
 const magicItemsContainer = document.getElementById('magicItemsContainer');
 const magicItemsButtonsContainer = document.getElementById('magicItemsButtonsContainer');
+const breakPointEl = document.getElementById('breakPoint');
 
 document.addEventListener("DOMContentLoaded", () => {
   armySelect.addEventListener("change", loadArmy);
@@ -48,8 +49,27 @@ function updateTotal() {
   const armyTotal = army.reduce((sum, u) => sum + (u.cost * u.count), 0);
   const magicTotal = selectedMagicItems.reduce((sum, i) => sum + (i.cost * i.count), 0);
   const total = armyTotal + magicTotal;
+
   totalPointsEl.textContent = total;
+
+  const bp = calculateBreakPoint();
+  breakPointEl.textContent = bp;
+
   validateArmy();
+}
+
+function calculateBreakPoint() {
+  let totalUnitsForBP = 0;
+
+  army.forEach(unit => {
+    // true par défaut sauf si explicitement false
+    const countsForBP = unit.countsForBP !== false;
+    if (countsForBP) {
+      totalUnitsForBP += unit.count;
+    }
+  });
+
+  return Math.ceil(totalUnitsForBP / 2);
 }
 
 function renderArmy() {
