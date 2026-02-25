@@ -5,7 +5,7 @@
       "name": "Archers",
       "type": "Infanterie",
       "cost": 55,
-      "countsForBP": false,
+      "countsForBP": false
     },
     {
       "name": "Hommes d’Armes",
