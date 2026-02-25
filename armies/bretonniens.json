@@ -4,12 +4,14 @@
     {
       "name": "Archers",
       "type": "Infanterie",
-      "cost": 55
+      "cost": 55,
+      "countsForBP": false,
     },
     {
       "name": "Hommes d’Armes",
       "type": "Infanterie",
       "cost": 45,
+      "countsForBP": false,
       "restrictions": {
         "minPer1000": 1
       }
@@ -18,6 +20,7 @@
       "name": "Paysans",
       "type": "Infanterie",
       "cost": 30,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 4
       }
@@ -26,6 +29,7 @@
       "name": "Ecuyers",
       "type": "Cavalerie",
       "cost": 90,
+      "countsForBP": false,
       "restrictions": {
         "minPer1000": 1,
         "maxPer1000": 4
@@ -59,6 +63,7 @@
       "name": "Trébuchet",
       "type": "Artillerie",
       "cost": 100,
+      "countsForBP": false,
       "restrictions": {
         "min": 0,
         "max": 1,
@@ -69,6 +74,7 @@
       "name": "Général",
       "type": "Général",
       "cost": 125,
+      "countsForBP": false,
       "restrictions": {
         "min": 1,
         "max": 1,
@@ -79,6 +85,7 @@
       "name": "Héros",
       "type": "Héros",
       "cost": 80,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
       }
@@ -87,6 +94,7 @@
       "name": "Enchanteresse",
       "type": "Sorcier",
       "cost": 45,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -95,6 +103,7 @@
       "name": "Pégase",
       "type": "Monture",
       "cost": 15,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -103,6 +112,7 @@
       "name": "Licorne",
       "type": "Monture",
       "cost": 15,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -111,6 +121,7 @@
       "name": "Hippogryphe",
       "type": "Monture Monstrueuse",
       "cost": 60,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -119,6 +130,7 @@
       "name": "Reliquaire du Graal",
       "type": "Spécial",
       "cost": 40,
+      "countsForBP": false,
       "restrictions": {
         "min": 0,
         "max": 1,
