@@ -7,12 +7,16 @@
       "cost": 110,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Arquebusiers",
       "type": "Infanterie",
-      "cost": 90
+      "cost": 90,
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Rangers",
@@ -20,7 +24,9 @@
       "cost": 110,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Marteliers",
@@ -28,7 +34,9 @@
       "cost": 125,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Mineurs",
@@ -36,7 +44,9 @@
       "cost": 90,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Tueurs de Trolls",
@@ -44,7 +54,9 @@
       "cost": 80,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Canons",
@@ -52,7 +64,9 @@
       "cost": 90,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Canon à Flammes",
@@ -60,7 +74,9 @@
       "cost": 50,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Gyrocoptère",
@@ -68,7 +84,9 @@
       "cost": 75,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Général",
@@ -79,7 +97,8 @@
         "min": 1,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Héros",
@@ -88,7 +107,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Maître des Runes",
@@ -97,7 +117,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Enclume du Destin",
@@ -108,7 +129,8 @@
         "min": 0,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "upgrade"
     },
     {
       "name": "Trône du Pouvoir",
@@ -119,7 +141,8 @@
         "min": 0,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "upgrade"
     }
   ]
 }

@@ -7,12 +7,16 @@
       "cost": 45,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Archers",
       "type": "Infanterie",
-      "cost": 55
+      "cost": 55,
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Ours",
@@ -20,7 +24,9 @@
       "cost": 85,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Chevaliers",
@@ -28,15 +34,19 @@
       "cost": 110,
       "restrictions": {
         "maxPer1000": 4
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
-      {
+    {
       "name": "Archers à Cheval",
       "type": "Cavalerie",
       "cost": 80,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Chariot de Guerre",
@@ -44,7 +54,9 @@
       "cost": 75,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Général",
@@ -55,7 +67,8 @@
         "min": 1,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Héros",
@@ -64,7 +77,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Sorcier",
@@ -73,7 +87,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Ours",
@@ -82,18 +97,20 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     },
     {
       "name": "Tzarine",
-      "type": "Spécial",
+      "type": "Amélioration",
       "cost": 25,
       "countsForBP": false,
       "restrictions": {
         "min": 0,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "upgrade"
     }
   ]
 }

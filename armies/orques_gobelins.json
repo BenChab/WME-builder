@@ -7,7 +7,9 @@
       "cost": 60,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Orques Noirs",
@@ -15,7 +17,9 @@
       "cost": 110,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Gobelins",
@@ -23,7 +27,9 @@
       "cost": 30,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Trolls",
@@ -31,49 +37,63 @@
       "cost": 110,
       "restrictions": {
         "maxPer1000": 3
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
-      {
+    {
       "name": "Ogres",
       "type": "Infanterie",
       "cost": 105,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
-       {
+    {
       "name": "Orques sur Sanglier",
       "type": "Cavalerie",
-      "cost": 110
+      "cost": 110,
+      "category": "unit",
+      "countsForBP": true
     },
-       {
+    {
       "name": "Gobelins sur Loup",
       "type": "Cavalerie",
-      "cost": 60
+      "cost": 60,
+      "category": "unit",
+      "countsForBP": true
     },
-       {
+    {
       "name": "Chars à Loups",
       "type": "Char",
       "cost": 80,
       "restrictions": {
         "maxPer1000": 3
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
-       {
+    {
       "name": "Géant",
       "type": "Monstre",
       "cost": 150,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
-       {
+    {
       "name": "Lance Rocs",
       "type": "Artillerie",
       "cost": 75,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Général Orque",
@@ -84,7 +104,8 @@
         "min": 1,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Héros Orque",
@@ -93,16 +114,18 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "character"
     },
-      {
+    {
       "name": "Chaman Orque",
       "type": "Sorcier",
       "cost": 45,
-        "countsForBP": false,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Héros Gobelin",
@@ -111,32 +134,38 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "character"
     },
-   {
+    {
       "name": "Chaman Gobelin",
       "type": "Sorcier",
       "cost": 30,
-     "countsForBP": false,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
-    },{
+      },
+      "category": "character"
+    },
+    {
       "name": "Vouivre",
-      "type": "Monture Monstrueuse",
+      "type": "Monture",
       "cost": 60,
-     "countsForBP": false,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
-    },{
+      },
+      "category": "upgrade"
+    },
+    {
       "name": "Char",
-      "type": "Monture Char",
+      "type": "Monture",
       "cost": 10,
-     "countsForBP": false,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     }
   ]
 }

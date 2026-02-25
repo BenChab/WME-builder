@@ -7,7 +7,9 @@
       "cost": 40,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Vermines de Choc",
@@ -15,7 +17,9 @@
       "cost": 55,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Jezzails",
@@ -23,7 +27,9 @@
       "cost": 70,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Moines de la Peste",
@@ -31,15 +37,19 @@
       "cost": 70,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
-      {
+    {
       "name": "Nuées de Rats",
       "type": "Infanterie",
       "cost": 25,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Coureurs d'Égouts",
@@ -47,31 +57,39 @@
       "cost": 70,
       "restrictions": {
         "maxPer1000": 4
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
-     {
+    {
       "name": "Rats-Ogres",
       "type": "Infanterie",
       "cost": 110,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
-       {
+    {
       "name": "Canon à Malefoudre",
       "type": "Artillerie",
       "cost": 50,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
-       {
+    {
       "name": "Roue Infernale",
       "type": "Machine",
       "cost": 125,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Prophète Gris",
@@ -82,7 +100,8 @@
         "min": 1,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Héros",
@@ -91,7 +110,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Technomage",
@@ -100,16 +120,18 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "character"
     },
-   {
+    {
       "name": "Cloche Hurlante",
-      "type": "Monture Char",
+      "type": "Monture",
       "cost": 120,
-     "countsForBP": false,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     }
   ]
 }

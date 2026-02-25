@@ -7,7 +7,9 @@
       "cost": 75,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Gardes Éternels",
@@ -15,7 +17,9 @@
       "cost": 45,
       "restrictions": {
         "minPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Gardes Sylvains",
@@ -23,7 +27,9 @@
       "cost": 60,
       "restrictions": {
         "minPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Dryades",
@@ -31,7 +37,9 @@
       "cost": 60,
       "restrictions": {
         "minPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Lémures",
@@ -39,7 +47,9 @@
       "cost": 100,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Danseurs de Guerre",
@@ -47,7 +57,9 @@
       "cost": 90,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Chevaliers Sylvains",
@@ -55,7 +67,9 @@
       "cost": 90,
       "restrictions": {
         "maxPer1000": 3
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Cavaliers Sauvages",
@@ -63,22 +77,31 @@
       "cost": 100,
       "restrictions": {
         "maxPer1000": 3
-      }
-    },{
+      },
+      "category": "unit",
+      "countsForBP": true
+    },
+    {
       "name": "Guerriers Faucon",
       "type": "Monstre",
       "cost": 70,
       "restrictions": {
         "maxPer1000": 1
-      }
-    },{
+      },
+      "category": "unit",
+      "countsForBP": true
+    },
+    {
       "name": "Homme Arbre",
       "type": "Monstre",
       "cost": 130,
       "restrictions": {
         "maxPer1000": 1
-      }
-    },{
+      },
+      "category": "unit",
+      "countsForBP": true
+    },
+    {
       "name": "Seigneur Sylvain",
       "type": "Général",
       "cost": 120,
@@ -87,24 +110,30 @@
         "min": 1,
         "max": 1,
         "perArmy": true
-      }
-    },{
+      },
+      "category": "character"
+    },
+    {
       "name": "Noble Sylvain",
       "type": "Héros",
       "cost": 80,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
-      }
-    },{
+      },
+      "category": "character"
+    },
+    {
       "name": "Tisseur de Sorts",
       "type": "Sorcier",
       "cost": 90,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
-    },{
+      },
+      "category": "character"
+    },
+    {
       "name": "Vénérable Homme Arbre",
       "type": "Amélioration",
       "cost": 60,
@@ -113,16 +142,18 @@
         "min": 0,
         "max": 1,
         "perArmy": true
-      }
-    },{
+      },
+      "category": "upgrade"
+    },
+    {
       "name": "Dragon Sylvain",
-      "type": "Monture Monstrueuse",
+      "type": "Monture",
       "cost": 100,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     }
-  
   ]
 }

@@ -7,7 +7,9 @@
       "cost": 45,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Archers",
@@ -15,7 +17,9 @@
       "cost": 55,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Gardes",
@@ -23,12 +27,16 @@
       "cost": 70,
       "restrictions": {
         "maxPer1000": 4
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Chevaliers",
       "type": "Cavalerie",
-      "cost": 110
+      "cost": 110,
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Cavaliers du désert",
@@ -36,7 +44,9 @@
       "cost": 80,
       "restrictions": {
         "minPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Méharistes",
@@ -44,7 +54,9 @@
       "cost": 100,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Tapis Volants",
@@ -52,7 +64,9 @@
       "cost": 85,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Éléphants",
@@ -60,7 +74,9 @@
       "cost": 200,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Général",
@@ -83,7 +99,8 @@
           "cost": 40,
           "type": "Monture Monstrueuse"
         }
-      ]
+      ],
+      "category": "character"
     },
     {
       "name": "Héros",
@@ -104,7 +121,8 @@
           "cost": 40,
           "type": "Monture Monstrueuse"
         }
-      ]
+      ],
+      "category": "character"
     },
     {
       "name": "Sorcier",
@@ -130,7 +148,8 @@
           "cost": 80,
           "type": "Monture Monstrueuse"
         }
-      ]
+      ],
+      "category": "character"
     }
   ]
 }

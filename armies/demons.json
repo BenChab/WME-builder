@@ -7,7 +7,9 @@
       "cost": 75,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Nuées Démoniaques",
@@ -16,7 +18,9 @@
       "restrictions": {
         "minPer1000": 1,
         "maxPer1000": 4
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Cavalerie Démoniaques",
@@ -24,7 +28,9 @@
       "cost": 110,
       "restrictions": {
         "maxPer1000": 3
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Chiens Démoniaques",
@@ -32,7 +38,9 @@
       "cost": 90,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Chars Démoniaques",
@@ -40,7 +48,9 @@
       "cost": 95,
       "restrictions": {
         "maxPer1000": 3
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Bêtes Démoniaques",
@@ -48,7 +58,9 @@
       "cost": 200,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Démons Volants",
@@ -56,7 +68,9 @@
       "cost": 80,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Démon Majeur",
@@ -64,8 +78,11 @@
       "cost": 150,
       "restrictions": {
         "maxPer1000": 1
-      }
-    },{
+      },
+      "category": "unit",
+      "countsForBP": true
+    },
+    {
       "name": "Archi Démon",
       "type": "Général",
       "cost": 125,
@@ -74,36 +91,45 @@
         "min": 1,
         "max": 1,
         "perArmy": true
-      }
-    },{
+      },
+      "category": "character"
+    },
+    {
       "name": "Seigneur Démon (héros ou sorcier)",
       "type": "Héros",
       "cost": 90,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
-      }
-    },{
+      },
+      "category": "character"
+    },
+    {
       "name": "Faveur des Dieux",
-      "type": "Spécial",
+      "type": "Amélioration",
       "cost": 50,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
-    },{
+      },
+      "category": "upgrade"
+    },
+    {
       "name": "Ailes Ténébreuses",
-      "type": "Spécial",
+      "type": "Amélioration",
       "cost": 10,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
-    },{
+      },
+      "category": "upgrade"
+    },
+    {
       "name": "Amélioration Sorcier pour général",
-      "type": "Spécial",
+      "type": "Amélioration",
       "countsForBP": false,
-      "cost": 25
+      "cost": 25,
+      "category": "upgrade"
     }
   ]
 }

@@ -5,7 +5,8 @@
       "name": "Archers",
       "type": "Infanterie",
       "cost": 55,
-      "countsForBP": false
+      "countsForBP": false,
+      "category": "unit"
     },
     {
       "name": "Hommes d’Armes",
@@ -14,7 +15,8 @@
       "countsForBP": false,
       "restrictions": {
         "minPer1000": 1
-      }
+      },
+      "category": "unit"
     },
     {
       "name": "Paysans",
@@ -23,7 +25,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 4
-      }
+      },
+      "category": "unit"
     },
     {
       "name": "Ecuyers",
@@ -33,7 +36,8 @@
       "restrictions": {
         "minPer1000": 1,
         "maxPer1000": 4
-      }
+      },
+      "category": "unit"
     },
     {
       "name": "Chevaliers",
@@ -41,7 +45,9 @@
       "cost": 110,
       "restrictions": {
         "minPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Chevaliers du Graal",
@@ -49,7 +55,9 @@
       "cost": 120,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Chevaliers Pégase",
@@ -57,7 +65,9 @@
       "cost": 90,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Trébuchet",
@@ -68,7 +78,8 @@
         "min": 0,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "unit"
     },
     {
       "name": "Général",
@@ -79,7 +90,8 @@
         "min": 1,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Héros",
@@ -88,7 +100,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Enchanteresse",
@@ -97,7 +110,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Pégase",
@@ -106,7 +120,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     },
     {
       "name": "Licorne",
@@ -115,27 +130,30 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     },
     {
       "name": "Hippogryphe",
-      "type": "Monture Monstrueuse",
+      "type": "Monture",
       "cost": 60,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     },
     {
       "name": "Reliquaire du Graal",
-      "type": "Spécial",
+      "type": "Amélioration",
       "cost": 40,
       "countsForBP": false,
       "restrictions": {
         "min": 0,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "upgrade"
     }
   ]
 }

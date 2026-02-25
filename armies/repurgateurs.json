@@ -7,7 +7,9 @@
       "cost": 40,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Flagellants",
@@ -15,7 +17,9 @@
       "cost": 70,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Exorcistes",
@@ -23,7 +27,9 @@
       "cost": 80,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Miliciens",
@@ -31,44 +37,56 @@
       "cost": 45,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
-      {
+    {
       "name": "Chasseurs",
       "type": "Infanterie",
       "cost": 55,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Chiens de Guerre",
       "type": "Infanterie",
-      "cost": 20
+      "cost": 20,
+      "category": "unit",
+      "countsForBP": true
     },
-       {
+    {
       "name": "Chevaliers",
       "type": "Cavalerie",
       "cost": 110,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
-       {
+    {
       "name": "Pistoliers",
       "type": "Cavalerie",
       "cost": 95,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
-       {
+    {
       "name": "Chariot Purificateur",
       "type": "Char",
       "cost": 100,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Inquisiteur",
@@ -79,7 +97,8 @@
         "min": 1,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Répurgateur",
@@ -88,7 +107,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Prêtre Guerrier",
@@ -97,29 +117,32 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Prison Tractée",
-      "type": "Monture Char",
+      "type": "Monture",
       "cost": 80,
       "countsForBP": false,
       "restrictions": {
         "min": 0,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "upgrade"
     },
-      {
+    {
       "name": "Autel de Sigmar",
-      "type": "Spécial",
+      "type": "Monture",
       "cost": 45,
-        "countsForBP": false,
+      "countsForBP": false,
       "restrictions": {
         "min": 0,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "upgrade"
     }
   ]
 }

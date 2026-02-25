@@ -7,7 +7,9 @@
       "cost": 105,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Crache-Plomb",
@@ -15,7 +17,9 @@
       "cost": 110,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Ventres-Durs",
@@ -23,7 +27,9 @@
       "cost": 150,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Yétis",
@@ -31,7 +37,9 @@
       "cost": 100,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Gnoblars",
@@ -40,7 +48,9 @@
       "restrictions": {
         "minPer1000": 1,
         "maxPer1000": 4
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Mangeurs d’Hommes",
@@ -48,7 +58,9 @@
       "cost": 120,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Chevaucheurs de Rhinox",
@@ -56,7 +68,9 @@
       "cost": 220,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Crocs de Sabre",
@@ -64,7 +78,9 @@
       "cost": 50,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Géant",
@@ -72,7 +88,9 @@
       "cost": 150,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Lance-Ferraille Gnoblar",
@@ -80,7 +98,9 @@
       "cost": 100,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Tyran",
@@ -91,7 +111,8 @@
         "min": 1,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Cogneur",
@@ -100,7 +121,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Boucher",
@@ -109,7 +131,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Rhinox",
@@ -118,16 +141,18 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     },
     {
       "name": "Mastauroc",
-      "type": "Monture Monstrueuse",
+      "type": "Monture",
       "cost": 60,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     }
   ]
 }

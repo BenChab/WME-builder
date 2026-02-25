@@ -7,7 +7,9 @@
       "cost": 60,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Archers",
@@ -15,7 +17,9 @@
       "cost": 75,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Heaumes d’Argent",
@@ -23,7 +27,9 @@
       "cost": 110,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Patrouilleurs Ellyriens",
@@ -31,7 +37,9 @@
       "cost": 90,
       "restrictions": {
         "maxPer1000": 3
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Chars",
@@ -39,7 +47,9 @@
       "cost": 95,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Aigles Géants",
@@ -47,7 +57,9 @@
       "cost": 70,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Baliste à Répétition",
@@ -55,8 +67,11 @@
       "cost": 55,
       "restrictions": {
         "maxPer1000": 1
-      }
-    },{
+      },
+      "category": "unit",
+      "countsForBP": true
+    },
+    {
       "name": "Général",
       "type": "Général",
       "cost": 125,
@@ -65,8 +80,10 @@
         "min": 1,
         "max": 1,
         "perArmy": true
-      }
-    },{
+      },
+      "category": "character"
+    },
+    {
       "name": "Seigneur Haut Elfe",
       "type": "Amélioration",
       "cost": 30,
@@ -75,47 +92,58 @@
         "min": 0,
         "max": 1,
         "perArmy": true
-      }
-    },{
+      },
+      "category": "upgrade"
+    },
+    {
       "name": "Héros",
       "type": "Héros",
       "cost": 80,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
-    },{
+      },
+      "category": "character"
+    },
+    {
       "name": "Sorcier",
       "type": "Sorcier",
       "cost": 90,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
-    },{
+      },
+      "category": "character"
+    },
+    {
       "name": "Aigle Géant",
       "type": "Monture",
       "cost": 15,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
-    },{
+      },
+      "category": "upgrade"
+    },
+    {
       "name": "Dragon",
-      "type": "Monture Monstrueuse",
+      "type": "Monture",
       "cost": 100,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
-    },{
+      },
+      "category": "upgrade"
+    },
+    {
       "name": "Char",
-      "type": "Monture Char",
+      "type": "Monture",
       "cost": 10,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     }
   ]
 }

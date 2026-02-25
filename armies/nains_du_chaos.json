@@ -8,7 +8,9 @@
       "restrictions": {
         "minPer1000": 2,
         "maxPer1000": 4
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Tromblons",
@@ -16,7 +18,9 @@
       "cost": 95,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Hobgoblins",
@@ -24,7 +28,9 @@
       "cost": 50,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Orques Noirs",
@@ -32,7 +38,9 @@
       "cost": 110,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Esclaves",
@@ -40,12 +48,16 @@
       "cost": 25,
       "restrictions": {
         "maxPer1000": 4
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Hobgoblins sur Loup",
       "type": "Cavalerie",
-      "cost": 80
+      "cost": 80,
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Centaures Taureaux",
@@ -53,7 +65,9 @@
       "cost": 145,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Canon Trembleterre",
@@ -61,7 +75,9 @@
       "cost": 100,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Lance-Roquettes",
@@ -69,7 +85,9 @@
       "cost": 60,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Balistes",
@@ -77,7 +95,9 @@
       "cost": 65,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Général",
@@ -88,18 +108,20 @@
         "min": 1,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Option Sorcier",
-      "type": "Spécial",
+      "type": "Amélioration",
       "cost": 25,
       "countsForBP": false,
       "restrictions": {
         "min": 0,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "upgrade"
     },
     {
       "name": "Héros",
@@ -108,7 +130,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Khan Hobgoblin",
@@ -117,7 +140,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Sorcier",
@@ -126,16 +150,18 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Grand Taurus",
-      "type": "Monture Monstrueuse",
+      "type": "Monture",
       "cost": 70,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     },
     {
       "name": "Lammasu",
@@ -144,7 +170,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     }
   ]
 }

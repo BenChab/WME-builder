@@ -7,7 +7,9 @@
       "cost": 35,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Saurus",
@@ -15,7 +17,9 @@
       "cost": 75,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Gardes des Temples",
@@ -23,7 +27,9 @@
       "cost": 110,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Salamandres",
@@ -32,7 +38,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit"
     },
     {
       "name": "Kroxigors",
@@ -40,7 +47,9 @@
       "cost": 135,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Cavaliers sur Sang-Froid",
@@ -48,7 +57,9 @@
       "cost": 140,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Téradons",
@@ -56,7 +67,9 @@
       "cost": 85,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Stégadon",
@@ -64,7 +77,9 @@
       "cost": 250,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Slann",
@@ -75,7 +90,8 @@
         "min": 1,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Héros Saurus",
@@ -84,7 +100,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Héros Skink",
@@ -93,7 +110,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 3
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Chaman Skink",
@@ -102,7 +120,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Palanquin",
@@ -111,25 +130,28 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     },
     {
       "name": "Stégadon",
-      "type": "Monture Monstrueuse",
+      "type": "Monture",
       "cost": 90,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     },
     {
       "name": "Carnosaure",
-      "type": "Monture Monstrueuse",
+      "type": "Monture",
       "cost": 60,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     }
   ]
 }

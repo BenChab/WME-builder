@@ -7,7 +7,9 @@
       "cost": 60,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Guerriers Nains",
@@ -15,7 +17,9 @@
       "cost": 110,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Ogres",
@@ -23,7 +27,9 @@
       "cost": 105,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Arbalétriers avec Pavois",
@@ -31,7 +37,9 @@
       "cost": 70,
       "restrictions": {
         "minPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Éclaireurs Halflings",
@@ -39,7 +47,9 @@
       "cost": 45,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Franche Compagnie",
@@ -47,7 +57,9 @@
       "cost": 45,
       "restrictions": {
         "maxPer1000": 4
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Hommes Oiseaux",
@@ -55,7 +67,9 @@
       "cost": 85,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Cavalerie Lourde",
@@ -63,12 +77,16 @@
       "cost": 110,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Cavalerie Légère",
       "type": "Cavalerie",
-      "cost": 80
+      "cost": 80,
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Canons Tractés",
@@ -76,7 +94,9 @@
       "cost": 85,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Marmite Halfling",
@@ -84,7 +104,9 @@
       "cost": 100,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Mammouth de Guerre",
@@ -92,7 +114,9 @@
       "cost": 100,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Général",
@@ -103,7 +127,8 @@
         "min": 1,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Héros",
@@ -112,7 +137,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Trésorier Payeur",
@@ -123,7 +149,8 @@
         "min": 0,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Sorcier",
@@ -132,7 +159,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Griffon",
@@ -141,7 +169,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     }
   ]
 }

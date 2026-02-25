@@ -7,7 +7,9 @@
       "cost": 30,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Archers Squelettes",
@@ -15,12 +17,16 @@
       "cost": 40,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Cavaliers Squelettes",
       "type": "Cavalerie",
-      "cost": 60
+      "cost": 60,
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Chars Squelettes",
@@ -28,7 +34,9 @@
       "cost": 110,
       "restrictions": {
         "maxPer1000": 3
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Charognards",
@@ -36,7 +44,9 @@
       "cost": 65,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Géant Squelette",
@@ -44,7 +54,9 @@
       "cost": 95,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Sphinx",
@@ -52,7 +64,9 @@
       "cost": 100,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Catapulte à Crânes",
@@ -60,7 +74,9 @@
       "cost": 85,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Balistes à Ossements",
@@ -68,7 +84,9 @@
       "cost": 65,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Roi des Tombes",
@@ -79,7 +97,8 @@
         "min": 1,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Prêtre-Liche",
@@ -88,25 +107,28 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Dragon Zombie",
-      "type": "Monture Monstrueuse",
+      "type": "Monture",
       "cost": 100,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     },
     {
       "name": "Char Liche",
-      "type": "Monture Char",
+      "type": "Monture",
       "cost": 10,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     }
   ]
 }

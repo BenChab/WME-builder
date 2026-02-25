@@ -1,132 +1,157 @@
 {
-    "armyName": "Chaos",
-    "units": [
-        {
-            "name": "Guerriers du Chaos",
-            "type": "Infanterie",
-            "cost": 150,
-            "restrictions": {
-                "minPer1000": 1
-            }
-        },
-        {
-            "name": "Maraudeurs du Chaos",
-            "type": "Infanterie",
-            "cost": 60,
-            "restrictions": {
-                "minPer1000": 1
-            }
-        },
-        {
-            "name": "Ogres",
-            "type": "Infanterie",
-            "cost": 105,
-            "restrictions": {
-                "maxPer1000": 1
-            }
-        },
-        {
-            "name": "Trolls",
-            "type": "Infanterie",
-            "cost": 110,
-            "restrictions": {
-                "maxPer1000": 1
-            }
-        },
-        {
-            "name": "Cavaliers Maraudeurs",
-            "type": "Cavalerie",
-            "cost": 90,
-            "restrictions": {
-                "maxPer1000": 4
-            }
-        },
-        {
-            "name": "Chevaliers du Chaos",
-            "type": "Cavalerie",
-            "cost": 200,
-            "restrictions": {
-                "maxPer1000": 2
-            }
-        },
-        {
-            "name": "Chiens du Chaos",
-            "type": "Cavalerie",
-            "cost": 30,
-            "restrictions": {
-                "maxPer1000": 2
-            }
-        },
-        {
-            "name": "Chars du Chaos",
-            "type": "Char",
-            "cost": 95,
-            "restrictions": {
-                "maxPer1000": 3
-            }
-        },
-        {
-            "name": "Harpies",
-            "type": "Monstre",
-            "cost": 65,
-            "restrictions": {
-                "maxPer1000": 1
-            }
-        },
-        {
-            "name": "Dragons-Ogres",
-            "type": "Monstre",
-            "cost": 200,
-            "restrictions": {
-                "maxPer1000": 1
-            }
-        },
-        {
-            "name": "Enfant du Chaos",
-            "type": "Monstre",
-            "cost": 80,
-            "restrictions": {
-                "maxPer1000": 1
-            }
-        },
-        {
-            "name": "Général",
-            "type": "Général",
-            "cost": 125,
-            "countsForBP": false,
-            "restrictions": {
-                "min": 1,
-                "max": 1,
-                "perArmy": true
-            }
-        },
-        {
-            "name": "Héros",
-            "type": "Héros",
-            "cost": 80,
-            "countsForBP": false,
-            "restrictions": {
-                "maxPer1000": 1
-            }
-        },
-        {
-            "name": "Sorcier",
-            "type": "Sorcier",
-            "cost": 90,
-            "countsForBP": false,
-            "restrictions": {
-                "maxPer1000": 1
-            }
-        },
-        {
-            "name": "Dragon du Chaos",
-            "type": "Monture Monstrueuse",
-            "cost": 100,
-            "countsForBP": false,
-            "restrictions": {
-                "maxPer1000": 1
-            }
-
-        }
-    ]
+  "armyName": "Chaos",
+  "units": [
+    {
+      "name": "Guerriers du Chaos",
+      "type": "Infanterie",
+      "cost": 150,
+      "restrictions": {
+        "minPer1000": 1
+      },
+      "category": "unit",
+      "countsForBP": true
+    },
+    {
+      "name": "Maraudeurs du Chaos",
+      "type": "Infanterie",
+      "cost": 60,
+      "restrictions": {
+        "minPer1000": 1
+      },
+      "category": "unit",
+      "countsForBP": true
+    },
+    {
+      "name": "Ogres",
+      "type": "Infanterie",
+      "cost": 105,
+      "restrictions": {
+        "maxPer1000": 1
+      },
+      "category": "unit",
+      "countsForBP": true
+    },
+    {
+      "name": "Trolls",
+      "type": "Infanterie",
+      "cost": 110,
+      "restrictions": {
+        "maxPer1000": 1
+      },
+      "category": "unit",
+      "countsForBP": true
+    },
+    {
+      "name": "Cavaliers Maraudeurs",
+      "type": "Cavalerie",
+      "cost": 90,
+      "restrictions": {
+        "maxPer1000": 4
+      },
+      "category": "unit",
+      "countsForBP": true
+    },
+    {
+      "name": "Chevaliers du Chaos",
+      "type": "Cavalerie",
+      "cost": 200,
+      "restrictions": {
+        "maxPer1000": 2
+      },
+      "category": "unit",
+      "countsForBP": true
+    },
+    {
+      "name": "Chiens du Chaos",
+      "type": "Cavalerie",
+      "cost": 30,
+      "restrictions": {
+        "maxPer1000": 2
+      },
+      "category": "unit",
+      "countsForBP": true
+    },
+    {
+      "name": "Chars du Chaos",
+      "type": "Char",
+      "cost": 95,
+      "restrictions": {
+        "maxPer1000": 3
+      },
+      "category": "unit",
+      "countsForBP": true
+    },
+    {
+      "name": "Harpies",
+      "type": "Monstre",
+      "cost": 65,
+      "restrictions": {
+        "maxPer1000": 1
+      },
+      "category": "unit",
+      "countsForBP": true
+    },
+    {
+      "name": "Dragons-Ogres",
+      "type": "Monstre",
+      "cost": 200,
+      "restrictions": {
+        "maxPer1000": 1
+      },
+      "category": "unit",
+      "countsForBP": true
+    },
+    {
+      "name": "Enfant du Chaos",
+      "type": "Monstre",
+      "cost": 80,
+      "restrictions": {
+        "maxPer1000": 1
+      },
+      "category": "unit",
+      "countsForBP": true
+    },
+    {
+      "name": "Général",
+      "type": "Général",
+      "cost": 125,
+      "countsForBP": false,
+      "restrictions": {
+        "min": 1,
+        "max": 1,
+        "perArmy": true
+      },
+      "category": "character"
+    },
+    {
+      "name": "Héros",
+      "type": "Héros",
+      "cost": 80,
+      "countsForBP": false,
+      "restrictions": {
+        "maxPer1000": 1
+      },
+      "category": "character"
+    },
+    {
+      "name": "Sorcier",
+      "type": "Sorcier",
+      "cost": 90,
+      "countsForBP": false,
+      "restrictions": {
+        "maxPer1000": 1
+      },
+      "category": "character"
+    },
+    {
+      "name": "Dragon du Chaos",
+      "type": "Monture",
+      "cost": 100,
+      "countsForBP": false,
+      "restrictions": {
+        "maxPer1000": 1
+      },
+      "category": "upgrade"
+    }
+  ]
 }

@@ -7,7 +7,9 @@
       "cost": 45,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Gors",
@@ -15,7 +17,9 @@
       "cost": 45,
       "restrictions": {
         "minPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Bestigors",
@@ -23,7 +27,9 @@
       "cost": 75,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Minotaures",
@@ -31,7 +37,9 @@
       "cost": 135,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Centigors",
@@ -39,7 +47,9 @@
       "cost": 95,
       "restrictions": {
         "maxPer1000": 4
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Chars",
@@ -47,7 +57,9 @@
       "cost": 120,
       "restrictions": {
         "maxPer1000": 3
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Dragons Ogres",
@@ -55,22 +67,30 @@
       "cost": 200,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Jabberslythe",
       "type": "Monstre",
-      "cost": 100
+      "cost": 100,
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Shaggoth",
       "type": "Monstre",
-      "cost": 100
+      "cost": 100,
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Ghorgon",
       "type": "Monstre",
-      "cost": 100
+      "cost": 100,
+      "category": "unit",
+      "countsForBP": true
     },
     {
       "name": "Seigneur",
@@ -81,7 +101,8 @@
         "min": 1,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Héros",
@@ -90,7 +111,8 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Doombull",
@@ -101,7 +123,8 @@
         "min": 0,
         "max": 1,
         "perArmy": true
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Chaman",
@@ -110,16 +133,18 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "character"
     },
     {
       "name": "Char",
-      "type": "Monture Char",
+      "type": "Monture",
       "cost": 10,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      }
+      },
+      "category": "upgrade"
     }
   ]
 }
