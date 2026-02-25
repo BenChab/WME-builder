@@ -82,6 +82,7 @@
       "name": "Seigneur Sylvain",
       "type": "Général",
       "cost": 120,
+      "countsForBP": false,
       "restrictions": {
         "min": 1,
         "max": 1,
@@ -91,6 +92,7 @@
       "name": "Noble Sylvain",
       "type": "Héros",
       "cost": 80,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
       }
@@ -98,6 +100,7 @@
       "name": "Tisseur de Sorts",
       "type": "Sorcier",
       "cost": 90,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -105,6 +108,7 @@
       "name": "Vénérable Homme Arbre",
       "type": "Amélioration",
       "cost": 60,
+      "countsForBP": false,
       "restrictions": {
         "min": 0,
         "max": 1,
@@ -114,6 +118,7 @@
       "name": "Dragon Sylvain",
       "type": "Monture Monstrueuse",
       "cost": 100,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
