@@ -41,7 +41,7 @@
     {
       "name": "Chariot de Guerre",
       "type": "Monstre",
-      "cost": 50,
+      "cost": 75,
       "restrictions": {
         "maxPer1000": 1
       }
