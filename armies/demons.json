@@ -69,6 +69,7 @@
       "name": "Archi Démon",
       "type": "Général",
       "cost": 125,
+      "countsForBP": false,
       "restrictions": {
         "min": 1,
         "max": 1,
@@ -78,6 +79,7 @@
       "name": "Seigneur Démon (héros ou sorcier)",
       "type": "Héros",
       "cost": 90,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
       }
@@ -85,6 +87,7 @@
       "name": "Faveur des Dieux",
       "type": "Spécial",
       "cost": 50,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -92,12 +95,14 @@
       "name": "Ailes Ténébreuses",
       "type": "Spécial",
       "cost": 10,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
     },{
       "name": "Amélioration Sorcier pour général",
       "type": "Spécial",
+      "countsForBP": false,
       "cost": 25
     }
   ]
