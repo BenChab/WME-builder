@@ -50,6 +50,7 @@
       "name": "Général",
       "type": "Général",
       "cost": 125,
+      "countsForBP": false,
       "restrictions": {
         "min": 1,
         "max": 1,
@@ -60,6 +61,7 @@
       "name": "Héros",
       "type": "Héros",
       "cost": 80,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
       }
@@ -68,6 +70,7 @@
       "name": "Sorcier",
       "type": "Sorcier",
       "cost": 45,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -76,6 +79,7 @@
       "name": "Ours",
       "type": "Monture",
       "cost": 10,
+      "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       }
@@ -84,6 +88,7 @@
       "name": "Tzarine",
       "type": "Spécial",
       "cost": 25,
+      "countsForBP": false,
       "restrictions": {
         "min": 0,
         "max": 1,
