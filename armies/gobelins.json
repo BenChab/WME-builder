@@ -1,5 +1,43 @@
 {
   "armyName": "Gobelins",
+
+  "upgradeLibrary": {
+    "wyvern": {
+      "name": "Wyvern",
+      "type": "Monture",
+      "cost": 60,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "char": {
+      "name": "Char",
+      "type": "Monture",
+      "cost": 10,
+      "groupId": "mount"
+    },
+
+    "fanatiques": {
+      "name": "Fanatiques Gobelins",
+      "type": "Amélioration",
+      "cost": 15,
+      "restrictions": {
+        "maxPer1000": 4,
+        "perArmy": true
+      }
+    }
+  },
+
+  "upgradeSets": {
+    "character_mounts": [
+      "wyvern",
+      "char"
+    ]
+  },
+  
   "units": [
     {
       "name": "Gobelins",
@@ -9,18 +47,12 @@
         "minPer1000": 4
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "upgradeOptions": [
+        "fanatiques"
+      ]
     },
-    {
-      "name": "Fanatiques Gobelins",
-      "type": "Infanterie",
-      "cost": 15,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 4
-      },
-      "category": "unit"
-    },
+    
     {
       "name": "Squigs",
       "type": "Infanterie",
@@ -141,6 +173,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -151,6 +184,7 @@
       "restrictions": {
         "maxPer1000": 4
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -161,24 +195,8 @@
       "restrictions": {
         "maxPer1000": 2
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
-    },
-    {
-      "name": "Wyvern",
-      "type": "Monture",
-      "cost": 60,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Char",
-      "type": "Monture",
-      "countsForBP": false,
-      "cost": 10,
-      "category": "upgrade"
     }
   ]
 }
