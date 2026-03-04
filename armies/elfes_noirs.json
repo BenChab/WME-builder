@@ -1,5 +1,66 @@
 {
   "armyName": "Elfes Noirs",
+
+"upgradeLibrary": {
+    "manticore": {
+      "name": "Manticore",
+      "type": "Monture",
+      "cost": 60,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "char": {
+      "name": "Char",
+      "type": "Monture",
+      "cost": 10,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "chaudron": {
+      "name": "Chaudron de Sang",
+      "type": "Monture",
+      "cost": 15,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "pegase_noir": {
+      "name": "Pégase Noir",
+      "type": "Monture",
+      "cost": 15,
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    }
+  },
+
+  "upgradeSets": {
+    "character_mounts": [
+      "manticore",
+      "char"
+    ],
+
+    "wizard_mounts": [
+      "manticore",
+      "char",
+      "chaudron",
+      "pegase_noir"
+    ]
+  },
+
+  
   "units": [
     {
       "name": "Lanciers",
@@ -91,6 +152,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -101,6 +163,7 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -111,42 +174,13 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "wizard_mounts",
       "category": "character"
     },
     {
       "name": "Manticore",
       "type": "Monture",
       "cost": 60,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Char",
-      "type": "Monture",
-      "cost": 10,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Chaudron de Sang",
-      "type": "Monture",
-      "cost": 15,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Pégase Noir",
-      "type": "Monture",
-      "cost": 15,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
