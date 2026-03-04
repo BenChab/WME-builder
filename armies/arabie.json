@@ -1,36 +1,72 @@
 {
   "armyName": "Arabie",
+
+  "upgradeLibrary": {
+    "tapis_volant": {
+      "name": "Tapis Volant",
+      "type": "Monture",
+      "cost": 10,
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "elephant_monture": {
+      "name": "Éléphant",
+      "type": "Monture",
+      "cost": 40,
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "djinn": {
+      "name": "Djinn",
+      "type": "Monture",
+      "cost": 80,
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    }
+  },
+
   "units": [
     {
       "name": "Lanciers",
       "type": "Infanterie",
       "cost": 45,
+      "category": "unit",
+      "countsForBP": true,
       "restrictions": {
         "minPer1000": 2
-      },
-      "category": "unit",
-      "countsForBP": true
+      }
     },
+
     {
       "name": "Archers",
       "type": "Infanterie",
       "cost": 55,
+      "category": "unit",
+      "countsForBP": true,
       "restrictions": {
         "minPer1000": 2
-      },
-      "category": "unit",
-      "countsForBP": true
+      }
     },
+
     {
       "name": "Gardes",
       "type": "Infanterie",
       "cost": 70,
+      "category": "unit",
+      "countsForBP": true,
       "restrictions": {
         "maxPer1000": 4
-      },
-      "category": "unit",
-      "countsForBP": true
+      }
     },
+
     {
       "name": "Chevaliers",
       "type": "Cavalerie",
@@ -38,118 +74,99 @@
       "category": "unit",
       "countsForBP": true
     },
+
     {
       "name": "Cavaliers du désert",
       "type": "Cavalerie",
       "cost": 80,
+      "category": "unit",
+      "countsForBP": true,
       "restrictions": {
         "minPer1000": 1
-      },
-      "category": "unit",
-      "countsForBP": true
+      }
     },
+
     {
       "name": "Méharistes",
       "type": "Cavalerie",
       "cost": 100,
+      "category": "unit",
+      "countsForBP": true,
       "restrictions": {
         "maxPer1000": 2
-      },
-      "category": "unit",
-      "countsForBP": true
+      }
     },
+
     {
       "name": "Tapis Volants",
       "type": "Cavalerie",
       "cost": 85,
+      "category": "unit",
+      "countsForBP": true,
       "restrictions": {
         "maxPer1000": 1
-      },
-      "category": "unit",
-      "countsForBP": true
+      }
     },
+
     {
       "name": "Éléphants",
       "type": "Monstre",
       "cost": 200,
+      "category": "unit",
+      "countsForBP": true,
       "restrictions": {
         "maxPer1000": 1
-      },
-      "category": "unit",
-      "countsForBP": true
+      }
     },
+
     {
       "name": "Général",
       "type": "Général",
       "cost": 125,
+      "category": "character",
       "countsForBP": false,
       "restrictions": {
         "min": 1,
         "max": 1,
         "perArmy": true
       },
-      "upgrades": [
-        {
-          "name": "Tapis Volant",
-          "cost": 10,
-          "type": "Monture"
-        },
-        {
-          "name": "Éléphant",
-          "cost": 40,
-          "type": "Monture Monstrueuse"
-        }
-      ],
-      "category": "character"
+      "upgradeOptions": [
+        "tapis_volant",
+        "elephant_monture",
+        "djinn"
+      ]
     },
+
     {
       "name": "Héros",
       "type": "Héros",
       "cost": 80,
+      "category": "character",
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 2
       },
-      "upgrades": [
-        {
-          "name": "Tapis Volant",
-          "cost": 10,
-          "type": "Monture"
-        },
-        {
-          "name": "Éléphant",
-          "cost": 40,
-          "type": "Monture Monstrueuse"
-        }
-      ],
-      "category": "character"
+      "upgradeOptions": [
+        "tapis_volant",
+        "elephant_monture",
+        "djinn"
+      ]
     },
+
     {
       "name": "Sorcier",
       "type": "Sorcier",
       "cost": 45,
+      "category": "character",
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       },
-      "upgrades": [
-        {
-          "name": "Tapis Volant",
-          "cost": 10,
-          "type": "Monture"
-        },
-        {
-          "name": "Éléphant",
-          "cost": 40,
-          "type": "Monture Monstrueuse"
-        },
-        {
-          "name": "Djinn",
-          "cost": 80,
-          "type": "Monture Monstrueuse"
-        }
-      ],
-      "category": "character"
+      "upgradeOptions": [
+        "tapis_volant",
+        "elephant_monture",
+        "djinn"
+      ]
     }
   ]
 }
