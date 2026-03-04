@@ -1,5 +1,44 @@
 {
   "armyName": "Comtes Vampires",
+
+"upgradeLibrary": {
+    "cauchemar": {
+      "name": "Cauchemar ailé",
+      "type": "Monture",
+      "cost": 60,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "carosse_noir": {
+      "name": "Carosse Noir",
+      "type": "Monture",
+      "cost": 15,
+      "groupId": "mount",
+      "restrictions": {
+        "max": 1,
+        "perArmy": true
+      }
+    }
+
+    
+  },
+
+  "upgradeSets": {
+    "character_mounts": [
+      "cauchemar",
+      "carosse_noir"
+    ],
+
+    "wizard_mounts": [
+      "cauchemar"
+    ]
+  },
+
+  
   "units": [
     {
       "name": "Squelettes",
@@ -88,6 +127,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -98,6 +138,7 @@
       "restrictions": {
         "maxPer1000": 2
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -108,29 +149,8 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "wizard_mounts",
       "category": "character"
-    },
-    {
-      "name": "Cauchemar Ailé",
-      "type": "Monture",
-      "cost": 60,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Carrosse Noir",
-      "type": "Monture",
-      "cost": 15,
-      "countsForBP": false,
-      "restrictions": {
-        "min": 0,
-        "max": 1,
-        "perArmy": true
-      },
-      "category": "upgrade"
     }
   ]
 }
