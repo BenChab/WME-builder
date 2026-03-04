@@ -1,5 +1,42 @@
 {
   "armyName": "Empire",
+
+"upgradeLibrary": {
+    "griffon": {
+      "name": "Griffon",
+      "type": "Monture",
+      "cost": 60,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "autel": {
+      "name": "Autel de Guerre",
+      "type": "Monture",
+      "cost": 15,
+      "groupId": "mount",
+      "restrictions": {
+        "perArmy": true
+      }
+    }
+  },
+
+  "upgradeSets": {
+    "character_mounts": [
+      "griffon"
+    ],
+
+    "wizard_mounts": [
+      "griffon",
+      "autel"
+    ]
+  },
+
+
+  
   "units": [
     {
       "name": "Hallebardiers",
@@ -102,6 +139,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -112,6 +150,7 @@
       "restrictions": {
         "maxPer1000": 2
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -122,29 +161,8 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "wizard_mounts",
       "category": "character"
-    },
-    {
-      "name": "Autel de Guerre",
-      "type": "Monture",
-      "cost": 15,
-      "countsForBP": false,
-      "restrictions": {
-        "min": 0,
-        "max": 1,
-        "perArmy": true
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Griffon",
-      "type": "Monture",
-      "cost": 60,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
     }
   ]
 }
