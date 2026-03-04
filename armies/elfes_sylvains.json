@@ -1,16 +1,42 @@
 {
   "armyName": "Elfes Sylvains",
-  "units": [
-    {
-      "name": "Forestiers",
-      "type": "Infanterie",
-      "cost": 75,
+
+"upgradeLibrary": {
+    "dragon": {
+      "name": "Dragon sylvain",
+      "type": "Monture",
+      "cost": 100,
+      "groupId": "mount",
       "restrictions": {
-        "maxPer1000": 2
-      },
-      "category": "unit",
-      "countsForBP": true
+        "maxPer1000": 1,
+        "perArmy": true
+      }
     },
+
+    "homme_arbre": {
+      "name": "Vénérable Homme Arbre",
+      "type": "Amélioration",
+      "cost": 60,
+      "restrictions": {
+        "perArmy": true
+      }
+    }
+  },
+
+  "upgradeSets": {
+    "character_mounts": [
+      "dragon"
+    ],
+
+    "noble_upgrades": [
+      "dragon",
+      "homme_arbre"
+    ]
+  },
+
+  
+  "units": [
+    
     {
       "name": "Gardes Éternels",
       "type": "Infanterie",
@@ -57,6 +83,16 @@
       "cost": 90,
       "restrictions": {
         "maxPer1000": 1
+      },
+      "category": "unit",
+      "countsForBP": true
+    },
+    {
+      "name": "Forestiers",
+      "type": "Infanterie",
+      "cost": 75,
+      "restrictions": {
+        "maxPer1000": 2
       },
       "category": "unit",
       "countsForBP": true
@@ -111,6 +147,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -121,6 +158,7 @@
       "restrictions": {
         "maxPer1000": 2
       },
+      "upgradeSet": "noble_upgrades",
       "category": "character"
     },
     {
@@ -132,28 +170,6 @@
         "maxPer1000": 1
       },
       "category": "character"
-    },
-    {
-      "name": "Vénérable Homme Arbre",
-      "type": "Amélioration",
-      "cost": 60,
-      "countsForBP": false,
-      "restrictions": {
-        "min": 0,
-        "max": 1,
-        "perArmy": true
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Dragon Sylvain",
-      "type": "Monture",
-      "cost": 100,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
     }
   ]
 }
