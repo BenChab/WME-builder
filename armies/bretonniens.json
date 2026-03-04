@@ -1,5 +1,63 @@
 {
   "armyName": "Bretonnie",
+
+  "upgradeLibrary": {
+    "pegase": {
+      "name": "Pégase",
+      "type": "Monture",
+      "cost": 15,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "licorne": {
+      "name": "Licorne",
+      "type": "Monture",
+      "cost": 15,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "hippogryphe": {
+      "name": "Hippogryphe",
+      "type": "Monture",
+      "cost": 60,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "reliquaire": {
+      "name": "Reliquaire du Graal",
+      "type": "Amélioration",
+      "cost": 40,
+      "restrictions": {
+        "max": 1,
+        "perArmy": true
+      }
+    }
+  },
+
+  "upgradeSets": {
+    "character_mounts": [
+      "pegase",
+      "hippogryphe"
+    ],
+
+    "wizard_mounts": [
+      "pegase",
+      "licorne"
+    ]
+  },
+
   "units": [
     {
       "name": "Archers",
@@ -8,6 +66,7 @@
       "countsForBP": false,
       "category": "unit"
     },
+
     {
       "name": "Hommes d’Armes",
       "type": "Infanterie",
@@ -18,16 +77,21 @@
       },
       "category": "unit"
     },
+
     {
       "name": "Paysans",
       "type": "Infanterie",
       "cost": 30,
       "countsForBP": false,
+      "upgradeOptions": [
+        "reliquaire"
+      ],
       "restrictions": {
         "maxPer1000": 4
       },
       "category": "unit"
     },
+
     {
       "name": "Ecuyers",
       "type": "Cavalerie",
@@ -39,48 +103,52 @@
       },
       "category": "unit"
     },
+
     {
       "name": "Chevaliers",
       "type": "Cavalerie",
       "cost": 110,
+      "countsForBP": true,
       "restrictions": {
         "minPer1000": 1
       },
-      "category": "unit",
-      "countsForBP": true
+      "category": "unit"
     },
+
     {
       "name": "Chevaliers du Graal",
       "type": "Cavalerie",
       "cost": 120,
+      "countsForBP": true,
       "restrictions": {
         "maxPer1000": 1
       },
-      "category": "unit",
-      "countsForBP": true
+      "category": "unit"
     },
+
     {
       "name": "Chevaliers Pégase",
       "type": "Monstre",
       "cost": 90,
+      "countsForBP": true,
       "restrictions": {
         "maxPer1000": 1
       },
-      "category": "unit",
-      "countsForBP": true
+      "category": "unit"
     },
+
     {
       "name": "Trébuchet",
       "type": "Artillerie",
       "cost": 100,
       "countsForBP": false,
       "restrictions": {
-        "min": 0,
         "max": 1,
         "perArmy": true
       },
       "category": "unit"
     },
+
     {
       "name": "Général",
       "type": "Général",
@@ -91,8 +159,10 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
+
     {
       "name": "Héros",
       "type": "Héros",
@@ -101,8 +171,10 @@
       "restrictions": {
         "maxPer1000": 2
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
+
     {
       "name": "Enchanteresse",
       "type": "Sorcier",
@@ -111,49 +183,8 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "wizard_mounts",
       "category": "character"
-    },
-    {
-      "name": "Pégase",
-      "type": "Monture",
-      "cost": 15,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Licorne",
-      "type": "Monture",
-      "cost": 15,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Hippogryphe",
-      "type": "Monture",
-      "cost": 60,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Reliquaire du Graal",
-      "type": "Amélioration",
-      "cost": 40,
-      "countsForBP": false,
-      "restrictions": {
-        "min": 0,
-        "max": 1,
-        "perArmy": true
-      },
-      "category": "upgrade"
     }
   ]
 }
