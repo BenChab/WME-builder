@@ -1,5 +1,24 @@
 {
   "armyName": "Chaos",
+
+"upgradeLibrary": {
+    "dragon": {
+      "name": "Dragon du chaos",
+      "type": "Monture",
+      "cost": 100,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    }
+},
+   "upgradeSets": {
+    "character_mounts": [
+      "dragon"
+    ],
+
+  
   "units": [
     {
       "name": "Guerriers du Chaos",
@@ -121,6 +140,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -131,6 +151,7 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -141,17 +162,9 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
-    {
-      "name": "Dragon du Chaos",
-      "type": "Monture",
-      "cost": 100,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    }
+    
   ]
 }
