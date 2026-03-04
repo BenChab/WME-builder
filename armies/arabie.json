@@ -6,6 +6,7 @@
       "name": "Tapis Volant",
       "type": "Monture",
       "cost": 10,
+      "groupId":"mount",
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
@@ -16,6 +17,7 @@
       "name": "Éléphant",
       "type": "Monture",
       "cost": 40,
+      "groupId":"mount",
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
@@ -26,11 +28,25 @@
       "name": "Djinn",
       "type": "Monture",
       "cost": 80,
+      "groupId":"mount",
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
       }
     }
+  },
+
+  "upgradeSets": {
+    "character_mounts": [
+      "tapis_volant",
+      "elephant_monture"
+    ],
+
+    "wizard_mounts": [
+      "tapis_volant",
+      "elephant_monture",
+      "djinn"
+    ]
   },
 
   "units": [
@@ -130,11 +146,7 @@
         "max": 1,
         "perArmy": true
       },
-      "upgradeOptions": [
-        "tapis_volant",
-        "elephant_monture",
-        "djinn"
-      ]
+      "upgradeSet": "character_mounts"
     },
 
     {
@@ -146,11 +158,7 @@
       "restrictions": {
         "maxPer1000": 2
       },
-      "upgradeOptions": [
-        "tapis_volant",
-        "elephant_monture",
-        "djinn"
-      ]
+      "upgradeSet": "character_mounts"
     },
 
     {
@@ -162,11 +170,7 @@
       "restrictions": {
         "maxPer1000": 1
       },
-      "upgradeOptions": [
-        "tapis_volant",
-        "elephant_monture",
-        "djinn"
-      ]
+      "upgradeSet": "wizard_mounts"
     }
   ]
 }
