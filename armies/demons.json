@@ -1,5 +1,54 @@
 {
   "armyName": "Démons",
+
+"upgradeLibrary": {
+    "faveur": {
+      "name": "Faveur des Dieux",
+      "type": "Amélioration",
+      "cost": 50,
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "ailes": {
+      "name": "Ailes Ténébreuses",
+      "type": "Amélioration",
+      "cost": 10,
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "sorcier": {
+      "name": "Amélioration Sorcier",
+      "type": "Amélioration",
+      "cost": 25,
+      "restrictions": {
+        "perArmy": true
+      }
+    }
+
+    
+  },
+
+  "upgradeSets": {
+    "character_upgrades": [
+      "faveur",
+      "ailes"
+    ],
+
+    "general_upgrades": [
+      "faveur",
+      "ailes",
+      "sorcier"
+    ]
+  },
+
+
+  
   "units": [
     {
       "name": "Hordes Démoniaques",
@@ -92,6 +141,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "general_upgrades",
       "category": "character"
     },
     {
@@ -102,34 +152,8 @@
       "restrictions": {
         "maxPer1000": 2
       },
+      "upgradeSet": "character_upgrades",
       "category": "character"
-    },
-    {
-      "name": "Faveur des Dieux",
-      "type": "Amélioration",
-      "cost": 50,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Ailes Ténébreuses",
-      "type": "Amélioration",
-      "cost": 10,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Amélioration Sorcier pour général",
-      "type": "Amélioration",
-      "countsForBP": false,
-      "cost": 25,
-      "category": "upgrade"
     }
   ]
 }
