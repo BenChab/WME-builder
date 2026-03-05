@@ -1,5 +1,38 @@
 {
   "armyName": "Rois des Tombes",
+
+  "upgradeLibrary": {
+    "dragon": {
+      "name": "Dragon Zombie",
+      "type": "Monture",
+      "cost": 100,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "char": {
+      "name": "Char Liche",
+      "type": "Monture",
+      "cost": 10,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    }
+  },
+
+  "upgradeSets": {
+    "character_mounts": [
+      "dragon",
+      "char"
+    ]
+    
+  },
+  
   "units": [
     {
       "name": "Squelettes",
@@ -98,6 +131,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -108,27 +142,8 @@
       "restrictions": {
         "maxPer1000": 2
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
-    },
-    {
-      "name": "Dragon Zombie",
-      "type": "Monture",
-      "cost": 100,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Char Liche",
-      "type": "Monture",
-      "cost": 10,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
     }
   ]
 }
