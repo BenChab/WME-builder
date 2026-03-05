@@ -241,7 +241,8 @@ if (!upgrade) return;
   close.className = "mt-2 text-red-500";
 
   close.onclick = () => {
-    document.body.removeChild(menu);
+    menu.remove();
+    upgradeMenu = null;
   };
 
   menu.appendChild(close);
@@ -253,13 +254,18 @@ if (!upgrade) return;
 }
 
 function closeUpgradeMenuOutside(event) {
+
   if (!upgradeMenu) return;
 
   if (!upgradeMenu.contains(event.target)) {
+
     upgradeMenu.remove();
     upgradeMenu = null;
+
     document.removeEventListener("click", closeUpgradeMenuOutside);
+
   }
+
 }
 
 function validateArmy() {
