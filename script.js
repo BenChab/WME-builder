@@ -124,7 +124,10 @@ function renderArmy() {
   }
 
   // 🔹 Unités
-  army.forEach((unit, index) => {
+  army
+  .slice()
+  .sort((a, b) => getUnitOrder(a.name) - getUnitOrder(b.name))
+  .forEach((unit, index) => {
     const buttons = [];
 
 if (unit.upgradeOptions && unit.upgradeOptions.length > 0) {
@@ -132,9 +135,9 @@ if (unit.upgradeOptions && unit.upgradeOptions.length > 0) {
   upgradeBtn.textContent = "⚙";
   upgradeBtn.className = "text-blue-500 hover:text-blue-700 ml-2";
 
-  upgradeBtn.onclick = () => {
-    showUpgradeMenu(index);
-  };
+  upgradeBtn.onclick = (event) => {
+  showUpgradeMenu(index, event);
+};
 
   buttons.push(upgradeBtn);
 }
@@ -193,7 +196,7 @@ createRow(
   });
 }
 
-function showUpgradeMenu(unitIndex) {
+function showUpgradeMenu(unitIndex, event) {
 
   const unit = army[unitIndex];
 
@@ -206,8 +209,8 @@ function showUpgradeMenu(unitIndex) {
 const menu = document.createElement('div');
 upgradeMenu = menu;
   menu.className = "fixed bg-white border shadow p-3 rounded";
-  menu.style.top = "200px";
-  menu.style.left = "200px";
+  menu.style.top = event.clientY + "px";
+  menu.style.left = event.clientX + "px";
 
   unit.upgradeOptions.forEach(id => {
 
@@ -220,9 +223,8 @@ if (!upgrade) return;
     btn.textContent = `${upgrade.name} (+${upgrade.cost} pts)`;
 
     btn.onclick = () => {
-      addUpgrade(unitIndex, id);
-      document.body.removeChild(menu);
-    };
+  addUpgrade(unitIndex, id);
+};
 
     menu.appendChild(btn);
   });
@@ -238,8 +240,20 @@ if (!upgrade) return;
   menu.appendChild(close);
 
   document.body.appendChild(menu);
+  setTimeout(() => {
+  document.addEventListener("click", closeUpgradeMenuOutside);
+}, 0);
 }
 
+function closeUpgradeMenuOutside(event) {
+  if (!upgradeMenu) return;
+
+  if (!upgradeMenu.contains(event.target)) {
+    upgradeMenu.remove();
+    upgradeMenu = null;
+    document.removeEventListener("click", closeUpgradeMenuOutside);
+  }
+}
 
 function validateArmy() {
   const pointBlocks = getPointBlocks();
@@ -482,6 +496,10 @@ units = armyData.units.map(unit => {
   return newUnit;
 });
 
+function getUnitOrder(name) {
+  return units.findIndex(u => u.name === name);
+}
+    
 unitSelectorContainer.classList.remove('hidden');
 createUnitButtons();
 army = [];
