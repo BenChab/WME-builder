@@ -77,7 +77,7 @@ function calculateBreakPoint() {
 function renderArmy() {
   armyList.innerHTML = '';
 
-  function createRow(name, count, cost, removeCallback) {
+  function createRow(name, count, cost, removeCallback, extraButtons = []) {
     const li = document.createElement('li');
     li.className = "flex justify-between items-center text-sm bg-white rounded px-2 py-1 shadow";
 
@@ -106,6 +106,9 @@ function renderArmy() {
     left.appendChild(costEl);
 
     li.appendChild(left);
+    extraButtons.forEach(btn => {
+  li.appendChild(btn);
+});
     li.appendChild(removeBtn);
 
     armyList.appendChild(li);
@@ -113,20 +116,35 @@ function renderArmy() {
 
   // 🔹 Unités
   army.forEach((unit, index) => {
-    createRow(
-      unit.name,
-      unit.count,
-      unit.cost * unit.count,
-      () => {
-        if (unit.count > 1) {
-          unit.count--;
-        } else {
-          army.splice(index, 1);
-        }
-        renderArmy();
-        updateTotal();
-      }
-    );
+    const buttons = [];
+
+if (unit.upgradeOptions && unit.upgradeOptions.length > 0) {
+  const upgradeBtn = document.createElement('button');
+  upgradeBtn.textContent = "⚙";
+  upgradeBtn.className = "text-blue-500 hover:text-blue-700 ml-2";
+
+  upgradeBtn.onclick = () => {
+    showUpgradeMenu(index);
+  };
+
+  buttons.push(upgradeBtn);
+}
+
+createRow(
+  unit.name,
+  unit.count,
+  unit.cost * unit.count,
+  () => {
+    if (unit.count > 1) {
+      unit.count--;
+    } else {
+      army.splice(index, 1);
+    }
+    renderArmy();
+    updateTotal();
+  },
+  buttons
+);
   });
 
   // 🔸 Objets magiques
@@ -147,6 +165,48 @@ function renderArmy() {
     );
   });
 }
+
+function showUpgradeMenu(unitIndex) {
+
+  const unit = army[unitIndex];
+
+  if (!unit.upgradeOptions) return;
+
+  const menu = document.createElement('div');
+  menu.className = "fixed bg-white border shadow p-3 rounded";
+  menu.style.top = "200px";
+  menu.style.left = "200px";
+
+  unit.upgradeOptions.forEach(id => {
+
+    const upgrade = upgradeLibrary[id];
+
+    const btn = document.createElement('button');
+    btn.className = "block w-full text-left hover:bg-gray-200 p-1";
+
+    btn.textContent = `${upgrade.name} (+${upgrade.cost} pts)`;
+
+    btn.onclick = () => {
+      addUpgrade(unitIndex, id);
+      document.body.removeChild(menu);
+    };
+
+    menu.appendChild(btn);
+  });
+
+  const close = document.createElement('button');
+  close.textContent = "Fermer";
+  close.className = "mt-2 text-red-500";
+
+  close.onclick = () => {
+    document.body.removeChild(menu);
+  };
+
+  menu.appendChild(close);
+
+  document.body.appendChild(menu);
+}
+
 
 function validateArmy() {
   const pointBlocks = getPointBlocks();
