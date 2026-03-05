@@ -5,6 +5,7 @@ let selectedMagicItems = [];
 let targetPoints = 2000;
 let upgradeLibrary = {};
 let upgradeSets = {};
+let upgradeMenu = null;
 
 const armySelect = document.getElementById('armySelect');
 const armyList = document.getElementById('armyList');
@@ -48,7 +49,21 @@ function getPointBlocks() {
 }
 
 function updateTotal() {
-  const armyTotal = army.reduce((sum, u) => sum + (u.cost * u.count), 0);
+  const armyTotal = army.reduce((sum, unit) => {
+
+  let unitCost = unit.cost * unit.count;
+
+  let upgradeCost = 0;
+
+  if (unit.upgrades) {
+    unit.upgrades.forEach(up => {
+      upgradeCost += up.cost;
+    });
+  }
+
+  return sum + unitCost + upgradeCost;
+
+}, 0);
   const magicTotal = selectedMagicItems.reduce((sum, i) => sum + (i.cost * i.count), 0);
   const total = armyTotal + magicTotal;
 
@@ -172,7 +187,12 @@ function showUpgradeMenu(unitIndex) {
 
   if (!unit.upgradeOptions) return;
 
-  const menu = document.createElement('div');
+  if (upgradeMenu) {
+  upgradeMenu.remove();
+}
+
+const menu = document.createElement('div');
+upgradeMenu = menu;
   menu.className = "fixed bg-white border shadow p-3 rounded";
   menu.style.top = "200px";
   menu.style.left = "200px";
@@ -351,7 +371,60 @@ function addMagicItem(name) {
   updateTotal();
 }
 
+function addUpgrade(unitIndex, upgradeId) {
+
+  const unit = army[unitIndex];
+  const upgrade = upgradeLibrary[upgradeId];
+
+  if (!upgrade) return;
+
+  const restriction = upgrade.restrictions || {};
+  const pointBlocks = getPointBlocks();
+
+  if (!unit.upgrades) {
+    unit.upgrades = [];
+  }
+
+  // Compter combien de fois cette upgrade est déjà prise
+  let totalTaken = 0;
+
+  army.forEach(u => {
+    if (u.upgrades) {
+      u.upgrades.forEach(up => {
+        if (up.id === upgradeId) {
+          totalTaken++;
+        }
+      });
+    }
+  });
+
+  // restrictions perArmy
+  if (restriction.perArmy && totalTaken >= 1) {
+    alert(`${upgrade.name} est limité à une fois par armée.`);
+    return;
+  }
+
+  // restrictions maxPer1000
+  if (restriction.maxPer1000 && totalTaken >= restriction.maxPer1000 * pointBlocks) {
+    alert(`${upgrade.name} est limité à ${restriction.maxPer1000} par tranche de 1000 pts.`);
+    return;
+  }
+
+  unit.upgrades.push({
+    id: upgradeId,
+    name: upgrade.name,
+    cost: upgrade.cost
+  });
+
+  renderArmy();
+  updateTotal();
+}
+
 async function loadArmy() {
+  if (upgradeMenu) {
+  upgradeMenu.remove();
+  upgradeMenu = null;
+}
   const selected = armySelect.value;
   if (!selected) return;
 
