@@ -13,7 +13,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-char"
     },
 
     
@@ -34,7 +35,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-ungors"
     },
     {
       "name": "Gors",
@@ -44,7 +46,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-gors"
     },
     {
       "name": "Bestigors",
@@ -54,7 +57,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-bestigors"
     },
     {
       "name": "Minotaures",
@@ -64,7 +68,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-minotaures"
     },
     {
       "name": "Centigors",
@@ -74,7 +79,8 @@
         "maxPer1000": 4
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-centigors"
     },
     {
       "name": "Chars",
@@ -84,7 +90,8 @@
         "maxPer1000": 3
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chars"
     },
     {
       "name": "Dragons Ogres",
@@ -94,28 +101,32 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-dogres"
     },
     {
       "name": "Jabberslythe",
       "type": "Monstre",
       "cost": 100,
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-jabberslythe"
     },
     {
       "name": "Shaggoth",
       "type": "Monstre",
       "cost": 100,
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-shaggoth"
     },
     {
       "name": "Ghorgon",
       "type": "Monstre",
       "cost": 100,
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-ghorgon"
     },
     {
       "name": "Seigneur",
@@ -128,7 +139,8 @@
         "perArmy": true
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-general"
     },
     {
       "name": "Héros",
@@ -139,7 +151,8 @@
         "maxPer1000": 2
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-heros"
     },
     {
       "name": "Doombull",
@@ -151,7 +164,8 @@
         "max": 1,
         "perArmy": true
       },
-      "category": "character"
+      "category": "character",
+      "id": "unit-doombull"
     },
     {
       "name": "Chaman",
@@ -162,7 +176,8 @@
         "maxPer1000": 1
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-chaman"
     }
     
   ]
