@@ -1,54 +1,51 @@
 {
   "armyName": "Démons",
-
-"upgradeLibrary": {
+  "upgradeLibrary": {
     "faveur": {
       "name": "Faveur des Dieux",
       "type": "Amélioration",
       "cost": 50,
+      "groupId": "upgrade",
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-faveur"
     },
-
     "ailes": {
       "name": "Ailes Ténébreuses",
       "type": "Amélioration",
       "cost": 10,
+      "groupId": "upgrade",
       "restrictions": {
-        "maxPer1000": 1,
+        "max": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-ailes"
     },
-
     "sorcier": {
       "name": "Amélioration Sorcier",
       "type": "Amélioration",
       "cost": 25,
+      "groupId": "upgrade",
       "restrictions": {
+        "max": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-sorcier"
     }
-
-    
   },
-
   "upgradeSets": {
     "character_upgrades": [
       "faveur",
       "ailes"
     ],
-
     "general_upgrades": [
       "faveur",
       "ailes",
       "sorcier"
     ]
   },
-
-
-  
   "units": [
     {
       "name": "Hordes Démoniaques",
@@ -58,7 +55,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-hordes_demoniaques-1"
     },
     {
       "name": "Nuées Démoniaques",
@@ -69,7 +67,8 @@
         "maxPer1000": 4
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-nuees_demoniaques-2"
     },
     {
       "name": "Cavalerie Démoniaques",
@@ -79,7 +78,8 @@
         "maxPer1000": 3
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-cavalerie_demoniaques-3"
     },
     {
       "name": "Chiens Démoniaques",
@@ -89,7 +89,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chiens_demoniaques-4"
     },
     {
       "name": "Chars Démoniaques",
@@ -99,7 +100,8 @@
         "maxPer1000": 3
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chars_demoniaques-5"
     },
     {
       "name": "Bêtes Démoniaques",
@@ -109,7 +111,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-betes_demoniaques-6"
     },
     {
       "name": "Démons Volants",
@@ -119,7 +122,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-demons_volants-7"
     },
     {
       "name": "Démon Majeur",
@@ -129,7 +133,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-demon_majeur-8"
     },
     {
       "name": "Archi Démon",
@@ -142,7 +147,8 @@
         "perArmy": true
       },
       "upgradeSet": "general_upgrades",
-      "category": "character"
+      "category": "character",
+      "id": "unit-archi_demon-9"
     },
     {
       "name": "Seigneur Démon (héros ou sorcier)",
@@ -153,7 +159,8 @@
         "maxPer1000": 2
       },
       "upgradeSet": "character_upgrades",
-      "category": "character"
+      "category": "character",
+      "id": "unit-seigneur_demon-10"
     }
   ]
 }
