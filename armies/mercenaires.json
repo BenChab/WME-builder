@@ -10,7 +10,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-griffon"
     }
   },
 
@@ -29,7 +30,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-piquiers"
     },
     {
       "name": "Guerriers Nains",
@@ -39,7 +41,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-nains"
     },
     {
       "name": "Ogres",
@@ -49,7 +52,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-ogres"
     },
     {
       "name": "Arbalétriers avec Pavois",
@@ -59,7 +63,8 @@
         "minPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-arbaletriers"
     },
     {
       "name": "Éclaireurs Halflings",
@@ -69,7 +74,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-halflings"
     },
     {
       "name": "Franche Compagnie",
@@ -79,7 +85,8 @@
         "maxPer1000": 4
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-franche-compagnie"
     },
     {
       "name": "Hommes Oiseaux",
@@ -89,7 +96,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-hommes-oiseaux"
     },
     {
       "name": "Cavalerie Lourde",
@@ -99,14 +107,16 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-cavalerie-lourde"
     },
     {
       "name": "Cavalerie Légère",
       "type": "Cavalerie",
       "cost": 80,
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-cavalerie-legere"
     },
     {
       "name": "Canons Tractés",
@@ -116,7 +126,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-canons"
     },
     {
       "name": "Marmite Halfling",
@@ -126,7 +137,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-marmite"
     },
     {
       "name": "Mammouth de Guerre",
@@ -136,7 +148,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-mammouth"
     },
     {
       "name": "Général",
@@ -149,7 +162,8 @@
         "perArmy": true
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-general"
     },
     {
       "name": "Héros",
@@ -160,7 +174,8 @@
         "maxPer1000": 2
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-heros"
     },
     {
       "name": "Trésorier Payeur",
@@ -173,7 +188,8 @@
         "perArmy": true
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-tresorier"
     },
     {
       "name": "Sorcier",
@@ -184,7 +200,8 @@
         "maxPer1000": 1
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-sorcier"
     }
   ]
 }
