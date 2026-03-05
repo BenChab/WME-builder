@@ -212,6 +212,7 @@ upgradeMenu = menu;
   unit.upgradeOptions.forEach(id => {
 
     const upgrade = upgradeLibrary[id];
+if (!upgrade) return;
 
     const btn = document.createElement('button');
     btn.className = "block w-full text-left hover:bg-gray-200 p-1";
