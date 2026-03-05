@@ -1,7 +1,6 @@
 {
   "armyName": "Chaos",
-
-"upgradeLibrary": {
+  "upgradeLibrary": {
     "dragon": {
       "name": "Dragon du chaos",
       "type": "Monture",
@@ -10,15 +9,15 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-dragon"
     }
-},
-   "upgradeSets": {
+  },
+  "upgradeSets": {
     "character_mounts": [
       "dragon"
     ]
-   },
-  
+  },
   "units": [
     {
       "name": "Guerriers du Chaos",
@@ -28,7 +27,8 @@
         "minPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-guerriers_du_chaos-1"
     },
     {
       "name": "Maraudeurs du Chaos",
@@ -38,7 +38,8 @@
         "minPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-maraudeurs_du_chaos-2"
     },
     {
       "name": "Ogres",
@@ -48,7 +49,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-ogres-3"
     },
     {
       "name": "Trolls",
@@ -58,7 +60,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-trolls-4"
     },
     {
       "name": "Cavaliers Maraudeurs",
@@ -68,7 +71,8 @@
         "maxPer1000": 4
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-cavaliers_maraudeurs-5"
     },
     {
       "name": "Chevaliers du Chaos",
@@ -78,7 +82,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chevaliers_du_chaos-6"
     },
     {
       "name": "Chiens du Chaos",
@@ -88,7 +93,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chiens_du_chaos-7"
     },
     {
       "name": "Chars du Chaos",
@@ -98,7 +104,8 @@
         "maxPer1000": 3
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chars_du_chaos-8"
     },
     {
       "name": "Harpies",
@@ -108,63 +115,31 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-harpies-9"
     },
     {
-      "name": "Dragons-Ogres",
+      "name": "Démons du Chaos",
       "type": "Monstre",
-      "cost": 200,
+      "cost": 180,
       "restrictions": {
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-demons_du_chaos-10"
     },
     {
-      "name": "Enfant du Chaos",
-      "type": "Monstre",
-      "cost": 80,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "unit",
-      "countsForBP": true
-    },
-    {
-      "name": "Général",
-      "type": "Général",
-      "cost": 125,
-      "countsForBP": false,
-      "restrictions": {
-        "min": 1,
-        "max": 1,
-        "perArmy": true
-      },
-      "upgradeSet": "character_mounts",
-      "category": "character"
-    },
-    {
-      "name": "Héros",
+      "name": "Seigneur du Chaos",
       "type": "Héros",
-      "cost": 80,
+      "cost": 160,
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
-    },
-    {
-      "name": "Sorcier",
-      "type": "Sorcier",
-      "cost": 90,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-seigneur_du_chaos-11"
     }
-    
   ]
 }
