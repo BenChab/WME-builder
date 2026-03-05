@@ -53,7 +53,7 @@ function updateTotal() {
 
   let unitCost = unit.cost * unit.count;
 
-  const upgradeCost = (unit.upgrades || []).reduce((s, up) => s + up.cost, 0);
+  const upgradeCost = (unit.upgrades || []).reduce((s, up) => s + (up.cost * up.count), 0);
 
   return sum + unitCost + upgradeCost;
 
@@ -168,10 +168,10 @@ createRow(
 
   unit.upgrades.forEach((up, upIndex) => {
 
-    createRow(
-      "   ↳ " + up.name,
-      1,
-      up.cost,
+  createRow(
+    "   ↳ " + up.name,
+    up.count,
+    up.cost * up.count,
       () => {
         unit.upgrades.splice(upIndex, 1);
         renderArmy();
@@ -477,11 +477,25 @@ function addUpgrade(unitIndex, upgradeId) {
     return;
   }
 
+  const totalUpgrades = (unit.upgrades || []).reduce((sum, u) => sum + (u.count || 1), 0);
+
+if (totalUpgrades >= unit.count) {
+  alert("Impossible d'ajouter plus d'améliorations que d'unités.");
+  return;
+}
+  
+  const existingUpgrade = unit.upgrades.find(u => u.id === upgradeId);
+
+if (existingUpgrade) {
+  existingUpgrade.count++;
+} else {
   unit.upgrades.push({
     id: upgradeId,
     name: upgrade.name,
-    cost: upgrade.cost
+    cost: upgrade.cost,
+    count: 1
   });
+}
 
   renderArmy();
   updateTotal();
