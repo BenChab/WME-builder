@@ -152,7 +152,7 @@
       "restrictions": {
         "maxPer1000": 1
       },      
-      "upgradeSet": "character_mounts",
+      "upgradeSet": "wizard_mounts",
       "category": "character"
     }
   ]
