@@ -25,8 +25,7 @@
       "type": "Amélioration",
       "cost": 15,
       "restrictions": {
-        "maxPer1000": 4,
-        "perArmy": true
+        "maxPer1000": 4
       }
     }
   },
