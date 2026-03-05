@@ -422,6 +422,19 @@ function addUpgrade(unitIndex, upgradeId) {
 
   const restriction = upgrade.restrictions || {};
 
+  if (restriction.maxPerUnit) {
+
+  const unitCount = (unit.upgrades || [])
+    .filter(u => u.id === upgradeId)
+    .length;
+
+  if (unitCount >= restriction.maxPerUnit) {
+    alert(`${upgrade.name} est limité à ${restriction.maxPerUnit} par unité.`);
+    return;
+  }
+
+}
+
   // Vérifier groupId (ex: montures)
 if (upgrade.groupId && unit.upgrades) {
 
