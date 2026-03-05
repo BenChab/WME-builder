@@ -10,7 +10,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-rhinox"
     },
 
     "mastauroc": {
@@ -21,7 +22,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-mastauroc"
     }
   },
 
@@ -41,7 +43,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-buffles"
     },
     {
       "name": "Crache-Plomb",
@@ -51,7 +54,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-crache-plomb"
     },
     {
       "name": "Ventres-Durs",
@@ -61,7 +65,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-ventres-durs"
     },
     {
       "name": "Yétis",
@@ -71,7 +76,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-yetis"
     },
     {
       "name": "Gnoblars",
@@ -82,7 +88,8 @@
         "maxPer1000": 4
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-gnoblars"
     },
     {
       "name": "Mangeurs d’Hommes",
@@ -92,7 +99,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-mangeurs"
     },
     {
       "name": "Chevaucheurs de Rhinox",
@@ -102,7 +110,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-rhinox"
     },
     {
       "name": "Crocs de Sabre",
@@ -112,7 +121,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-crocs"
     },
     {
       "name": "Géant",
@@ -122,7 +132,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-geant"
     },
     {
       "name": "Lance-Ferraille Gnoblar",
@@ -132,7 +143,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-lance-ferraille"
     },
     {
       "name": "Tyran",
@@ -145,7 +157,8 @@
         "perArmy": true
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-tyran"
     },
     {
       "name": "Cogneur",
@@ -156,7 +169,8 @@
         "maxPer1000": 1
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-cogneur"
     },
     {
       "name": "Boucher",
@@ -167,7 +181,8 @@
         "maxPer1000": 1
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-boucher"
     }
   ]
 }
