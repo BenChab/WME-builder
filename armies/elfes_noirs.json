@@ -10,7 +10,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-manticore"
     },
 
     "char": {
@@ -21,7 +22,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-char"
     },
 
     "chaudron": {
@@ -32,7 +34,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-chaudron"
     },
 
     "pegase_noir": {
@@ -42,7 +45,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-pegase"
     }
   },
 
@@ -70,7 +74,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-lanciers"
     },
     {
       "name": "Arbalétriers",
@@ -80,7 +85,8 @@
         "minPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-arbaletriers"
     },
     {
       "name": "Furies",
@@ -90,7 +96,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-furie"
     },
     {
       "name": "Cavaliers Noirs",
@@ -100,7 +107,8 @@
         "maxPer1000": 3
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-cavaliers"
     },
     {
       "name": "Chevaliers sur Sang-Froid",
@@ -110,7 +118,8 @@
         "maxPer1000": 3
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chevaliers"
     },
     {
       "name": "Harpies",
@@ -120,7 +129,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-harpies"
     },
     {
       "name": "Hydre de Guerre",
@@ -130,7 +140,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-hydre"
     },
     {
       "name": "Baliste à Répétition",
@@ -140,7 +151,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-baliste"
     },
     {
       "name": "Général",
@@ -153,7 +165,8 @@
         "perArmy": true
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-general"
     },
     {
       "name": "Héros",
@@ -164,7 +177,8 @@
         "maxPer1000": 1
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-heros"
     },
     {
       "name": "Sorcière",
@@ -175,17 +189,8 @@
         "maxPer1000": 1
       },
       "upgradeSet": "wizard_mounts",
-      "category": "character"
-    },
-    {
-      "name": "Manticore",
-      "type": "Monture",
-      "cost": 60,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
+      "category": "character",
+      "id": "unit-sorciere"
     }
   ]
 }
