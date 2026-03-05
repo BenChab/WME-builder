@@ -53,13 +53,7 @@ function updateTotal() {
 
   let unitCost = unit.cost * unit.count;
 
-  let upgradeCost = 0;
-
-  if (unit.upgrades) {
-    unit.upgrades.forEach(up => {
-      upgradeCost += up.cost;
-    });
-  }
+  const upgradeCost = (unit.upgrades || []).reduce((s, up) => s + up.cost, 0);
 
   return sum + unitCost + upgradeCost;
 
@@ -165,7 +159,7 @@ createRow(
   unit.upgrades.forEach((up, upIndex) => {
 
     createRow(
-      "↳ " + up.name,
+      "   ↳" + up.name,
       1,
       up.cost,
       () => {
@@ -342,7 +336,7 @@ function addUnitByName(name) {
   if (existing) {
     existing.count++;
   } else {
-    army.push({ ...unit, count: 1 });
+    army.push({ ...unit, count: 1, upgrades: [] });
   }
 
   renderArmy();
