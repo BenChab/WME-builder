@@ -10,7 +10,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-vouivre"
     },
 
     "char": {
@@ -21,7 +22,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-char"
     }
   },
 
@@ -42,7 +44,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-orques"
     },
     {
       "name": "Orques Noirs",
@@ -52,7 +55,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-orques-noirs"
     },
     {
       "name": "Gobelins",
@@ -62,7 +66,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-gobelins"
     },
     {
       "name": "Trolls",
@@ -72,7 +77,8 @@
         "maxPer1000": 3
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-trolls"
     },
     {
       "name": "Ogres",
@@ -82,21 +88,24 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-ogres"
     },
     {
       "name": "Orques sur Sanglier",
       "type": "Cavalerie",
       "cost": 110,
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-sangliers"
     },
     {
       "name": "Gobelins sur Loup",
       "type": "Cavalerie",
       "cost": 60,
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-gobs-loups"
     },
     {
       "name": "Chars à Loups",
@@ -106,7 +115,8 @@
         "maxPer1000": 3
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chars-a-loup"
     },
     {
       "name": "Géant",
@@ -116,7 +126,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-geant"
     },
     {
       "name": "Lance Rocs",
@@ -126,7 +137,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-lance-rocs"
     },
     {
       "name": "Général Orque",
@@ -139,7 +151,8 @@
         "perArmy": true
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-general"
     },
     {
       "name": "Héros Orque",
@@ -150,7 +163,8 @@
         "maxPer1000": 2
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-heros-orque"
     },
     {
       "name": "Chaman Orque",
@@ -161,7 +175,8 @@
         "maxPer1000": 1
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-chaman-orque"
     },
     {
       "name": "Héros Gobelin",
@@ -172,7 +187,8 @@
         "maxPer1000": 2
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-heros-gobelin"
     },
     {
       "name": "Chaman Gobelin",
@@ -183,7 +199,8 @@
         "maxPer1000": 1
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-chaman-gobelin"
     }
   ]
 }
