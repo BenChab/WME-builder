@@ -318,3 +318,53 @@ async function loadArmy() {
     console.error("Erreur de chargement :", error);
   }
 }
+
+function validateArmy() {
+  const pointBlocks = getPointBlocks();
+  const messages = [];
+
+  army.forEach(unit => {
+    if (!unit.restrictions) return;
+
+    const selected = army.find(u => u.id === unit.id);
+    const count = selected ? selected.count : 0;
+    const r = unit.restrictions;
+
+    if (r.min && count < r.min) {
+      messages.push(`${unit.name} : minimum requis ${r.min}`);
+    }
+    if (r.max && count > r.max) {
+      messages.push(`${unit.name} : maximum autorisé ${r.max}`);
+    }
+    if (r.minPer1000 && count < r.minPer1000 * pointBlocks) {
+      messages.push(`${unit.name} : minimum ${r.minPer1000} par 1000 pts requis (actuellement ${count})`);
+    }
+    if (r.maxPer1000 && count > r.maxPer1000 * pointBlocks) {
+      messages.push(`${unit.name} : maximum ${r.maxPer1000} par 1000 pts dépassé (actuellement ${count})`);
+    }
+  });
+
+  validationMessages.innerHTML = '';
+  if (messages.length > 0) {
+    messages.forEach(msg => {
+      const div = document.createElement('div');
+      div.textContent = msg;
+      div.className = 'text-sm text-red-600';
+      validationMessages.appendChild(div);
+    });
+  }
+}
+
+function createMagicItemButtons() {
+  magicItemsButtonsContainer.innerHTML = '';
+  magicItems.forEach(item => {
+    const btn = document.createElement('button');
+    btn.className = 'bg-yellow-100 hover:bg-yellow-200 border rounded p-2 shadow';
+    btn.innerHTML = `<strong>${item.name}</strong><br><span class="text-sm">${item.cost} pts</span>`;
+    btn.onclick = () => addMagicItem(item.name);
+    magicItemsButtonsContainer.appendChild(btn);
+  });
+  // On ne force plus d'affichage ici, c'est géré par le bouton toggle
+}
+
+
