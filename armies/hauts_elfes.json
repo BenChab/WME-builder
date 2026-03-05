@@ -10,7 +10,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-aigle"
     },
 
     "dragon": {
@@ -21,7 +22,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-dragon"
     },
 
     "char": {
@@ -32,7 +34,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-char"
     },
 
     "seigneur": {
@@ -41,7 +44,8 @@
       "cost": 40,
       "restrictions": {
         "perArmy": true
-      }
+      },
+      "id": "upgrade-seigneur"
     }
   },
 
@@ -69,7 +73,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-lanciers"
     },
     {
       "name": "Archers",
@@ -79,7 +84,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-archers"
     },
     {
       "name": "Heaumes d’Argent",
@@ -89,7 +95,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-heaumes-dargent"
     },
     {
       "name": "Patrouilleurs Ellyriens",
@@ -99,7 +106,8 @@
         "maxPer1000": 3
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-patrouilleurs"
     },
     {
       "name": "Chars",
@@ -109,7 +117,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chars"
     },
     {
       "name": "Aigles Géants",
@@ -119,7 +128,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-aigles"
     },
     {
       "name": "Baliste à Répétition",
@@ -129,7 +139,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-baliste"
     },
     {
       "name": "Général",
@@ -141,21 +152,12 @@
         "max": 1,
         "perArmy": true
       },
-      "category": "character"
-    },
-    {
-      "name": "Seigneur Haut Elfe",
-      "type": "Amélioration",
-      "cost": 30,
-      "countsForBP": false,
-      "restrictions": {
-        "min": 0,
-        "max": 1,
-        "perArmy": true
-      },
+      "category": "character",
+      ,
       "upgradeSet": "general_upgrades",
-      "category": "upgrade"
+      "id": "unit-general"
     },
+    
     {
       "name": "Héros",
       "type": "Héros",
@@ -165,7 +167,8 @@
         "maxPer1000": 1
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-heros"
     },
     {
       "name": "Sorcier",
@@ -176,7 +179,8 @@
         "maxPer1000": 1
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-sorcier"
     }
   ]
 }
