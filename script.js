@@ -338,14 +338,17 @@ function createUnitButtons() {
 }
 
 function addUnitByName(name) {
-  const existing = army.find(
-    u => u.name === unit.name && !unit.upgradeOptions
-  );
+
+  const unit = units.find(u => u.name === name);
   if (!unit) return;
 
   const restriction = unit.restrictions;
   const pointBlocks = getPointBlocks();
-  const existing = army.find(u => u.name === unit.name);
+
+  const existing = army.find(
+    u => u.name === unit.name && !unit.upgradeOptions
+  );
+
   const currentCount = existing ? existing.count : 0;
 
   if (restriction) {
