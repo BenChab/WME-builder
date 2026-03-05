@@ -1,7 +1,6 @@
 {
   "armyName": "Comtes Vampires",
-
-"upgradeLibrary": {
+  "upgradeLibrary": {
     "cauchemar": {
       "name": "Cauchemar ailé",
       "type": "Monture",
@@ -10,9 +9,9 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-cauchemar"
     },
-
     "carosse_noir": {
       "name": "Carosse Noir",
       "type": "Monture",
@@ -21,24 +20,19 @@
       "restrictions": {
         "max": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-carosse_noir"
     }
-
-    
   },
-
   "upgradeSets": {
     "character_mounts": [
       "cauchemar",
       "carosse_noir"
     ],
-
     "wizard_mounts": [
       "cauchemar"
     ]
   },
-
-  
   "units": [
     {
       "name": "Squelettes",
@@ -48,7 +42,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-squelettes-1"
     },
     {
       "name": "Zombies",
@@ -58,14 +53,16 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-zombies-2"
     },
     {
       "name": "Goules",
       "type": "Infanterie",
       "cost": 55,
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-goules-3"
     },
     {
       "name": "Gardes des Cryptes",
@@ -75,7 +72,8 @@
         "maxPer1000": 4
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-gardes_des_cryptes-4"
     },
     {
       "name": "Nuées Éthérées",
@@ -85,7 +83,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-nuees_etherees-5"
     },
     {
       "name": "Chevaliers Noirs",
@@ -95,7 +94,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chevaliers_noirs-6"
     },
     {
       "name": "Loups Funestes",
@@ -105,7 +105,8 @@
         "maxPer1000": 4
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-loups_funestes-7"
     },
     {
       "name": "Chauve-Souris Vampires",
@@ -115,7 +116,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chauve_souris_vampires-8"
     },
     {
       "name": "Seigneur Vampire",
@@ -128,7 +130,8 @@
         "perArmy": true
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-seigneur_vampire-9"
     },
     {
       "name": "Vampire",
@@ -139,7 +142,8 @@
         "maxPer1000": 2
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-vampire-10"
     },
     {
       "name": "Nécromancien",
@@ -150,7 +154,8 @@
         "maxPer1000": 1
       },
       "upgradeSet": "wizard_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-necromancien-11"
     }
   ]
 }
