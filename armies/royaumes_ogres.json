@@ -1,5 +1,37 @@
 {
   "armyName": "Royaumes Ogres",
+
+"upgradeLibrary": {
+    "rhinos": {
+      "name": "Rhinox",
+      "type": "Monture",
+      "cost": 10,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "mastauroc": {
+      "name": "Mastauroc",
+      "type": "Monture",
+      "cost": 60,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    }
+  },
+
+  "upgradeSets": {
+    "character_mounts": [
+      "rhinox",
+      "mastauroc"
+    ]
+  },
+  
   "units": [
     {
       "name": "Buffles Ogres",
@@ -112,6 +144,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -122,6 +155,7 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -132,27 +166,8 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
-    },
-    {
-      "name": "Rhinox",
-      "type": "Monture",
-      "cost": 10,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Mastauroc",
-      "type": "Monture",
-      "cost": 60,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
     }
   ]
 }
