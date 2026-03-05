@@ -211,6 +211,8 @@ function showUpgradeMenu(unitIndex, event) {
 
   if (upgradeMenu) {
   upgradeMenu.remove();
+  upgradeMenu = null;
+  document.removeEventListener("click", closeUpgradeMenuOutside);
 }
 
 const menu = document.createElement('div');
@@ -241,9 +243,10 @@ if (!upgrade) return;
   close.className = "mt-2 text-red-500";
 
   close.onclick = () => {
-    menu.remove();
-    upgradeMenu = null;
-  };
+  menu.remove();
+  upgradeMenu = null;
+  document.removeEventListener("click", closeUpgradeMenuOutside);
+};
 
   menu.appendChild(close);
 
