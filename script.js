@@ -124,10 +124,13 @@ function renderArmy() {
   }
 
   // 🔹 Unités
-  army
-  .map((unit, i) => ({ unit, i }))
-  .sort((a, b) => getUnitOrder(a.unit.name) - getUnitOrder(b.unit.name))
-  .forEach(({ unit, i }) => {
+  const sortedArmy = [...army].sort(
+  (a, b) => getUnitOrder(a.name) - getUnitOrder(b.name)
+);
+
+sortedArmy.forEach(unit => {
+
+  const realIndex = army.indexOf(unit);
     const buttons = [];
 
 if (unit.upgradeOptions && unit.upgradeOptions.length > 0) {
@@ -147,11 +150,9 @@ createRow(
   unit.count,
   unit.cost * unit.count,
   () => {
-    if (unit.count > 1) {
-      unit.count--;
-    } else {
-      army.splice(i, 1);
-    }
+    upgradeBtn.onclick = (event) => {
+  showUpgradeMenu(realIndex, event);
+};
     renderArmy();
     updateTotal();
   },
