@@ -1,5 +1,57 @@
 {
   "armyName": "Nains du Chaos",
+
+  "upgradeLibrary": {
+    "taurus": {
+      "name": "Grand Taurus",
+      "type": "Monture",
+      "cost": 70,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "lammasu": {
+      "name": "Lammasu",
+      "type": "Monture",
+      "cost": 20,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "sorcier": {
+      "name": "Amélioration en Sorcier",
+      "type": "Amélioration",
+      "cost": 25,
+      "restrictions": {
+        "perArmy": true
+      }
+    }
+  },
+
+  
+  "upgradeSets": {
+    "general_upgrades": [
+      "taurus",
+      "sorcier"
+    ],
+    
+    "character_mounts": [
+      "taurus"
+    ],
+
+    "wizard_mounts": [
+      "taurus",
+      "lammasu"
+    ]
+  },
+
+  
   "units": [
     {
       "name": "Nains du Chaos",
@@ -109,20 +161,10 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "general_upgrades",
       "category": "character"
     },
-    {
-      "name": "Option Sorcier",
-      "type": "Amélioration",
-      "cost": 25,
-      "countsForBP": false,
-      "restrictions": {
-        "min": 0,
-        "max": 1,
-        "perArmy": true
-      },
-      "category": "upgrade"
-    },
+    
     {
       "name": "Héros",
       "type": "Héros",
@@ -131,6 +173,7 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -151,27 +194,8 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "wizard_mounts",
       "category": "character"
-    },
-    {
-      "name": "Grand Taurus",
-      "type": "Monture",
-      "cost": 70,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Lammasu",
-      "type": "Monture",
-      "cost": 20,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
     }
   ]
 }
