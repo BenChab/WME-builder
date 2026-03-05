@@ -1,5 +1,38 @@
 {
   "armyName": "Nains",
+
+  "upgradeLibrary": {
+    "enclume": {
+      "name": "Enclume du Destin",
+      "type": "Monture",
+      "cost": 50,
+      "groupId": "mount",
+      "restrictions": {
+        "perArmy": true
+      }
+    },
+
+    "trone": {
+      "name": "Trône du Pouvoir",
+      "type": "Monture",
+      "cost": 15,
+      "groupId": "mount",
+      "restrictions": {
+        "perArmy": true
+      }
+    }
+  },
+
+  "upgradeSets": {
+    "character_mounts": [
+      "trone"
+    ],
+
+    "wizard_mounts": [
+      "enclume"
+    ]
+  },
+  
   "units": [
     {
       "name": "Guerriers",
@@ -98,6 +131,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -117,32 +151,9 @@
       "countsForBP": false,
       "restrictions": {
         "maxPer1000": 1
-      },
+      },      
+      "upgradeSet": "character_mounts",
       "category": "character"
-    },
-    {
-      "name": "Enclume du Destin",
-      "type": "Monture",
-      "cost": 50,
-      "countsForBP": false,
-      "restrictions": {
-        "min": 0,
-        "max": 1,
-        "perArmy": true
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Trône du Pouvoir",
-      "type": "Monture",
-      "cost": 15,
-      "countsForBP": false,
-      "restrictions": {
-        "min": 0,
-        "max": 1,
-        "perArmy": true
-      },
-      "category": "upgrade"
     }
   ]
 }
