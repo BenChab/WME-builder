@@ -1,5 +1,48 @@
 {
   "armyName": "Répurgateurs",
+
+  "upgradeLibrary": {
+    "prison": {
+      "name": "Prison Tractée",
+      "type": "Monture",
+      "cost": 80,
+      "groupId": "mount",
+      "restrictions": {
+        "perArmy": true
+      }
+    },
+
+    "chiens": {
+      "name": "Chiens de guerre",
+      "type": "Amélioration",
+      "cost": 20
+    }
+
+    "autel": {
+      "name": "Autel de Sigmar",
+      "type": "Amélioration",
+      "cost": 45,
+      "restrictions": {
+        "perArmy": true
+      }
+    }
+  },
+
+  "upgradeSets": {
+    "character_mounts": [
+      "prison"
+    ],
+
+    "troup_upgrades": [
+      "chiens"
+    ],
+
+    "devot_upgrades": [
+      "chiens",
+      "autel"
+    ]
+  },
+  
   "units": [
     {
       "name": "Dévots",
@@ -8,6 +51,7 @@
       "restrictions": {
         "minPer1000": 2
       },
+      "upgradeSet":"devot_upgrades",
       "category": "unit",
       "countsForBP": true
     },
@@ -18,6 +62,7 @@
       "restrictions": {
         "minPer1000": 2
       },
+      "upgradeSet":"troup_upgrades",
       "category": "unit",
       "countsForBP": true
     },
@@ -98,6 +143,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -108,6 +154,7 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -119,30 +166,6 @@
         "maxPer1000": 2
       },
       "category": "character"
-    },
-    {
-      "name": "Prison Tractée",
-      "type": "Monture",
-      "cost": 80,
-      "countsForBP": false,
-      "restrictions": {
-        "min": 0,
-        "max": 1,
-        "perArmy": true
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Autel de Sigmar",
-      "type": "Monture",
-      "cost": 45,
-      "countsForBP": false,
-      "restrictions": {
-        "min": 0,
-        "max": 1,
-        "perArmy": true
-      },
-      "category": "upgrade"
     }
   ]
 }
