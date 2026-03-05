@@ -10,7 +10,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-dragon"
     },
 
     "char": {
@@ -21,7 +22,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-char"
     }
   },
 
@@ -42,7 +44,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-squelettes"
     },
     {
       "name": "Archers Squelettes",
@@ -52,14 +55,16 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-archers-squelettes"
     },
     {
       "name": "Cavaliers Squelettes",
       "type": "Cavalerie",
       "cost": 60,
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-cavaliers-squelettes"
     },
     {
       "name": "Chars Squelettes",
@@ -69,7 +74,8 @@
         "maxPer1000": 3
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chars-squelettes"
     },
     {
       "name": "Charognards",
@@ -79,7 +85,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-charognards"
     },
     {
       "name": "Géant Squelette",
@@ -89,7 +96,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-géant-squelette"
     },
     {
       "name": "Sphinx",
@@ -99,7 +107,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-sphinx"
     },
     {
       "name": "Catapulte à Crânes",
@@ -109,7 +118,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-catapulte"
     },
     {
       "name": "Balistes à Ossements",
@@ -119,7 +129,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-balistes"
     },
     {
       "name": "Roi des Tombes",
@@ -132,7 +143,8 @@
         "perArmy": true
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-roi-des-tombes"
     },
     {
       "name": "Prêtre-Liche",
@@ -143,7 +155,8 @@
         "maxPer1000": 2
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-prêtre-liche"
     }
   ]
 }
