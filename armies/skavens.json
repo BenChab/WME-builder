@@ -1,5 +1,23 @@
 {
   "armyName": "Skavens",
+
+  "upgradeLibrary": {
+    "cloche": {
+      "name": "Cloche Hurlante",
+      "type": "Monture",
+      "cost": 120,
+      "groupId": "mount",
+      "restrictions": {
+        "perArmy": true
+      }
+    }
+  },
+
+  "upgradeSets": {
+    "character_mounts": [
+      "cloche"
+    ]
+  },
   "units": [
     {
       "name": "Guerriers des Clans",
@@ -101,6 +119,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
