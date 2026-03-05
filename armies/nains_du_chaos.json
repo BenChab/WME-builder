@@ -10,7 +10,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-taurus"
     },
 
     "lammasu": {
@@ -21,7 +22,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-lammasu"
     },
 
     "sorcier": {
@@ -30,7 +32,8 @@
       "cost": 25,
       "restrictions": {
         "perArmy": true
-      }
+      },
+      "id": "upgrade-sorcier"
     }
   },
 
@@ -62,7 +65,8 @@
         "maxPer1000": 4
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-nains-du-chaos"
     },
     {
       "name": "Tromblons",
@@ -72,7 +76,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-tromblons"
     },
     {
       "name": "Hobgoblins",
@@ -82,7 +87,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-hobgobelins"
     },
     {
       "name": "Orques Noirs",
@@ -92,7 +98,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-orques-noirs"
     },
     {
       "name": "Esclaves",
@@ -102,14 +109,16 @@
         "maxPer1000": 4
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-esclaves"
     },
     {
       "name": "Hobgoblins sur Loup",
       "type": "Cavalerie",
       "cost": 80,
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-loups"
     },
     {
       "name": "Centaures Taureaux",
@@ -119,7 +128,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-centaures"
     },
     {
       "name": "Canon Trembleterre",
@@ -129,7 +139,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-canon"
     },
     {
       "name": "Lance-Roquettes",
@@ -139,7 +150,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-lance-roquette"
     },
     {
       "name": "Balistes",
@@ -149,7 +161,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-baliste"
     },
     {
       "name": "Général",
@@ -162,7 +175,8 @@
         "perArmy": true
       },
       "upgradeSet": "general_upgrades",
-      "category": "character"
+      "category": "character",
+      "id": "unit-general"
     },
     
     {
@@ -174,7 +188,8 @@
         "maxPer1000": 1
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-heros"
     },
     {
       "name": "Khan Hobgoblin",
@@ -184,7 +199,8 @@
       "restrictions": {
         "maxPer1000": 1
       },
-      "category": "character"
+      "category": "character",
+      "id": "unit-khan"
     },
     {
       "name": "Sorcier",
@@ -195,7 +211,8 @@
         "maxPer1000": 1
       },
       "upgradeSet": "wizard_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-sorcier"
     }
   ]
 }
