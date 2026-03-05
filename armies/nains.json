@@ -9,7 +9,8 @@
       "groupId": "mount",
       "restrictions": {
         "perArmy": true
-      }
+      },
+      "id": "upgrade-enclume"
     },
 
     "trone": {
@@ -19,7 +20,8 @@
       "groupId": "mount",
       "restrictions": {
         "perArmy": true
-      }
+      },
+      "id": "upgrade-trone"
     }
   },
 
@@ -42,14 +44,16 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-guerriers"
     },
     {
       "name": "Arquebusiers",
       "type": "Infanterie",
       "cost": 90,
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-arquebusiers"
     },
     {
       "name": "Rangers",
@@ -59,7 +63,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-rangers"
     },
     {
       "name": "Marteliers",
@@ -69,7 +74,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-marteliers"
     },
     {
       "name": "Mineurs",
@@ -79,7 +85,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-mineurs"
     },
     {
       "name": "Tueurs de Trolls",
@@ -89,7 +96,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-tueurs"
     },
     {
       "name": "Canons",
@@ -99,7 +107,9 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-general",
+      "id": "unit-canons"
     },
     {
       "name": "Canon à Flammes",
@@ -109,7 +119,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-canon-flamme"
     },
     {
       "name": "Gyrocoptère",
@@ -119,7 +130,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-gyrocoptere"
     },
     {
       "name": "Général",
@@ -132,7 +144,8 @@
         "perArmy": true
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-general"
     },
     {
       "name": "Héros",
@@ -142,7 +155,8 @@
       "restrictions": {
         "maxPer1000": 1
       },
-      "category": "character"
+      "category": "character",
+      "id": "unit-heros"
     },
     {
       "name": "Maître des Runes",
@@ -153,7 +167,8 @@
         "maxPer1000": 1
       },      
       "upgradeSet": "wizard_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-maitre-des-runes"
     }
   ]
 }
