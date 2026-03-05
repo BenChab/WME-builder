@@ -194,6 +194,7 @@ function showUpgradeMenu(unitId, event) {
 
   if (!unit.upgradeOptions) return;
 
+  // Si une autre popup est déjà ouverte, la fermer d'abord
   if (upgradeMenu) {
     upgradeMenu.remove();
   }
@@ -204,6 +205,7 @@ function showUpgradeMenu(unitId, event) {
   menu.style.top = event.clientY + "px";
   menu.style.left = event.clientX + "px";
 
+  // Ajouter les options de mise à niveau
   unit.upgradeOptions.forEach(id => {
     const upgrade = upgradeLibrary[id];
 
@@ -214,9 +216,12 @@ function showUpgradeMenu(unitId, event) {
 
     btn.textContent = `${upgrade.name} (+${upgrade.cost} pts)`;
 
+    // Ajouter l'événement de clic pour l'amélioration
     btn.onclick = () => {
       addUpgrade(unitId, id);
+      // Fermeture de la fenêtre après ajout de l'amélioration
       document.body.removeChild(menu);
+      upgradeMenu = null;
     };
 
     menu.appendChild(btn);
@@ -226,13 +231,18 @@ function showUpgradeMenu(unitId, event) {
   close.textContent = "Fermer";
   close.className = "mt-2 text-red-500";
 
+  // Fermer la fenêtre en cliquant sur le bouton "Fermer"
   close.onclick = () => {
     document.body.removeChild(menu);
+    upgradeMenu = null;
   };
 
   menu.appendChild(close);
 
+  // Ajouter la fenêtre de popup au corps de la page
   document.body.appendChild(menu);
+
+  // Ajouter un événement pour fermer la popup si on clique en dehors
   setTimeout(() => {
     document.addEventListener("click", closeUpgradeMenuOutside);
   }, 0);
