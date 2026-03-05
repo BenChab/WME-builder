@@ -349,22 +349,25 @@ function addUnitByName(name) {
     u => u.name === unit.name && !unit.upgradeOptions
   );
 
-  const currentCount = existing ? existing.count : 0;
+  const totalInArmy = army
+  .filter(u => u.name === unit.name)
+  .reduce((sum, u) => sum + u.count, 0);
 
-  if (restriction) {
-    if (restriction.perArmy && existing && currentCount >= restriction.max) {
-      alert(`${unit.name} ne peut être sélectionné qu'une seule fois.`);
-      return;
-    }
-    if (restriction.maxPer1000 && currentCount >= restriction.maxPer1000 * pointBlocks) {
-      alert(`${unit.name} est limité à ${restriction.maxPer1000} par tranche de 1000 pts.`);
-      return;
-    }
-    if (restriction.max && currentCount >= restriction.max) {
-      alert(`${unit.name} est limité à ${restriction.max} exemplaires.`);
-      return;
-    }
-  }
+if (restriction.perArmy && totalInArmy >= restriction.max) {
+  alert(`${unit.name} ne peut être sélectionné qu'une seule fois.`);
+  return;
+}
+
+if (restriction.maxPer1000 && totalInArmy >= restriction.maxPer1000 * pointBlocks) {
+  alert(`${unit.name} est limité à ${restriction.maxPer1000} par tranche de 1000 pts.`);
+  return;
+}
+
+if (restriction.max && totalInArmy >= restriction.max) {
+  alert(`${unit.name} est limité à ${restriction.max} exemplaires.`);
+  return;
+}
+
 
   if (existing) {
     existing.count++;
