@@ -9,7 +9,8 @@
       "groupId": "mount",
       "restrictions": {
         "perArmy": true
-      }
+      },
+      "id": "upgrade-cloche-hurlante"
     }
   },
 
@@ -27,7 +28,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-guerriers"
     },
     {
       "name": "Vermines de Choc",
@@ -37,7 +39,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-vermines"
     },
     {
       "name": "Jezzails",
@@ -47,7 +50,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-jezzails"
     },
     {
       "name": "Moines de la Peste",
@@ -57,7 +61,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-moines"
     },
     {
       "name": "Nuées de Rats",
@@ -67,7 +72,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-nuées"
     },
     {
       "name": "Coureurs d'Égouts",
@@ -77,7 +83,8 @@
         "maxPer1000": 4
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-coureurs"
     },
     {
       "name": "Rats-Ogres",
@@ -87,7 +94,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-rats-ogres"
     },
     {
       "name": "Canon à Malefoudre",
@@ -97,7 +105,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-canon"
     },
     {
       "name": "Roue Infernale",
@@ -107,7 +116,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-roue-infernale"
     },
     {
       "name": "Prophète Gris",
@@ -120,7 +130,8 @@
         "perArmy": true
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-prophete"
     },
     {
       "name": "Héros",
@@ -130,7 +141,8 @@
       "restrictions": {
         "maxPer1000": 2
       },
-      "category": "character"
+      "category": "character,
+      "id": "unit-heros"
     },
     {
       "name": "Technomage",
@@ -140,17 +152,8 @@
       "restrictions": {
         "maxPer1000": 1
       },
-      "category": "character"
-    },
-    {
-      "name": "Cloche Hurlante",
-      "type": "Monture",
-      "cost": 120,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
+      "category": "character",
+      "id": "unit-technomage"
     }
   ]
 }
