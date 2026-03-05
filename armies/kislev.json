@@ -10,7 +10,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-ours"
     },
 
     "tzarine": {
@@ -19,7 +20,8 @@
       "cost": 25,
       "restrictions": {
         "perArmy": true
-      }
+      },
+      "id": "upgrade-tzarine"
     }
   },
 
@@ -43,14 +45,16 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-guerrier"
     },
     {
       "name": "Archers",
       "type": "Infanterie",
       "cost": 55,
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-archers"
     },
     {
       "name": "Ours",
@@ -60,7 +64,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-ours"
     },
     {
       "name": "Chevaliers",
@@ -70,7 +75,8 @@
         "maxPer1000": 4
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chevaliers"
     },
     {
       "name": "Archers à Cheval",
@@ -80,7 +86,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-archers-cheval"
     },
     {
       "name": "Chariot de Guerre",
@@ -90,7 +97,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chariot"
     },
     {
       "name": "Général",
@@ -103,7 +111,8 @@
         "perArmy": true
       },
       "upgradeSet":"tzarine_upgrades",
-      "category": "character"
+      "category": "character",
+      "id": "unit-general"
     },
     {
       "name": "Héros",
@@ -114,7 +123,8 @@
         "maxPer1000": 2
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-heros"
     },
     {
       "name": "Sorcier",
@@ -125,7 +135,8 @@
         "maxPer1000": 1
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-sorcier"
     }
   ]
 }
