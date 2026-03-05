@@ -160,6 +160,24 @@ createRow(
   },
   buttons
 );
+    if (unit.upgrades && unit.upgrades.length > 0) {
+
+  unit.upgrades.forEach((up, upIndex) => {
+
+    createRow(
+      "↳ " + up.name,
+      1,
+      up.cost,
+      () => {
+        unit.upgrades.splice(upIndex, 1);
+        renderArmy();
+        updateTotal();
+      }
+    );
+
+  });
+
+}
   });
 
   // 🔸 Objets magiques
