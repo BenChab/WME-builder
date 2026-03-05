@@ -1,5 +1,54 @@
 {
   "armyName": "Hommes-Lézards",
+
+"upgradeLibrary": {
+    "palanquin": {
+      "name": "Palanquin",
+      "type": "Monture",
+      "cost": 20,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "stegadon": {
+      "name": "Stégadon",
+      "type": "Monture",
+      "cost": 90,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "carnosaure": {
+      "name": "Carnosaure",
+      "type": "Monture",
+      "cost": 60,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    }
+
+    
+  },
+
+  "upgradeSets": {
+    "slann_mounts": [
+      "palanquin",
+      "stegadon"
+    ],
+
+    "saurus_mounts": [
+      "carnosaure"
+    ]
+  },
+  
   "units": [
     {
       "name": "Skinks",
@@ -91,6 +140,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "slann_mounts",
       "category": "character"
     },
     {
@@ -101,6 +151,7 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "saurus_mounts",
       "category": "character"
     },
     {
@@ -122,36 +173,6 @@
         "maxPer1000": 1
       },
       "category": "character"
-    },
-    {
-      "name": "Palanquin",
-      "type": "Monture",
-      "cost": 20,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Stégadon",
-      "type": "Monture",
-      "cost": 90,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Carnosaure",
-      "type": "Monture",
-      "cost": 60,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
     }
   ]
 }
