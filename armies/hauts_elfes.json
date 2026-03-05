@@ -164,7 +164,7 @@
       "restrictions": {
         "maxPer1000": 1
       },
-      "upgradeSet": "character_upgrades",
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -175,7 +175,7 @@
       "restrictions": {
         "maxPer1000": 1
       },
-      "upgradeSet": "character_upgrades",
+      "upgradeSet": "character_mounts",
       "category": "character"
     }
   ]
