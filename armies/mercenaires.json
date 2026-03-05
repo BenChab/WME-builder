@@ -1,5 +1,25 @@
 {
   "armyName": "Mercenaires",
+
+  "upgradeLibrary": {
+    "griffon": {
+      "name": "Griffon",
+      "type": "Monture",
+      "cost": 60,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    }
+  },
+
+  "upgradeSets": {
+    "character_mounts": [
+      "griffon"
+    ]
+  },
+  
   "units": [
     {
       "name": "Piquiers",
@@ -128,6 +148,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -138,6 +159,7 @@
       "restrictions": {
         "maxPer1000": 2
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -150,6 +172,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -160,17 +183,8 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
-    },
-    {
-      "name": "Griffon",
-      "type": "Monture",
-      "cost": 60,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
     }
   ]
 }
