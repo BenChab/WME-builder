@@ -1,5 +1,65 @@
 {
   "armyName": "Hauts Elfes",
+
+ "upgradeLibrary": {
+    "aigle": {
+      "name": "Aigle Géant",
+      "type": "Monture",
+      "cost": 15,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "dragon": {
+      "name": "Dragon",
+      "type": "Monture",
+      "cost": 100,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "char": {
+      "name": "Char",
+      "type": "Monture",
+      "cost": 10,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "seigneur": {
+      "name": "Seigneur Haut Elfe",
+      "type": "Amélioration",
+      "cost": 40,
+      "restrictions": {
+        "perArmy": true
+      }
+    }
+  },
+
+  "upgradeSets": {
+    "character_mounts": [
+      "aigle",
+      "dragon",
+      "char"
+    ],
+
+    "general_upgrades": [
+      "aigle",
+      "dragon",
+      "char",
+      "seigneur"
+    ]
+  },
+  
   "units": [
     {
       "name": "Lanciers",
@@ -93,6 +153,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "general_upgrades",
       "category": "upgrade"
     },
     {
@@ -103,6 +164,7 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "character_upgrades",
       "category": "character"
     },
     {
@@ -113,37 +175,8 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "character_upgrades",
       "category": "character"
-    },
-    {
-      "name": "Aigle Géant",
-      "type": "Monture",
-      "cost": 15,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Dragon",
-      "type": "Monture",
-      "cost": 100,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Char",
-      "type": "Monture",
-      "cost": 10,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
     }
   ]
 }
