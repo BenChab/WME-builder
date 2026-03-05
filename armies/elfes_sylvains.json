@@ -1,7 +1,6 @@
 {
   "armyName": "Elfes Sylvains",
-
-"upgradeLibrary": {
+  "upgradeLibrary": {
     "dragon": {
       "name": "Dragon sylvain",
       "type": "Monture",
@@ -10,33 +9,29 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-dragon"
     },
-
     "homme_arbre": {
       "name": "Vénérable Homme Arbre",
       "type": "Amélioration",
       "cost": 60,
       "restrictions": {
         "perArmy": true
-      }
+      },
+      "id": "upgrade-homme_arbre"
     }
   },
-
   "upgradeSets": {
     "character_mounts": [
       "dragon"
     ],
-
     "noble_upgrades": [
       "dragon",
       "homme_arbre"
     ]
   },
-
-  
   "units": [
-    
     {
       "name": "Gardes Éternels",
       "type": "Infanterie",
@@ -45,7 +40,8 @@
         "minPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-gardes_eternels-1"
     },
     {
       "name": "Gardes Sylvains",
@@ -55,7 +51,8 @@
         "minPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-gardes_sylvains-2"
     },
     {
       "name": "Dryades",
@@ -65,7 +62,8 @@
         "minPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-dryades-3"
     },
     {
       "name": "Lémures",
@@ -75,7 +73,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-lemures-4"
     },
     {
       "name": "Danseurs de Guerre",
@@ -85,7 +84,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-danseurs_de_guerre-5"
     },
     {
       "name": "Forestiers",
@@ -95,7 +95,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-forestiers-6"
     },
     {
       "name": "Chevaliers Sylvains",
@@ -105,7 +106,8 @@
         "maxPer1000": 3
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chevaliers_sylvains-7"
     },
     {
       "name": "Cavaliers Sauvages",
@@ -115,7 +117,8 @@
         "maxPer1000": 3
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-cavaliers_sauvages-8"
     },
     {
       "name": "Guerriers Faucon",
@@ -125,7 +128,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-guerriers_faucon-9"
     },
     {
       "name": "Homme Arbre",
@@ -135,7 +139,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-homme_arbre-10"
     },
     {
       "name": "Seigneur Sylvain",
@@ -148,7 +153,8 @@
         "perArmy": true
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-seigneur_sylvain-11"
     },
     {
       "name": "Noble Sylvain",
@@ -159,7 +165,8 @@
         "maxPer1000": 2
       },
       "upgradeSet": "noble_upgrades",
-      "category": "character"
+      "category": "character",
+      "id": "unit-noble_sylvain-12"
     },
     {
       "name": "Tisseur de Sorts",
@@ -169,7 +176,8 @@
       "restrictions": {
         "maxPer1000": 1
       },
-      "category": "character"
+      "category": "character",
+      "id": "unit-tisseur_de_sort-13"
     }
   ]
 }
