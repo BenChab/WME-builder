@@ -25,7 +25,8 @@
       "type": "Amélioration",
       "cost": 15,
       "restrictions": {
-        "maxPer1000": 4
+        "maxPer1000": 4,
+        "maxPerUnit": 1
       }
     }
   },
