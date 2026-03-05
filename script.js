@@ -119,6 +119,10 @@ function renderArmy() {
     armyList.appendChild(li);
   }
 
+function getUnitOrder(name) {
+  return units.findIndex(u => u.name === name);
+}
+  
   // 🔹 Unités
   const sortedArmy = [...army].sort(
     (a, b) => getUnitOrder(a.name) - getUnitOrder(b.name)
