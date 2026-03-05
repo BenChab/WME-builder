@@ -10,7 +10,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-griffon"
     },
 
     "autel": {
@@ -20,7 +21,8 @@
       "groupId": "mount",
       "restrictions": {
         "perArmy": true
-      }
+      },
+      "id": "upgrade-autel"
     }
   },
 
@@ -46,7 +48,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-hallebardiers"
     },
     {
       "name": "Arquebusiers",
@@ -56,7 +59,8 @@
         "maxPer1000": 3
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-arquebusiers"
     },
     {
       "name": "Arbalétriers",
@@ -66,28 +70,32 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-arbaletriers"
     },
     {
       "name": "Flagellants",
       "type": "Infanterie",
       "cost": 70,
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-flagellants"
     },
     {
       "name": "Tirailleurs",
       "type": "Infanterie",
       "cost": 25,
       "countsForBP": false,
-      "category": "unit"
+      "category": "unit",
+      "id": "unit-tirailleurs"
     },
     {
       "name": "Chevaliers",
       "type": "Cavalerie",
       "cost": 110,
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chevaliers"
     },
     {
       "name": "Pistoliers",
@@ -97,7 +105,8 @@
         "maxPer1000": 4
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-pistoliers"
     },
     {
       "name": "Canon Feu d’Enfer",
@@ -107,7 +116,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-feu-denfer"
     },
     {
       "name": "Canon",
@@ -117,7 +127,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-canon"
     },
     {
       "name": "Tank à Vapeur",
@@ -127,7 +138,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-tank"
     },
     {
       "name": "Général",
@@ -140,7 +152,8 @@
         "perArmy": true
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-general"
     },
     {
       "name": "Héros",
@@ -151,7 +164,8 @@
         "maxPer1000": 2
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-heros"
     },
     {
       "name": "Sorcier",
@@ -162,7 +176,8 @@
         "maxPer1000": 1
       },
       "upgradeSet": "wizard_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-sorcier"
     }
   ]
 }
