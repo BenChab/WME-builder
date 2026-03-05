@@ -417,65 +417,52 @@ function addUpgrade(unitIndex, upgradeId) {
 
   const unit = army[unitIndex];
   const upgrade = upgradeLibrary[upgradeId];
-
   if (!upgrade) return;
 
   const restriction = upgrade.restrictions || {};
-
-  if (restriction.maxPerUnit) {
-
-  const unitCount = (unit.upgrades || [])
-    .filter(u => u.id === upgradeId)
-    .length;
-
-  if (unitCount >= restriction.maxPerUnit) {
-    alert(`${upgrade.name} est limité à ${restriction.maxPerUnit} par unité.`);
-    return;
-  }
-
-}
-
-  // Vérifier groupId (ex: montures)
-if (upgrade.groupId && unit.upgrades) {
-
-  const conflict = unit.upgrades.find(u => {
-    const existingUpgrade = upgradeLibrary[u.id];
-    return existingUpgrade && existingUpgrade.groupId === upgrade.groupId;
-  });
-
-  if (conflict) {
-    alert(`Cette unité possède déjà une amélioration du groupe "${upgrade.groupId}".`);
-    return;
-  }
-
-}
-  
-  const pointBlocks = getPointBlocks();
 
   if (!unit.upgrades) {
     unit.upgrades = [];
   }
 
-  // Compter combien de fois cette upgrade est déjà prise
+  const pointBlocks = getPointBlocks();
+
+  // limite par unité
+  if (restriction.maxPerUnit) {
+    const unitCount = unit.upgrades.filter(u => u.id === upgradeId).length;
+    if (unitCount >= restriction.maxPerUnit) {
+      alert(`${upgrade.name} est limité à ${restriction.maxPerUnit} par unité.`);
+      return;
+    }
+  }
+
+  // vérifier groupId (ex : montures)
+  if (upgrade.groupId) {
+    const conflict = unit.upgrades.find(u => {
+      const existingUpgrade = upgradeLibrary[u.id];
+      return existingUpgrade && existingUpgrade.groupId === upgrade.groupId;
+    });
+
+    if (conflict) {
+      alert(`Cette unité possède déjà une amélioration du groupe "${upgrade.groupId}".`);
+      return;
+    }
+  }
+
+  // compter dans toute l'armée
   let totalTaken = 0;
 
   army.forEach(u => {
-    if (u.upgrades) {
-      u.upgrades.forEach(up => {
-        if (up.id === upgradeId) {
-          totalTaken++;
-        }
-      });
-    }
+    (u.upgrades || []).forEach(up => {
+      if (up.id === upgradeId) totalTaken++;
+    });
   });
 
-  // restrictions perArmy
   if (restriction.perArmy && totalTaken >= 1) {
     alert(`${upgrade.name} est limité à une fois par armée.`);
     return;
   }
 
-  // restrictions maxPer1000
   if (restriction.maxPer1000 && totalTaken >= restriction.maxPer1000 * pointBlocks) {
     alert(`${upgrade.name} est limité à ${restriction.maxPer1000} par tranche de 1000 pts.`);
     return;
