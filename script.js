@@ -392,6 +392,22 @@ function addUpgrade(unitIndex, upgradeId) {
   if (!upgrade) return;
 
   const restriction = upgrade.restrictions || {};
+
+  // Vérifier groupId (ex: montures)
+if (upgrade.groupId && unit.upgrades) {
+
+  const conflict = unit.upgrades.find(u => {
+    const existingUpgrade = upgradeLibrary[u.id];
+    return existingUpgrade && existingUpgrade.groupId === upgrade.groupId;
+  });
+
+  if (conflict) {
+    alert(`Cette unité possède déjà une amélioration du groupe "${upgrade.groupId}".`);
+    return;
+  }
+
+}
+  
   const pointBlocks = getPointBlocks();
 
   if (!unit.upgrades) {
