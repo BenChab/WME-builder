@@ -194,16 +194,18 @@ function showUpgradeMenu(unitId, event) {
 
   if (!unit.upgradeOptions) return;
 
-  // Si une autre popup est déjà ouverte, la fermer d'abord
+  // Vérifier si une popup est déjà ouverte et la fermer si nécessaire
   if (upgradeMenu) {
-    upgradeMenu.remove();
+    upgradeMenu.remove();  // Supprimer l'ancienne popup
+    upgradeMenu = null;    // Réinitialiser la variable
   }
 
+  // Créer une nouvelle popup
   const menu = document.createElement('div');
-  upgradeMenu = menu;
+  upgradeMenu = menu;  // Assigner la nouvelle popup à la variable
   menu.className = "fixed bg-white border shadow p-3 rounded";
-  menu.style.top = event.clientY + "px";
-  menu.style.left = event.clientX + "px";
+  menu.style.top = event.clientY + "px";  // Positionner la popup en fonction du clic
+  menu.style.left = event.clientX + "px"; 
 
   // Ajouter les options de mise à niveau
   unit.upgradeOptions.forEach(id => {
