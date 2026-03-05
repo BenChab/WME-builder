@@ -367,4 +367,13 @@ function createMagicItemButtons() {
   // On ne force plus d'affichage ici, c'est géré par le bouton toggle
 }
 
-
+function createUnitButtons() {
+  unitButtonsContainer.innerHTML = ''; // Vider le conteneur avant d'ajouter les nouveaux boutons
+  units.forEach(unit => {
+    const btn = document.createElement('button');
+    btn.className = 'bg-gray-100 hover:bg-blue-200 border rounded p-2 text-left shadow';
+    btn.innerHTML = `<strong>${unit.name}</strong><br><span class="text-sm">${unit.cost} pts</span>`;
+    btn.onclick = () => addUnitByName(unit.name); // Ajouter l'unité au clic
+    unitButtonsContainer.appendChild(btn);
+  });
+}
