@@ -10,7 +10,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-palanquin"
     },
 
     "stegadon": {
@@ -21,7 +22,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-stegadon"
     },
 
     "carnosaure": {
@@ -32,7 +34,8 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade-carnosaure"
     }
 
     
@@ -58,7 +61,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-skinks"
     },
     {
       "name": "Saurus",
@@ -68,7 +72,8 @@
         "minPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-saurus"
     },
     {
       "name": "Gardes des Temples",
@@ -78,7 +83,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-gardes"
     },
     {
       "name": "Salamandres",
@@ -88,7 +94,8 @@
       "restrictions": {
         "maxPer1000": 2
       },
-      "category": "unit"
+      "category": "unit",
+      "id": "unit-salamandre"
     },
     {
       "name": "Kroxigors",
@@ -98,7 +105,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-kroxigors"
     },
     {
       "name": "Cavaliers sur Sang-Froid",
@@ -108,7 +116,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-cavaliers"
     },
     {
       "name": "Téradons",
@@ -118,7 +127,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-téradons"
     },
     {
       "name": "Stégadon",
@@ -128,7 +138,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-stegadon"
     },
     {
       "name": "Slann",
@@ -141,7 +152,8 @@
         "perArmy": true
       },
       "upgradeSet": "slann_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-slann"
     },
     {
       "name": "Héros Saurus",
@@ -152,7 +164,8 @@
         "maxPer1000": 1
       },
       "upgradeSet": "saurus_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-heros-saurus"
     },
     {
       "name": "Héros Skink",
@@ -162,7 +175,8 @@
       "restrictions": {
         "maxPer1000": 3
       },
-      "category": "character"
+      "category": "character",
+      "id": "unit-heros-skink"
     },
     {
       "name": "Chaman Skink",
@@ -172,7 +186,8 @@
       "restrictions": {
         "maxPer1000": 1
       },
-      "category": "character"
+      "category": "character",
+      "id": "unit-chaman"
     }
   ]
 }
