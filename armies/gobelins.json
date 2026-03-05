@@ -10,14 +10,16 @@
       "restrictions": {
         "maxPer1000": 1,
         "perArmy": true
-      }
+      },
+      "id": "upgrade_wyvern"
     },
 
     "char": {
       "name": "Char",
       "type": "Monture",
       "cost": 10,
-      "groupId": "mount"
+      "groupId": "mount",
+      "id": "upgrade-char"
     },
 
     "fanatiques": {
@@ -27,7 +29,8 @@
       "restrictions": {
         "maxPer1000": 4,
         "maxPerUnit": 1
-      }
+      },
+      "id": "upgrades-fanatiques"
     }
   },
 
@@ -50,7 +53,8 @@
       "countsForBP": true,
       "upgradeOptions": [
         "fanatiques"
-      ]
+      ],
+      "id": "unit-gobs"
     },
     
     {
@@ -61,7 +65,8 @@
         "maxPer1000": 3
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-squigs"
     },
     {
       "name": "Trolls",
@@ -71,7 +76,8 @@
         "maxPer1000": 3
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-trolls"
     },
     {
       "name": "Gobelins sur Loup",
@@ -81,7 +87,8 @@
         "minPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-loups"
     },
     {
       "name": "Gobelins sur Araignée",
@@ -91,7 +98,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-araignée"
     },
     {
       "name": "Chars à Loups",
@@ -101,7 +109,8 @@
         "maxPer1000": 3
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chars"
     },
     {
       "name": "Chariot à Pompe",
@@ -111,7 +120,8 @@
       "restrictions": {
         "maxPer1000": 2
       },
-      "category": "unit"
+      "category": "unit",
+      "id": "unit-chariot"
     },
     {
       "name": "Géant",
@@ -121,7 +131,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-géant"
     },
     {
       "name": "Arachnarok",
@@ -131,7 +142,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-arachnarok"
     },
     {
       "name": "Arachnarok Géante",
@@ -141,7 +153,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-arachnarok-geante"
     },
     {
       "name": "Catapulte à Plongeurs de la Mort",
@@ -151,7 +164,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-catapulte"
     },
     {
       "name": "Balistes",
@@ -161,7 +175,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-baliste"
     },
     {
       "name": "Chef de Guerre",
@@ -174,7 +189,8 @@
         "perArmy": true
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-general"
     },
     {
       "name": "Grand Chef",
@@ -185,7 +201,8 @@
         "maxPer1000": 4
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-heros"
     },
     {
       "name": "Chaman",
@@ -196,7 +213,8 @@
         "maxPer1000": 2
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-chaman"
     }
   ]
 }
