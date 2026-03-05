@@ -83,6 +83,10 @@ function calculateBreakPoint() {
   return Math.ceil(totalUnitsForBP / 2);
 }
 
+function getUnitOrder(name) {
+  return units.findIndex(u => u.name === name);
+}
+
 function renderArmy() {
   armyList.innerHTML = '';
 
@@ -139,7 +143,7 @@ if (unit.upgradeOptions && unit.upgradeOptions.length > 0) {
   upgradeBtn.className = "text-blue-500 hover:text-blue-700 ml-2";
 
   upgradeBtn.onclick = (event) => {
-  showUpgradeMenu(i, event);
+  showUpgradeMenu(realIndex, event);
 };
 
   buttons.push(upgradeBtn);
@@ -150,9 +154,11 @@ createRow(
   unit.count,
   unit.cost * unit.count,
   () => {
-    upgradeBtn.onclick = (event) => {
-  showUpgradeMenu(realIndex, event);
-};
+    if (unit.count > 1) {
+      unit.count--;
+    } else {
+      army.splice(realIndex, 1);
+    }
     renderArmy();
     updateTotal();
   },
@@ -163,7 +169,7 @@ createRow(
   unit.upgrades.forEach((up, upIndex) => {
 
     createRow(
-      "   ↳" + up.name,
+      "   ↳ " + up.name,
       1,
       up.cost,
       () => {
@@ -497,9 +503,7 @@ units = armyData.units.map(unit => {
   return newUnit;
 });
 
-function getUnitOrder(name) {
-  return units.findIndex(u => u.name === name);
-}
+
     
 unitSelectorContainer.classList.remove('hidden');
 createUnitButtons();
