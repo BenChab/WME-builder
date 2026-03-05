@@ -338,7 +338,9 @@ function createUnitButtons() {
 }
 
 function addUnitByName(name) {
-  const unit = units.find(u => u.name === name);
+  const existing = army.find(
+    u => u.name === unit.name && !unit.upgradeOptions
+  );
   if (!unit) return;
 
   const restriction = unit.restrictions;
