@@ -3,6 +3,8 @@ let army = [];
 let magicItems = [];
 let selectedMagicItems = [];
 let targetPoints = 2000;
+let upgradeLibrary = {};
+let upgradeSets = {};
 
 const armySelect = document.getElementById('armySelect');
 const armyList = document.getElementById('armyList');
@@ -305,12 +307,24 @@ async function loadArmy() {
     createMagicItemButtons();
     selectedMagicItems = [];
 
-    units = armyData.units;
-    unitSelectorContainer.classList.remove('hidden');
-    createUnitButtons();
-    army = [];
-    renderArmy();
-    updateTotal();
+   upgradeLibrary = armyData.upgradeLibrary || {};
+upgradeSets = armyData.upgradeSets || {};
+
+units = armyData.units.map(unit => {
+  const newUnit = { ...unit };
+
+  if (newUnit.upgradeSet) {
+    newUnit.upgradeOptions = upgradeSets[newUnit.upgradeSet] || [];
+  }
+
+  return newUnit;
+});
+
+unitSelectorContainer.classList.remove('hidden');
+createUnitButtons();
+army = [];
+renderArmy();
+updateTotal();
   } catch (error) {
     alert("Erreur de chargement des données.");
     console.error("Erreur de chargement :", error);
