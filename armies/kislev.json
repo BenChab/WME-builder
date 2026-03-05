@@ -1,5 +1,39 @@
 {
   "armyName": "Kislev",
+
+  "upgradeLibrary": {
+    "ours": {
+      "name": "Ours",
+      "type": "Monture",
+      "cost": 10,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    "tzarine": {
+      "name": "Tzarine",
+      "type": "Amélioration",
+      "cost": 25,
+      "restrictions": {
+        "perArmy": true
+      }
+    }
+  },
+
+  "upgradeSets": {
+    "character_mounts": [
+      "ours"
+    ],
+
+    "general_upgrades": [
+      "ours",
+      "tzarine"
+    ]
+  },
+  
   "units": [
     {
       "name": "Guerriers",
@@ -68,6 +102,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet":"tzarine_upgrades",
       "category": "character"
     },
     {
@@ -78,6 +113,7 @@
       "restrictions": {
         "maxPer1000": 2
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -88,29 +124,8 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
-    },
-    {
-      "name": "Ours",
-      "type": "Monture",
-      "cost": 10,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
-    },
-    {
-      "name": "Tzarine",
-      "type": "Amélioration",
-      "cost": 25,
-      "countsForBP": false,
-      "restrictions": {
-        "min": 0,
-        "max": 1,
-        "perArmy": true
-      },
-      "category": "upgrade"
     }
   ]
 }
