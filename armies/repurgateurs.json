@@ -9,13 +9,15 @@
       "groupId": "mount",
       "restrictions": {
         "perArmy": true
-      }
+      },
+      "id": "upgrade-prison"
     },
 
     "chiens": {
       "name": "Chiens de guerre",
       "type": "Amélioration",
-      "cost": 20
+      "cost": 20,
+      "id": "upgrade-chiens"
     },
 
     "autel": {
@@ -24,7 +26,8 @@
       "cost": 45,
       "restrictions": {
         "perArmy": true
-      }
+      },
+      "id": "upgrade-autel"
     }
   },
 
@@ -53,7 +56,8 @@
       },
       "upgradeSet":"devot_upgrades",
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-devots"
     },
     {
       "name": "Flagellants",
@@ -64,7 +68,8 @@
       },
       "upgradeSet":"troup_upgrades",
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-flagellants"
     },
     {
       "name": "Exorcistes",
@@ -74,7 +79,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-exorcistes"
     },
     {
       "name": "Miliciens",
@@ -84,7 +90,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-miliciens"
     },
     {
       "name": "Chasseurs",
@@ -94,14 +101,8 @@
         "maxPer1000": 2
       },
       "category": "unit",
-      "countsForBP": true
-    },
-    {
-      "name": "Chiens de Guerre",
-      "type": "Infanterie",
-      "cost": 20,
-      "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chasseurs"
     },
     {
       "name": "Chevaliers",
@@ -111,7 +112,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chevaliers"
     },
     {
       "name": "Pistoliers",
@@ -121,7 +123,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-pistoliers"
     },
     {
       "name": "Chariot Purificateur",
@@ -131,7 +134,8 @@
         "maxPer1000": 1
       },
       "category": "unit",
-      "countsForBP": true
+      "countsForBP": true,
+      "id": "unit-chariot"
     },
     {
       "name": "Inquisiteur",
@@ -144,7 +148,8 @@
         "perArmy": true
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-general"
     },
     {
       "name": "Répurgateur",
@@ -155,7 +160,8 @@
         "maxPer1000": 1
       },
       "upgradeSet": "character_mounts",
-      "category": "character"
+      "category": "character",
+      "id": "unit-heros"
     },
     {
       "name": "Prêtre Guerrier",
@@ -165,7 +171,8 @@
       "restrictions": {
         "maxPer1000": 2
       },
-      "category": "character"
+      "category": "character",
+      "id": "unit-pretre"
     }
   ]
 }
