@@ -1,5 +1,30 @@
 {
   "armyName": "Hommes-bêtes",
+
+"upgradeLibrary": {
+    
+  
+
+    "char": {
+      "name": "Char",
+      "type": "Monture",
+      "cost": 10,
+      "groupId": "mount",
+      "restrictions": {
+        "maxPer1000": 1,
+        "perArmy": true
+      }
+    },
+
+    
+
+  "upgradeSets": {
+    "character_mounts": [
+      "char"
+    ]
+  }
+  },
+  
   "units": [
     {
       "name": "Ungors",
@@ -102,6 +127,7 @@
         "max": 1,
         "perArmy": true
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -112,6 +138,7 @@
       "restrictions": {
         "maxPer1000": 2
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
     },
     {
@@ -134,17 +161,9 @@
       "restrictions": {
         "maxPer1000": 1
       },
+      "upgradeSet": "character_mounts",
       "category": "character"
-    },
-    {
-      "name": "Char",
-      "type": "Monture",
-      "cost": 10,
-      "countsForBP": false,
-      "restrictions": {
-        "maxPer1000": 1
-      },
-      "category": "upgrade"
     }
+    
   ]
 }
