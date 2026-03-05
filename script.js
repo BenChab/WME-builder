@@ -275,6 +275,40 @@ function addUpgrade(unitId, upgradeId) {
   updateTotal();
 }
 
+function addUnitByName(name) {
+  const unit = units.find(u => u.name === name);
+  if (!unit) return;
+
+  const restriction = unit.restrictions;
+  const pointBlocks = getPointBlocks();
+  const existing = army.find(u => u.id === unit.id);
+  const currentCount = existing ? existing.count : 0;
+
+  if (restriction) {
+    if (restriction.perArmy && existing && currentCount >= restriction.max) {
+      alert(`${unit.name} ne peut être sélectionné qu'une seule fois.`);
+      return;
+    }
+    if (restriction.maxPer1000 && currentCount >= restriction.maxPer1000 * pointBlocks) {
+      alert(`${unit.name} est limité à ${restriction.maxPer1000} par tranche de 1000 pts.`);
+      return;
+    }
+    if (restriction.max && currentCount >= restriction.max) {
+      alert(`${unit.name} est limité à ${restriction.max} exemplaires.`);
+      return;
+    }
+  }
+
+  if (existing) {
+    existing.count++;
+  } else {
+    army.push({ ...unit, count: 1 });
+  }
+
+  renderArmy();
+  updateTotal();
+}
+
 function createUnitButtons() {
   unitButtonsContainer.innerHTML = ''; // Vider le conteneur avant d'ajouter les nouveaux boutons
   units.forEach(unit => {
