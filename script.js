@@ -5,7 +5,7 @@ let selectedMagicItems = [];
 let targetPoints = 2000;
 let upgradeLibrary = {};
 let upgradeSets = {};
-let upgradeMenu = null;
+let upgradeMenu = null;  // Déclaration globale, uniquement ici
 
 const armySelect = document.getElementById('armySelect');
 const armyList = document.getElementById('armyList');
@@ -37,11 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
-// Fonction qui retourne l'ordre des unités dans le tableau en fonction de leur nom
-function getUnitOrder(name) {
-  return units.findIndex(u => u.name === name);
-}
 
 function updateTargetPoints() {
   targetPoints = parseInt(targetPointsInput.value, 10) || 0;
@@ -97,9 +92,7 @@ function renderArmy() {
       const upgradeBtn = document.createElement('button');
       upgradeBtn.textContent = "⚙";
       upgradeBtn.className = "text-blue-500 hover:text-blue-700 ml-2";
-      upgradeBtn.onclick = (event) => {
-        showUpgradeMenu(unit.id, event); // Appeler la popup d'amélioration
-      };
+      upgradeBtn.onclick = (event) => showUpgradeMenu(unit.id, event);
 
       buttons.push(upgradeBtn);
     }
@@ -109,7 +102,7 @@ function renderArmy() {
       unit.count,
       unit.cost * unit.count,
       () => {
-        removeUnitFromArmy(unit.id);  // Supprimer l'unité de l'armée
+        removeUnitFromArmy(unit.id);
         renderArmy();  // Redessiner l'armée après suppression
         updateTotal();
       },
@@ -185,28 +178,25 @@ function createRow(name, count, cost, removeCallback, extraButtons = []) {
   armyList.appendChild(li);
 }
 
-let upgradeMenu = null;
-
 function showUpgradeMenu(unitId, event) {
   const unit = army.find(u => u.id === unitId);
 
   if (!unit.upgradeOptions) return;
 
-  // Si une popup existe déjà, la fermer avant d'en ouvrir une nouvelle
+  // Si une popup est déjà ouverte, on la ferme avant d'en ouvrir une nouvelle
   if (upgradeMenu) {
-    removeUpgradeMenu(); // Fermer la popup existante
+    removeUpgradeMenu();  // Fermer la popup existante
   }
 
-  // Créer une nouvelle popup d'amélioration
   const menu = document.createElement('div');
   upgradeMenu = menu;
   menu.className = "fixed bg-white border shadow p-3 rounded";
   menu.style.top = event.clientY + "px";
   menu.style.left = event.clientX + "px";
 
-  // Ajouter les options d'amélioration
   unit.upgradeOptions.forEach(id => {
     const upgrade = upgradeLibrary[id];
+
     if (!upgrade) return;
 
     const btn = document.createElement('button');
@@ -215,7 +205,7 @@ function showUpgradeMenu(unitId, event) {
 
     btn.onclick = () => {
       addUpgrade(unitId, id);  // Ajouter l'amélioration
-      removeUpgradeMenu();  // Supprimer la popup immédiatement après sélection
+      removeUpgradeMenu();  // Fermer la popup après ajout
     };
 
     menu.appendChild(btn);
@@ -224,20 +214,23 @@ function showUpgradeMenu(unitId, event) {
   const close = document.createElement('button');
   close.textContent = "Fermer";
   close.className = "mt-2 text-red-500";
-  close.onclick = () => removeUpgradeMenu();  // Fermer la popup en cliquant sur "Fermer"
+  close.onclick = () => removeUpgradeMenu();  // Fermer la popup
 
   menu.appendChild(close);
+
   document.body.appendChild(menu);
 
-  // Ajouter un gestionnaire d'événements pour fermer la popup si on clique en dehors
-  document.addEventListener("click", closeUpgradeMenuOutside);
+  // Ajouter l'événement pour fermer la popup si on clique en dehors
+  document.removeEventListener("click", closeUpgradeMenuOutside);  // Retirer l'ancien gestionnaire
+  document.addEventListener("click", closeUpgradeMenuOutside);  // Ajouter un nouveau gestionnaire
 }
 
 function closeUpgradeMenuOutside(event) {
-  // Si la popup est ouverte et le clic n'est pas dans la popup
-  if (upgradeMenu && !upgradeMenu.contains(event.target)) {
-    removeUpgradeMenu();  // Fermer la popup
-    document.removeEventListener("click", closeUpgradeMenuOutside); // Retirer l'écouteur
+  if (!upgradeMenu) return;
+
+  if (!upgradeMenu.contains(event.target)) {
+    removeUpgradeMenu();  // Supprimer la popup
+    document.removeEventListener("click", closeUpgradeMenuOutside); // Retirer l'événement
   }
 }
 
@@ -246,90 +239,6 @@ function removeUpgradeMenu() {
     document.body.removeChild(upgradeMenu);  // Supprimer la popup
     upgradeMenu = null;  // Réinitialiser la popup
   }
-}
-
-function addUpgrade(unitId, upgradeId) {
-  const unit = army.find(u => u.id === unitId);
-  const upgrade = upgradeLibrary[upgradeId];
-
-  if (!upgrade) return;
-
-  // Vérifier s'il existe une restriction pour l'amélioration
-  const restriction = upgrade.restrictions || {};
-  if (restriction.perArmy) {
-    const existingUpgrade = unit.upgrades.find(up => up.id === upgradeId);
-    if (existingUpgrade) {
-      alert(`${upgrade.name} est déjà sélectionné pour cette unité.`);
-      return;
-    }
-  }
-
-  if (!unit.upgrades) {
-    unit.upgrades = [];
-  }
-
-  unit.upgrades.push({
-    id: upgradeId,
-    name: upgrade.name,
-    cost: upgrade.cost
-  });
-
-  renderArmy();
-  updateTotal();
-}
-
-function removeUnitFromArmy(unitId) {
-  const unitIndex = army.findIndex(u => u.id === unitId);
-  if (unitIndex !== -1) {
-    army.splice(unitIndex, 1);  // Supprimer l'unité
-    renderArmy();  // Redessiner l'armée
-    updateTotal();  // Mettre à jour le total
-  }
-}
-
-function addUnitByName(name) {
-  const unit = units.find(u => u.name === name);
-  if (!unit) return;
-
-  const restriction = unit.restrictions;
-  const pointBlocks = getPointBlocks();
-  const existing = army.find(u => u.id === unit.id);
-  const currentCount = existing ? existing.count : 0;
-
-  if (restriction) {
-    if (restriction.perArmy && existing && currentCount >= restriction.max) {
-      alert(`${unit.name} ne peut être sélectionné qu'une seule fois.`);
-      return;
-    }
-    if (restriction.maxPer1000 && currentCount >= restriction.maxPer1000 * pointBlocks) {
-      alert(`${unit.name} est limité à ${restriction.maxPer1000} par tranche de 1000 pts.`);
-      return;
-    }
-    if (restriction.max && currentCount >= restriction.max) {
-      alert(`${unit.name} est limité à ${restriction.max} exemplaires.`);
-      return;
-    }
-  }
-
-  if (existing) {
-    existing.count++; // Augmenter le nombre d'unités existantes
-  } else {
-    army.push({ ...unit, count: 1 }); // Ajouter une nouvelle unité si elle n'existe pas
-  }
-
-  renderArmy(); // Mettre à jour l'affichage de l'armée
-  updateTotal(); // Mettre à jour les points
-}
-
-function createUnitButtons() {
-  unitButtonsContainer.innerHTML = ''; // Vider le conteneur avant d'ajouter les nouveaux boutons
-  units.forEach(unit => {
-    const btn = document.createElement('button');
-    btn.className = 'bg-gray-100 hover:bg-blue-200 border rounded p-2 text-left shadow';
-    btn.innerHTML = `<strong>${unit.name}</strong><br><span class="text-sm">${unit.cost} pts</span>`;
-    btn.onclick = () => addUnitByName(unit.name); // Ajouter l'unité au clic
-    unitButtonsContainer.appendChild(btn);
-  });
 }
 
 async function loadArmy() {
@@ -376,6 +285,7 @@ async function loadArmy() {
     console.error("Erreur de chargement :", error);
   }
 }
+
 
 function validateArmy() {
   const pointBlocks = getPointBlocks();
