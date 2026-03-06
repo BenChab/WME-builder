@@ -55,6 +55,7 @@ function updateTotal() {
 
     return sum + unitCost + upgradeCost;
   }, 0);
+
   const magicTotal = selectedMagicItems.reduce((sum, i) => sum + (i.cost * i.count), 0);
   const total = armyTotal + magicTotal;
 
@@ -111,19 +112,12 @@ function renderArmy() {
     left.appendChild(costEl);
 
     li.appendChild(left);
-    extraButtons.forEach(btn => {
-      li.appendChild(btn);
-    });
+    extraButtons.forEach(btn => li.appendChild(btn));
     li.appendChild(removeBtn);
 
     armyList.appendChild(li);
   }
 
-function getUnitOrder(name) {
-  return units.findIndex(u => u.name === name);
-}
-  
-  // 🔹 Unités
   const sortedArmy = [...army].sort(
     (a, b) => getUnitOrder(a.name) - getUnitOrder(b.name)
   );
@@ -135,10 +129,7 @@ function getUnitOrder(name) {
       const upgradeBtn = document.createElement('button');
       upgradeBtn.textContent = "⚙";
       upgradeBtn.className = "text-blue-500 hover:text-blue-700 ml-2";
-
-      upgradeBtn.onclick = (event) => {
-        showUpgradeMenu(unit.id, event);
-      };
+      upgradeBtn.onclick = (event) => showUpgradeMenu(unit.id, event);
 
       buttons.push(upgradeBtn);
     }
@@ -170,7 +161,6 @@ function getUnitOrder(name) {
     }
   });
 
-  // 🔸 Objets magiques
   selectedMagicItems.forEach((item, index) => {
     createRow(
       item.name,
@@ -194,20 +184,17 @@ function showUpgradeMenu(unitId, event) {
 
   if (!unit.upgradeOptions) return;
 
-  // Vérifier si une popup est déjà ouverte et la fermer si nécessaire
   if (upgradeMenu) {
-    upgradeMenu.remove();  // Supprimer l'ancienne popup
-    upgradeMenu = null;    // Réinitialiser la variable
+    upgradeMenu.remove();
+    upgradeMenu = null;
   }
 
-  // Créer une nouvelle popup
   const menu = document.createElement('div');
-  upgradeMenu = menu;  // Assigner la nouvelle popup à la variable
+  upgradeMenu = menu;
   menu.className = "fixed bg-white border shadow p-3 rounded";
-  menu.style.top = event.clientY + "px";  // Positionner la popup en fonction du clic
-  menu.style.left = event.clientX + "px"; 
+  menu.style.top = event.clientY + "px";
+  menu.style.left = event.clientX + "px";
 
-  // Ajouter les options de mise à niveau
   unit.upgradeOptions.forEach(id => {
     const upgrade = upgradeLibrary[id];
 
@@ -218,10 +205,8 @@ function showUpgradeMenu(unitId, event) {
 
     btn.textContent = `${upgrade.name} (+${upgrade.cost} pts)`;
 
-    // Ajouter l'événement de clic pour l'amélioration
     btn.onclick = () => {
       addUpgrade(unitId, id);
-      // Fermeture de la fenêtre après ajout de l'amélioration
       document.body.removeChild(menu);
       upgradeMenu = null;
     };
@@ -233,7 +218,6 @@ function showUpgradeMenu(unitId, event) {
   close.textContent = "Fermer";
   close.className = "mt-2 text-red-500";
 
-  // Fermer la fenêtre en cliquant sur le bouton "Fermer"
   close.onclick = () => {
     document.body.removeChild(menu);
     upgradeMenu = null;
@@ -241,10 +225,7 @@ function showUpgradeMenu(unitId, event) {
 
   menu.appendChild(close);
 
-  // Ajouter la fenêtre de popup au corps de la page
   document.body.appendChild(menu);
-
-  // Ajouter un événement pour fermer la popup si on clique en dehors
   setTimeout(() => {
     document.addEventListener("click", closeUpgradeMenuOutside);
   }, 0);
@@ -272,7 +253,6 @@ function addUpgrade(unitId, upgradeId) {
     unit.upgrades = [];
   }
 
-  // Vérifier s'il y a un conflit avec les améliorations existantes
   if (restriction.perArmy) {
     const existingUpgrade = unit.upgrades.find(up => up.id === upgradeId);
     if (existingUpgrade) {
@@ -326,17 +306,15 @@ function addUnitByName(name) {
 }
 
 function createUnitButtons() {
-  unitButtonsContainer.innerHTML = ''; // Vider le conteneur avant d'ajouter les nouveaux boutons
+  unitButtonsContainer.innerHTML = '';
   units.forEach(unit => {
     const btn = document.createElement('button');
     btn.className = 'bg-gray-100 hover:bg-blue-200 border rounded p-2 text-left shadow';
     btn.innerHTML = `<strong>${unit.name}</strong><br><span class="text-sm">${unit.cost} pts</span>`;
-    btn.onclick = () => addUnitByName(unit.name); // Ajouter l'unité au clic
+    btn.onclick = () => addUnitByName(unit.name);
     unitButtonsContainer.appendChild(btn);
   });
 }
-
-
 
 async function loadArmy() {
   if (upgradeMenu) {
