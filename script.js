@@ -178,6 +178,10 @@ function createRow(name, count, cost, removeCallback, extraButtons = []) {
   armyList.appendChild(li);
 }
 
+function getUnitOrder(name) {
+  return units.findIndex(u => u.name === name);
+}
+
 function showUpgradeMenu(unitId, event) {
   const unit = army.find(u => u.id === unitId);
 
@@ -285,7 +289,6 @@ async function loadArmy() {
     console.error("Erreur de chargement :", error);
   }
 }
-
 
 function validateArmy() {
   const pointBlocks = getPointBlocks();
