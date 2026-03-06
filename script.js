@@ -50,9 +50,7 @@ function getPointBlocks() {
 function updateTotal() {
   const armyTotal = army.reduce((sum, unit) => {
     let unitCost = unit.cost * unit.count;
-
     const upgradeCost = (unit.upgrades || []).reduce((s, up) => s + up.cost, 0);
-
     return sum + unitCost + upgradeCost;
   }, 0);
 
@@ -81,42 +79,7 @@ function calculateBreakPoint() {
 }
 
 function renderArmy() {
-  armyList.innerHTML = '';
-
-  function createRow(name, count, cost, removeCallback, extraButtons = []) {
-    const li = document.createElement('li');
-    li.className = "flex justify-between items-center text-sm bg-white rounded px-2 py-1 shadow";
-
-    const left = document.createElement('div');
-    left.className = "flex gap-3 items-center";
-
-    const nameEl = document.createElement('span');
-    nameEl.className = "font-medium w-40 truncate";
-    nameEl.textContent = name;
-
-    const countEl = document.createElement('span');
-    countEl.className = "w-8 text-center";
-    countEl.textContent = `x${count}`;
-
-    const costEl = document.createElement('span');
-    costEl.className = "w-20 text-right";
-    costEl.textContent = `${cost} pts`;
-
-    const removeBtn = document.createElement('button');
-    removeBtn.textContent = '🗑️';
-    removeBtn.className = "text-red-500 hover:text-red-700";
-    removeBtn.onclick = removeCallback;
-
-    left.appendChild(nameEl);
-    left.appendChild(countEl);
-    left.appendChild(costEl);
-
-    li.appendChild(left);
-    extraButtons.forEach(btn => li.appendChild(btn));
-    li.appendChild(removeBtn);
-
-    armyList.appendChild(li);
-  }
+  armyList.innerHTML = ''; // Vider la liste à chaque fois
 
   const sortedArmy = [...army].sort(
     (a, b) => getUnitOrder(a.name) - getUnitOrder(b.name)
@@ -139,7 +102,8 @@ function renderArmy() {
       unit.count,
       unit.cost * unit.count,
       () => {
-        renderArmy();
+        removeUnitFromArmy(unit.id);
+        renderArmy();  // Redessiner l'armée après suppression
         updateTotal();
       },
       buttons
@@ -177,6 +141,41 @@ function renderArmy() {
       }
     );
   });
+}
+
+function createRow(name, count, cost, removeCallback, extraButtons = []) {
+  const li = document.createElement('li');
+  li.className = "flex justify-between items-center text-sm bg-white rounded px-2 py-1 shadow";
+
+  const left = document.createElement('div');
+  left.className = "flex gap-3 items-center";
+
+  const nameEl = document.createElement('span');
+  nameEl.className = "font-medium w-40 truncate";
+  nameEl.textContent = name;
+
+  const countEl = document.createElement('span');
+  countEl.className = "w-8 text-center";
+  countEl.textContent = `x${count}`;
+
+  const costEl = document.createElement('span');
+  costEl.className = "w-20 text-right";
+  costEl.textContent = `${cost} pts`;
+
+  const removeBtn = document.createElement('button');
+  removeBtn.textContent = '🗑️';
+  removeBtn.className = "text-red-500 hover:text-red-700";
+  removeBtn.onclick = removeCallback;
+
+  left.appendChild(nameEl);
+  left.appendChild(countEl);
+  left.appendChild(costEl);
+
+  li.appendChild(left);
+  extraButtons.forEach(btn => li.appendChild(btn));
+  li.appendChild(removeBtn);
+
+  armyList.appendChild(li);
 }
 
 function showUpgradeMenu(unitId, event) {
@@ -271,6 +270,15 @@ function addUpgrade(unitId, upgradeId) {
   updateTotal();
 }
 
+function removeUnitFromArmy(unitId) {
+  const unitIndex = army.findIndex(u => u.id === unitId);
+  if (unitIndex !== -1) {
+    army.splice(unitIndex, 1);  // Supprimer l'unité
+    renderArmy();  // Redessiner l'armée
+    updateTotal();  // Mettre à jour le total
+  }
+}
+
 function addUnitByName(name) {
   const unit = units.find(u => u.name === name);
   if (!unit) return;
@@ -306,7 +314,7 @@ function addUnitByName(name) {
 }
 
 function createUnitButtons() {
-  unitButtonsContainer.innerHTML = '';
+  unitButtonsContainer.innerHTML = ''; // Vider le conteneur avant d'ajouter les nouveaux boutons
   units.forEach(unit => {
     const btn = document.createElement('button');
     btn.className = 'bg-gray-100 hover:bg-blue-200 border rounded p-2 text-left shadow';
