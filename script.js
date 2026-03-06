@@ -92,7 +92,9 @@ function renderArmy() {
       const upgradeBtn = document.createElement('button');
       upgradeBtn.textContent = "⚙";
       upgradeBtn.className = "text-blue-500 hover:text-blue-700 ml-2";
-      upgradeBtn.onclick = (event) => showUpgradeMenu(unit.id, event);
+      upgradeBtn.onclick = (event) => {
+        showUpgradeMenu(unit.id, event);
+      };
 
       buttons.push(upgradeBtn);
     }
