@@ -190,15 +190,14 @@ function showUpgradeMenu(unitId, event) {
 
   if (!unit.upgradeOptions) return;
 
-  // Si la popup est déjà ouverte, on la ferme avant d'en ouvrir une nouvelle
+  // Si une popup existe déjà, on la ferme avant d'en ouvrir une nouvelle
   if (upgradeMenu) {
-    upgradeMenu.remove();
-    upgradeMenu = null;
+    removeUpgradeMenu(); // Fermer la popup existante
   }
 
-  // Créer une nouvelle popup
+  // Créer une nouvelle popup d'amélioration
   const menu = document.createElement('div');
-  upgradeMenu = menu;
+  upgradeMenu = menu;  // Mettre à jour la variable upgradeMenu
   menu.className = "fixed bg-white border shadow p-3 rounded";
   menu.style.top = event.clientY + "px";
   menu.style.left = event.clientX + "px";
@@ -213,9 +212,8 @@ function showUpgradeMenu(unitId, event) {
     btn.textContent = `${upgrade.name} (+${upgrade.cost} pts)`;
 
     btn.onclick = () => {
-      addUpgrade(unitId, id);
+      addUpgrade(unitId, id);  // Ajouter l'amélioration
       removeUpgradeMenu();  // Supprimer la popup
-      upgradeMenu = null;  // Réinitialiser la popup
     };
 
     menu.appendChild(btn);
@@ -226,19 +224,15 @@ function showUpgradeMenu(unitId, event) {
   close.className = "mt-2 text-red-500";
 
   close.onclick = () => {
-    removeUpgradeMenu();  // Supprimer la popup
-    upgradeMenu = null; // Réinitialiser la popup
+    removeUpgradeMenu();  // Fermer la popup
   };
 
   menu.appendChild(close);
 
   document.body.appendChild(menu);
 
-  // On supprime tout d'abord l'ancien écouteur, puis on le réajoute.
-  setTimeout(() => {
-    document.removeEventListener("click", closeUpgradeMenuOutside);  // Supprimer l'ancien gestionnaire
-    document.addEventListener("click", closeUpgradeMenuOutside);  // Réajouter un nouveau gestionnaire
-  }, 0);
+  // Ajouter l'écouteur d'événements pour fermer la popup si on clique en dehors
+  document.addEventListener("click", closeUpgradeMenuOutside);
 }
 
 function closeUpgradeMenuOutside(event) {
@@ -255,6 +249,7 @@ function removeUpgradeMenu() {
   if (upgradeMenu) {
     document.body.removeChild(upgradeMenu); // Supprimer la popup
     upgradeMenu = null; // Réinitialiser la popup
+    document.removeEventListener("click", closeUpgradeMenuOutside);
   }
 }
 
