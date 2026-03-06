@@ -38,6 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Fonction qui retourne l'ordre des unités dans le tableau en fonction de leur nom
+function getUnitOrder(name) {
+  return units.findIndex(u => u.name === name);
+}
+
 function updateTargetPoints() {
   targetPoints = parseInt(targetPointsInput.value, 10) || 0;
   updateTotal();
