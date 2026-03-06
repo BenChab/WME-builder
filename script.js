@@ -214,7 +214,7 @@ function showUpgradeMenu(unitId, event) {
 
     btn.onclick = () => {
       addUpgrade(unitId, id);
-      document.body.removeChild(menu);  // Fermer la popup après ajout
+      removeUpgradeMenu();  // Supprimer la popup
       upgradeMenu = null;  // Réinitialiser la popup
     };
 
@@ -226,7 +226,7 @@ function showUpgradeMenu(unitId, event) {
   close.className = "mt-2 text-red-500";
 
   close.onclick = () => {
-    document.body.removeChild(menu); // Fermer la popup
+    removeUpgradeMenu();  // Supprimer la popup
     upgradeMenu = null; // Réinitialiser la popup
   };
 
@@ -245,9 +245,16 @@ function closeUpgradeMenuOutside(event) {
   if (!upgradeMenu) return;
 
   if (!upgradeMenu.contains(event.target)) {
-    upgradeMenu.remove();
+    removeUpgradeMenu();  // Supprimer la popup
     upgradeMenu = null;
     document.removeEventListener("click", closeUpgradeMenuOutside);
+  }
+}
+
+function removeUpgradeMenu() {
+  if (upgradeMenu) {
+    document.body.removeChild(upgradeMenu); // Supprimer la popup
+    upgradeMenu = null; // Réinitialiser la popup
   }
 }
 
