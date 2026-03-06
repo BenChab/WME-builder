@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+
 function updateTargetPoints() {
   targetPoints = parseInt(targetPointsInput.value, 10) || 0;
   updateTotal();
@@ -182,6 +184,58 @@ function createRow(name, count, cost, removeCallback, extraButtons = []) {
 
 function getUnitOrder(name) {
   return units.findIndex(u => u.name === name);
+}
+
+function addUnitByName(name) {
+  // Trouver l'unité sélectionnée dans la liste des unités
+  const unit = units.find(u => u.name === name);
+  if (!unit) return;  // Si l'unité n'existe pas, on arrête la fonction
+
+  const restriction = unit.restrictions;
+  const pointBlocks = getPointBlocks();
+  
+  // Vérifier si l'unité est déjà dans l'armée
+  const existing = army.find(u => u.id === unit.id);
+  const currentCount = existing ? existing.count : 0;
+
+  // Vérifier les restrictions d'unité
+  if (restriction) {
+    if (restriction.perArmy && existing && currentCount >= restriction.max) {
+      alert(`${unit.name} ne peut être sélectionné qu'une seule fois.`);
+      return;
+    }
+    if (restriction.maxPer1000 && currentCount >= restriction.maxPer1000 * pointBlocks) {
+      alert(`${unit.name} est limité à ${restriction.maxPer1000} par tranche de 1000 pts.`);
+      return;
+    }
+    if (restriction.max && currentCount >= restriction.max) {
+      alert(`${unit.name} est limité à ${restriction.max} exemplaires.`);
+      return;
+    }
+  }
+
+  // Si l'unité existe déjà, on augmente sa quantité
+  if (existing) {
+    existing.count++;
+  } else {
+    // Sinon, on ajoute l'unité à l'armée
+    army.push({ ...unit, count: 1 });
+  }
+
+  // Mettre à jour l'affichage de l'armée et du total des points
+  renderArmy();
+  updateTotal();
+}
+
+function createUnitButtons() {
+  unitButtonsContainer.innerHTML = ''; // Vider le conteneur avant d'ajouter les nouveaux boutons
+  units.forEach(unit => {
+    const btn = document.createElement('button');
+    btn.className = 'bg-gray-100 hover:bg-blue-200 border rounded p-2 text-left shadow';
+    btn.innerHTML = `<strong>${unit.name}</strong><br><span class="text-sm">${unit.cost} pts</span>`;
+    btn.onclick = () => addUnitByName(unit.name); // Ajouter l'unité au clic
+    unitButtonsContainer.appendChild(btn);
+  });
 }
 
 function showUpgradeMenu(unitId, event) {
