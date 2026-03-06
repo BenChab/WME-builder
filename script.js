@@ -183,11 +183,13 @@ function showUpgradeMenu(unitId, event) {
 
   if (!unit.upgradeOptions) return;
 
+  // Si la popup est déjà ouverte, on la ferme avant d'en ouvrir une nouvelle
   if (upgradeMenu) {
     upgradeMenu.remove();
     upgradeMenu = null;
   }
 
+  // Créer une nouvelle popup
   const menu = document.createElement('div');
   upgradeMenu = menu;
   menu.className = "fixed bg-white border shadow p-3 rounded";
@@ -201,13 +203,12 @@ function showUpgradeMenu(unitId, event) {
 
     const btn = document.createElement('button');
     btn.className = "block w-full text-left hover:bg-gray-200 p-1";
-
     btn.textContent = `${upgrade.name} (+${upgrade.cost} pts)`;
 
     btn.onclick = () => {
       addUpgrade(unitId, id);
-      document.body.removeChild(menu);
-      upgradeMenu = null;
+      document.body.removeChild(menu);  // Fermer la popup après ajout
+      upgradeMenu = null;  // Réinitialiser la popup
     };
 
     menu.appendChild(btn);
@@ -218,13 +219,15 @@ function showUpgradeMenu(unitId, event) {
   close.className = "mt-2 text-red-500";
 
   close.onclick = () => {
-    document.body.removeChild(menu);
-    upgradeMenu = null;
+    document.body.removeChild(menu); // Fermer la popup
+    upgradeMenu = null; // Réinitialiser la popup
   };
 
   menu.appendChild(close);
 
   document.body.appendChild(menu);
+
+  // Événement pour fermer la popup si on clique en dehors
   setTimeout(() => {
     document.addEventListener("click", closeUpgradeMenuOutside);
   }, 0);
@@ -239,6 +242,8 @@ function closeUpgradeMenuOutside(event) {
     document.removeEventListener("click", closeUpgradeMenuOutside);
   }
 }
+
+
 
 function addUpgrade(unitId, upgradeId) {
   const unit = army.find(u => u.id === unitId);
@@ -304,13 +309,13 @@ function addUnitByName(name) {
   }
 
   if (existing) {
-    existing.count++;
+    existing.count++; // Augmenter le nombre d'unités existantes
   } else {
-    army.push({ ...unit, count: 1 });
+    army.push({ ...unit, count: 1 }); // Ajouter une nouvelle unité si elle n'existe pas
   }
 
-  renderArmy();
-  updateTotal();
+  renderArmy(); // Mettre à jour l'affichage de l'armée
+  updateTotal(); // Mettre à jour les points
 }
 
 function createUnitButtons() {
@@ -329,6 +334,7 @@ async function loadArmy() {
     upgradeMenu.remove();
     upgradeMenu = null;
   }
+
   const selected = armySelect.value;
   if (!selected) return;
 
