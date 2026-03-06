@@ -234,9 +234,10 @@ function showUpgradeMenu(unitId, event) {
 
   document.body.appendChild(menu);
 
-  // Événement pour fermer la popup si on clique en dehors
+  // On supprime tout d'abord l'ancien écouteur, puis on le réajoute.
   setTimeout(() => {
-    document.addEventListener("click", closeUpgradeMenuOutside);
+    document.removeEventListener("click", closeUpgradeMenuOutside);  // Supprimer l'ancien gestionnaire
+    document.addEventListener("click", closeUpgradeMenuOutside);  // Réajouter un nouveau gestionnaire
   }, 0);
 }
 
