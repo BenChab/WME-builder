@@ -92,7 +92,9 @@ function renderArmy() {
       const upgradeBtn = document.createElement('button');
       upgradeBtn.textContent = "⚙";
       upgradeBtn.className = "text-blue-500 hover:text-blue-700 ml-2";
-      upgradeBtn.onclick = (event) => showUpgradeMenu(unit.id, event);
+      upgradeBtn.onclick = (event) => {
+        showUpgradeMenu(unit.id, event); // Appeler la popup d'amélioration
+      };
 
       buttons.push(upgradeBtn);
     }
@@ -102,7 +104,7 @@ function renderArmy() {
       unit.count,
       unit.cost * unit.count,
       () => {
-        removeUnitFromArmy(unit.id);
+        removeUnitFromArmy(unit.id);  // Supprimer l'unité de l'armée
         renderArmy();  // Redessiner l'armée après suppression
         updateTotal();
       },
@@ -243,8 +245,6 @@ function closeUpgradeMenuOutside(event) {
   }
 }
 
-
-
 function addUpgrade(unitId, upgradeId) {
   const unit = army.find(u => u.id === unitId);
   const upgrade = upgradeLibrary[upgradeId];
@@ -324,7 +324,7 @@ function createUnitButtons() {
     const btn = document.createElement('button');
     btn.className = 'bg-gray-100 hover:bg-blue-200 border rounded p-2 text-left shadow';
     btn.innerHTML = `<strong>${unit.name}</strong><br><span class="text-sm">${unit.cost} pts</span>`;
-    btn.onclick = () => addUnitByName(unit.name);
+    btn.onclick = () => addUnitByName(unit.name); // Ajouter l'unité au clic
     unitButtonsContainer.appendChild(btn);
   });
 }
@@ -421,4 +421,3 @@ function createMagicItemButtons() {
   });
   // On ne force plus d'affichage ici, c'est géré par le bouton toggle
 }
-
