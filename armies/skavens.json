@@ -141,7 +141,7 @@
       "restrictions": {
         "maxPer1000": 2
       },
-      "category": "character,
+      "category": "character",
       "id": "unit-heros"
     },
     {
