@@ -413,31 +413,52 @@ async function loadArmy(){
 
 function validateArmy(){
 
-  const messages=[];
+  const pointBlocks = getPointBlocks();
+  const messages = [];
 
-  army.forEach(unit=>{
+  units.forEach(unit => {
 
     if(!unit.restrictions) return;
 
-    const r=unit.restrictions;
+    const selected = army.find(u => u.id === unit.id);
+    const count = selected ? selected.count : 0;
 
-    if(r.max && unit.count>r.max){
+    const r = unit.restrictions;
 
-      messages.push(`${unit.name} : maximum ${r.max}`);
+    if(r.min && count < r.min){
+
+      messages.push(`${unit.name} : minimum requis ${r.min}`);
+
+    }
+
+    if(r.max && count > r.max){
+
+      messages.push(`${unit.name} : maximum autorisé ${r.max}`);
+
+    }
+
+    if(r.minPer1000 && count < r.minPer1000 * pointBlocks){
+
+      messages.push(`${unit.name} : minimum ${r.minPer1000} par 1000 pts requis`);
+
+    }
+
+    if(r.maxPer1000 && count > r.maxPer1000 * pointBlocks){
+
+      messages.push(`${unit.name} : maximum ${r.maxPer1000} par 1000 pts dépassé`);
 
     }
 
   });
 
-  validationMessages.innerHTML='';
+  validationMessages.innerHTML = '';
 
-  messages.forEach(msg=>{
+  messages.forEach(msg => {
 
-    const div=document.createElement('div');
+    const div = document.createElement('div');
 
-    div.textContent=msg;
-
-    div.className='text-sm text-red-600';
+    div.textContent = msg;
+    div.className = 'text-sm text-red-600';
 
     validationMessages.appendChild(div);
 
