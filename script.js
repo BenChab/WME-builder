@@ -3,9 +3,10 @@ let army = [];
 let magicItems = [];
 let selectedMagicItems = [];
 let targetPoints = 2000;
+
 let upgradeLibrary = {};
 let upgradeSets = {};
-let upgradeMenu = null;  // Déclaration globale, uniquement ici
+let upgradeMenu = null;
 
 const armySelect = document.getElementById('armySelect');
 const armyList = document.getElementById('armyList');
@@ -19,15 +20,16 @@ const magicItemsButtonsContainer = document.getElementById('magicItemsButtonsCon
 const breakPointEl = document.getElementById('breakPoint');
 
 document.addEventListener("DOMContentLoaded", () => {
+
   armySelect.addEventListener("change", loadArmy);
   targetPointsInput.addEventListener("input", updateTargetPoints);
-  updateTotal();
 
   magicItemsContainer.style.display = 'none';
 
   const toggleMagicItemsBtn = document.getElementById('toggleMagicItemsBtn');
 
   toggleMagicItemsBtn.addEventListener('click', () => {
+
     if (magicItemsContainer.style.display === 'none') {
       magicItemsContainer.style.display = 'block';
       toggleMagicItemsBtn.textContent = 'Masquer les objets magiques';
@@ -35,351 +37,412 @@ document.addEventListener("DOMContentLoaded", () => {
       magicItemsContainer.style.display = 'none';
       toggleMagicItemsBtn.textContent = 'Afficher les objets magiques';
     }
+
   });
+
+  updateTotal();
+
 });
 
-
-
-function updateTargetPoints() {
-  targetPoints = parseInt(targetPointsInput.value, 10) || 0;
+function updateTargetPoints(){
+  targetPoints = parseInt(targetPointsInput.value,10) || 0;
   updateTotal();
 }
 
-function getPointBlocks() {
-  return Math.floor(targetPoints / 1000); // Tranches complètes uniquement
+function getPointBlocks(){
+  return Math.floor(targetPoints/1000);
 }
 
-function updateTotal() {
-  const armyTotal = army.reduce((sum, unit) => {
-    let unitCost = unit.cost * unit.count;
-    const upgradeCost = (unit.upgrades || []).reduce((s, up) => s + up.cost, 0);
-    return sum + unitCost + upgradeCost;
-  }, 0);
+function updateTotal(){
 
-  const magicTotal = selectedMagicItems.reduce((sum, i) => sum + (i.cost * i.count), 0);
+  const armyTotal = army.reduce((sum,unit)=>{
+
+    let unitCost = unit.cost * unit.count;
+
+    const upgradeCost = (unit.upgrades || []).reduce((s,up)=> s+up.cost ,0);
+
+    return sum + unitCost + upgradeCost;
+
+  },0);
+
+  const magicTotal = selectedMagicItems.reduce((sum,i)=> sum + (i.cost*i.count),0);
+
   const total = armyTotal + magicTotal;
 
   totalPointsEl.textContent = total;
 
-  const bp = calculateBreakPoint();
-  breakPointEl.textContent = bp;
+  breakPointEl.textContent = calculateBreakPoint();
 
   validateArmy();
+
 }
 
-function calculateBreakPoint() {
+function calculateBreakPoint(){
+
   let totalUnitsForBP = 0;
 
-  army.forEach(unit => {
-    const countsForBP = unit.countsForBP !== false;
-    if (countsForBP) {
+  army.forEach(unit=>{
+
+    if(unit.countsForBP !== false){
+
       totalUnitsForBP += unit.count;
+
     }
+
   });
 
-  return Math.ceil(totalUnitsForBP / 2);
+  return Math.ceil(totalUnitsForBP/2);
+
 }
 
-function renderArmy() {
-  armyList.innerHTML = ''; // Vider la liste à chaque fois
+function getUnitOrder(name){
+  return units.findIndex(u=>u.name===name);
+}
+
+function renderArmy(){
+
+  armyList.innerHTML = '';
 
   const sortedArmy = [...army].sort(
-    (a, b) => getUnitOrder(a.name) - getUnitOrder(b.name)
+    (a,b)=> getUnitOrder(a.name) - getUnitOrder(b.name)
   );
 
-  sortedArmy.forEach(unit => {
+  sortedArmy.forEach(unit=>{
+
     const buttons = [];
 
-    if (unit.upgradeOptions && unit.upgradeOptions.length > 0) {
+    if(unit.upgradeOptions && unit.upgradeOptions.length){
+
       const upgradeBtn = document.createElement('button');
       upgradeBtn.textContent = "⚙";
-      upgradeBtn.className = "text-blue-500 hover:text-blue-700 ml-2";
-      upgradeBtn.onclick = (event) => {
-        showUpgradeMenu(unit.id, event);
+      upgradeBtn.className="text-blue-500 hover:text-blue-700 ml-2";
+
+      upgradeBtn.onclick=(event)=>{
+        showUpgradeMenu(unit.id,event);
       };
 
       buttons.push(upgradeBtn);
+
     }
 
     createRow(
       unit.name,
       unit.count,
       unit.cost * unit.count,
-      () => {
-        removeUnitFromArmy(unit.id);
-        renderArmy();  // Redessiner l'armée après suppression
-        updateTotal();
-      },
+      ()=>removeUnitFromArmy(unit.id),
       buttons
     );
 
-    if (unit.upgrades && unit.upgrades.length > 0) {
-      unit.upgrades.forEach((up, upIndex) => {
+    if(unit.upgrades){
+
+      unit.upgrades.forEach((up,upIndex)=>{
+
         createRow(
-          "↳ " + up.name,
+          "↳ "+up.name,
           1,
           up.cost,
-          () => {
-            unit.upgrades.splice(upIndex, 1);
+          ()=>{
+            unit.upgrades.splice(upIndex,1);
             renderArmy();
             updateTotal();
           }
         );
+
       });
+
     }
+
   });
 
-  selectedMagicItems.forEach((item, index) => {
-    createRow(
-      item.name,
-      item.count,
-      item.cost * item.count,
-      () => {
-        if (item.count > 1) {
-          item.count--;
-        } else {
-          selectedMagicItems.splice(index, 1);
-        }
-        renderArmy();
-        updateTotal();
-      }
-    );
-  });
 }
 
-function createRow(name, count, cost, removeCallback, extraButtons = []) {
+function createRow(name,count,cost,removeCallback,extraButtons=[]){
+
   const li = document.createElement('li');
-  li.className = "flex justify-between items-center text-sm bg-white rounded px-2 py-1 shadow";
+
+  li.className="flex justify-between items-center text-sm bg-white rounded px-2 py-1 shadow";
 
   const left = document.createElement('div');
-  left.className = "flex gap-3 items-center";
+  left.className="flex gap-3 items-center";
 
   const nameEl = document.createElement('span');
-  nameEl.className = "font-medium w-40 truncate";
-  nameEl.textContent = name;
+  nameEl.className="font-medium w-40 truncate";
+  nameEl.textContent=name;
 
-  const countEl = document.createElement('span');
-  countEl.className = "w-8 text-center";
-  countEl.textContent = `x${count}`;
+  const countEl=document.createElement('span');
+  countEl.className="w-8 text-center";
+  countEl.textContent=`x${count}`;
 
-  const costEl = document.createElement('span');
-  costEl.className = "w-20 text-right";
-  costEl.textContent = `${cost} pts`;
+  const costEl=document.createElement('span');
+  costEl.className="w-20 text-right";
+  costEl.textContent=`${cost} pts`;
 
-  const removeBtn = document.createElement('button');
-  removeBtn.textContent = '🗑️';
-  removeBtn.className = "text-red-500 hover:text-red-700";
-  removeBtn.onclick = removeCallback;
+  const removeBtn=document.createElement('button');
+  removeBtn.textContent='🗑️';
+  removeBtn.className="text-red-500 hover:text-red-700";
+  removeBtn.onclick=removeCallback;
 
   left.appendChild(nameEl);
   left.appendChild(countEl);
   left.appendChild(costEl);
 
   li.appendChild(left);
-  extraButtons.forEach(btn => li.appendChild(btn));
+
+  extraButtons.forEach(btn=>li.appendChild(btn));
+
   li.appendChild(removeBtn);
 
   armyList.appendChild(li);
+
 }
 
-function getUnitOrder(name) {
-  return units.findIndex(u => u.name === name);
-}
+function removeUnitFromArmy(unitId){
 
-function addUnitByName(name) {
-  // Trouver l'unité sélectionnée dans la liste des unités
-  const unit = units.find(u => u.name === name);
-  if (!unit) return;  // Si l'unité n'existe pas, on arrête la fonction
+  const index = army.findIndex(u=>u.id===unitId);
 
-  const restriction = unit.restrictions;
-  const pointBlocks = getPointBlocks();
-  
-  // Vérifier si l'unité est déjà dans l'armée
-  const existing = army.find(u => u.id === unit.id);
-  const currentCount = existing ? existing.count : 0;
+  if(index===-1) return;
 
-  // Vérifier les restrictions d'unité
-  if (restriction) {
-    if (restriction.perArmy && existing && currentCount >= restriction.max) {
-      alert(`${unit.name} ne peut être sélectionné qu'une seule fois.`);
-      return;
-    }
-    if (restriction.maxPer1000 && currentCount >= restriction.maxPer1000 * pointBlocks) {
-      alert(`${unit.name} est limité à ${restriction.maxPer1000} par tranche de 1000 pts.`);
-      return;
-    }
-    if (restriction.max && currentCount >= restriction.max) {
-      alert(`${unit.name} est limité à ${restriction.max} exemplaires.`);
-      return;
-    }
+  if(army[index].count>1){
+
+    army[index].count--;
+
+  }else{
+
+    army.splice(index,1);
+
   }
 
-  // Si l'unité existe déjà, on augmente sa quantité
-  if (existing) {
-    existing.count++;
-  } else {
-    // Sinon, on ajoute l'unité à l'armée
-    army.push({ ...unit, count: 1 });
-  }
-
-  // Mettre à jour l'affichage de l'armée et du total des points
   renderArmy();
   updateTotal();
+
 }
 
-function createUnitButtons() {
-  unitButtonsContainer.innerHTML = ''; // Vider le conteneur avant d'ajouter les nouveaux boutons
-  units.forEach(unit => {
-    const btn = document.createElement('button');
-    btn.className = 'bg-gray-100 hover:bg-blue-200 border rounded p-2 text-left shadow';
-    btn.innerHTML = `<strong>${unit.name}</strong><br><span class="text-sm">${unit.cost} pts</span>`;
-    btn.onclick = () => addUnitByName(unit.name); // Ajouter l'unité au clic
-    unitButtonsContainer.appendChild(btn);
-  });
-}
+function addUnitByName(name){
 
-function showUpgradeMenu(unitId, event) {
-  const unit = army.find(u => u.id === unitId);
+  const unit = units.find(u=>u.name===name);
 
-  if (!unit.upgradeOptions) return;
+  if(!unit) return;
 
-  // Si une popup est déjà ouverte, on la ferme avant d'en ouvrir une nouvelle
-  if (upgradeMenu) {
-    removeUpgradeMenu();  // Fermer la popup existante
+  const existing = army.find(u=>u.id===unit.id);
+
+  if(existing){
+
+    existing.count++;
+
+  }else{
+
+    army.push({
+      ...unit,
+      id: unit.id || unit.name,
+      count:1,
+      upgrades:[]
+    });
+
   }
 
-  const menu = document.createElement('div');
-  upgradeMenu = menu;
-  menu.className = "fixed bg-white border shadow p-3 rounded";
-  menu.style.top = event.clientY + "px";
-  menu.style.left = event.clientX + "px";
+  renderArmy();
+  updateTotal();
 
-  unit.upgradeOptions.forEach(id => {
+}
+
+function createUnitButtons(){
+
+  unitButtonsContainer.innerHTML='';
+
+  units.forEach(unit=>{
+
+    const btn=document.createElement('button');
+
+    btn.className='bg-gray-100 hover:bg-blue-200 border rounded p-2 text-left shadow';
+
+    btn.innerHTML=`<strong>${unit.name}</strong><br><span class="text-sm">${unit.cost} pts</span>`;
+
+    btn.onclick=()=>addUnitByName(unit.name);
+
+    unitButtonsContainer.appendChild(btn);
+
+  });
+
+}
+
+function showUpgradeMenu(unitId,event){
+
+  const unit = army.find(u=>u.id===unitId);
+
+  if(!unit || !unit.upgradeOptions) return;
+
+  removeUpgradeMenu();
+
+  const menu=document.createElement('div');
+
+  upgradeMenu=menu;
+
+  menu.className="fixed bg-white border shadow p-3 rounded";
+
+  menu.style.top=event.clientY+"px";
+  menu.style.left=event.clientX+"px";
+
+  unit.upgradeOptions.forEach(id=>{
+
     const upgrade = upgradeLibrary[id];
 
-    if (!upgrade) return;
+    if(!upgrade) return;
 
-    const btn = document.createElement('button');
-    btn.className = "block w-full text-left hover:bg-gray-200 p-1";
-    btn.textContent = `${upgrade.name} (+${upgrade.cost} pts)`;
+    const btn=document.createElement('button');
 
-    btn.onclick = () => {
-      addUpgrade(unitId, id);  // Ajouter l'amélioration
-      removeUpgradeMenu();  // Fermer la popup après ajout
+    btn.className="block w-full text-left hover:bg-gray-200 p-1";
+
+    btn.textContent=`${upgrade.name} (+${upgrade.cost} pts)`;
+
+    btn.onclick=()=>{
+
+      addUpgrade(unitId,id);
+      removeUpgradeMenu();
+
     };
 
     menu.appendChild(btn);
+
   });
 
-  const close = document.createElement('button');
-  close.textContent = "Fermer";
-  close.className = "mt-2 text-red-500";
-  close.onclick = () => removeUpgradeMenu();  // Fermer la popup
+  const close=document.createElement('button');
+
+  close.textContent="Fermer";
+
+  close.className="mt-2 text-red-500";
+
+  close.onclick=removeUpgradeMenu;
 
   menu.appendChild(close);
 
   document.body.appendChild(menu);
 
-  // Ajouter l'événement pour fermer la popup si on clique en dehors
-  document.removeEventListener("click", closeUpgradeMenuOutside);  // Retirer l'ancien gestionnaire
-  document.addEventListener("click", closeUpgradeMenuOutside);  // Ajouter un nouveau gestionnaire
 }
 
-function closeUpgradeMenuOutside(event) {
-  if (!upgradeMenu) return;
+function removeUpgradeMenu(){
 
-  if (!upgradeMenu.contains(event.target)) {
-    removeUpgradeMenu();  // Supprimer la popup
-    document.removeEventListener("click", closeUpgradeMenuOutside); // Retirer l'événement
-  }
-}
+  if(upgradeMenu){
 
-function removeUpgradeMenu() {
-  if (upgradeMenu) {
-    document.body.removeChild(upgradeMenu);  // Supprimer la popup
-    upgradeMenu = null;  // Réinitialiser la popup
-  }
-}
-
-async function loadArmy() {
-  if (upgradeMenu) {
     upgradeMenu.remove();
-    upgradeMenu = null;
+
+    upgradeMenu=null;
+
   }
 
-  const selected = armySelect.value;
-  if (!selected) return;
+}
 
-  try {
-    const [armyRes, magicRes] = await Promise.all([
+function addUpgrade(unitId,upgradeId){
+
+  const unit=army.find(u=>u.id===unitId);
+
+  const upgrade=upgradeLibrary[upgradeId];
+
+  if(!unit || !upgrade) return;
+
+  unit.upgrades.push({
+
+    id:upgradeId,
+    name:upgrade.name,
+    cost:upgrade.cost
+
+  });
+
+  renderArmy();
+  updateTotal();
+
+}
+
+async function loadArmy(){
+
+  removeUpgradeMenu();
+
+  const selected=armySelect.value;
+
+  if(!selected) return;
+
+  try{
+
+    const [armyRes,magicRes] = await Promise.all([
+
       fetch(`armies/${selected}.json`),
       fetch("armies/magic_items.json")
+
     ]);
 
-    const armyData = await armyRes.json();
-    magicItems = await magicRes.json();
+    const armyData=await armyRes.json();
 
-    createMagicItemButtons();
-    selectedMagicItems = [];
+    magicItems=await magicRes.json();
 
-    upgradeLibrary = armyData.upgradeLibrary || {};
-    upgradeSets = armyData.upgradeSets || {};
+    upgradeLibrary=armyData.upgradeLibrary || {};
 
-    units = armyData.units.map(unit => {
-      const newUnit = { ...unit };
+    upgradeSets=armyData.upgradeSets || {};
 
-      if (newUnit.upgradeSet) {
-        newUnit.upgradeOptions = upgradeSets[newUnit.upgradeSet] || [];
+    units=armyData.units.map(unit=>{
+
+      const newUnit={...unit};
+
+      if(newUnit.upgradeSet){
+
+        newUnit.upgradeOptions=upgradeSets[newUnit.upgradeSet] || [];
+
       }
 
       return newUnit;
+
     });
 
     unitSelectorContainer.classList.remove('hidden');
+
     createUnitButtons();
-    army = [];
+
+    army=[];
+
     renderArmy();
+
     updateTotal();
-  } catch (error) {
+
+  }catch(error){
+
     alert("Erreur de chargement des données.");
-    console.error("Erreur de chargement :", error);
+
+    console.error("Erreur de chargement :",error);
+
   }
+
 }
 
-function validateArmy() {
-  const pointBlocks = getPointBlocks();
-  const messages = [];
+function validateArmy(){
 
-  army.forEach(unit => {
-    if (!unit.restrictions) return;
+  const messages=[];
 
-    const selected = army.find(u => u.id === unit.id);
-    const count = selected ? selected.count : 0;
-    const r = unit.restrictions;
+  army.forEach(unit=>{
 
-    if (r.min && count < r.min) {
-      messages.push(`${unit.name} : minimum requis ${r.min}`);
+    if(!unit.restrictions) return;
+
+    const r=unit.restrictions;
+
+    if(r.max && unit.count>r.max){
+
+      messages.push(`${unit.name} : maximum ${r.max}`);
+
     }
-    if (r.max && count > r.max) {
-      messages.push(`${unit.name} : maximum autorisé ${r.max}`);
-    }
-    if (r.minPer1000 && count < r.minPer1000 * pointBlocks) {
-      messages.push(`${unit.name} : minimum ${r.minPer1000} par 1000 pts requis (actuellement ${count})`);
-    }
-    if (r.maxPer1000 && count > r.maxPer1000 * pointBlocks) {
-      messages.push(`${unit.name} : maximum ${r.maxPer1000} par 1000 pts dépassé (actuellement ${count})`);
-    }
+
   });
 
-  validationMessages.innerHTML = '';
-  if (messages.length > 0) {
-    messages.forEach(msg => {
-      const div = document.createElement('div');
-      div.textContent = msg;
-      div.className = 'text-sm text-red-600';
-      validationMessages.appendChild(div);
-    });
-  }
+  validationMessages.innerHTML='';
+
+  messages.forEach(msg=>{
+
+    const div=document.createElement('div');
+
+    div.textContent=msg;
+
+    div.className='text-sm text-red-600';
+
+    validationMessages.appendChild(div);
+
+  });
+
 }
 
 function createMagicItemButtons() {
